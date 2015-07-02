@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -16,8 +17,47 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Parse setApplicationId:@"qO0ZQgj6slnMsfMdqg3krsrGeBQqpw9YqkZHyKfe"
+                  clientKey:@"D7DPPQ5eKU6ZAbY0RAOZ4Uj6FcJq5vY0GUZKZ2UG"];
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:nil];
+    [application registerUserNotificationSettings:setting];
+    [application registerForRemoteNotifications];
+    
+    
     // Override point for customization after application launch.
     return YES;
+}
+-(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+     NSLog(@"notificationSettings %@", notificationSettings);
+
+}
+
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    //    ViewController *controller =  self.window.rootViewController;
+    //    [controller performSegueWithIdentifier:@"ShowController" sender:self];
+    
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    
+    NSLog(@"token %@", deviceToken);
+    
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+    NSLog(@"fail %@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
