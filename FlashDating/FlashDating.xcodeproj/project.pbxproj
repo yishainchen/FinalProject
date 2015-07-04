@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA61B47C7FC006B61A8 /* WebViewController.m */; };
+		846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */; };
 		84F3F99E1B427DD100879069 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F99D1B427DD100879069 /* main.m */; };
 		84F3F9A11B427DD100879069 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F9A01B427DD100879069 /* AppDelegate.m */; };
 		84F3F9A41B427DD100879069 /* FlashDating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F9A21B427DD100879069 /* FlashDating.xcdatamodeld */; };
@@ -32,6 +34,10 @@
 /* Begin PBXFileReference section */
 		16E2F7B8600A822357A689AD /* libPods-FlashDating.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlashDating.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C9AAB8C0B81FB45F0A8538 /* Pods-FlashDating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashDating.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashDating/Pods-FlashDating.debug.xcconfig"; sourceTree = "<group>"; };
+		846B9EA51B47C7FC006B61A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		846B9EA61B47C7FC006B61A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSearchViewController.h; sourceTree = "<group>"; };
+		846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSearchViewController.m; sourceTree = "<group>"; };
 		84F3F9981B427DD100879069 /* FlashDating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashDating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3F99C1B427DD100879069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3F99D1B427DD100879069 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 		84F3F98F1B427DD000879069 = {
 			isa = PBXGroup;
 			children = (
+				846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */,
+				846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */,
+				846B9EA51B47C7FC006B61A8 /* WebViewController.h */,
+				846B9EA61B47C7FC006B61A8 /* WebViewController.m */,
 				84F3F9C51B427E0700879069 /* LineActivity.h */,
 				84F3F9C61B427E0700879069 /* LineActivity.m */,
 				84F3F99A1B427DD100879069 /* FlashDating */,
@@ -288,10 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F3F9A11B427DD100879069 /* AppDelegate.m in Sources */,
+				846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */,
 				84F3F9A41B427DD100879069 /* FlashDating.xcdatamodeld in Sources */,
 				84F3F9A71B427DD100879069 /* ViewController.m in Sources */,
 				84F3F99E1B427DD100879069 /* main.m in Sources */,
 				84F3F9C71B427E0700879069 /* LineActivity.m in Sources */,
+				846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

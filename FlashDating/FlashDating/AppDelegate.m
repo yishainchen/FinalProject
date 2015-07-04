@@ -46,8 +46,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification
 
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    // Store the deviceToken in the current installation and save it to Parse.
-    
+
     NSLog(@"token %@", deviceToken);
     
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];

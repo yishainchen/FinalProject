@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LineActivity.h"
 #import <Parse/Parse.h>
+#import "DateSearchViewController.h"
 @interface ViewController ()
 
 @end
@@ -29,8 +30,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)ShowInvitePage:(id)sender {
-    UIImage *image = [UIImage imageNamed:@"Line"];
-    NSArray *array = @[@"哭哭",image];
+    UIImage *image = [UIImage imageNamed:@"Flashdate"];
+    NSArray *array = @[@"Hello",image];
     LineActivity *line = [[LineActivity alloc ]init];
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:array   applicationActivities:@[line]];
     controller.excludedActivityTypes = @[UIActivityTypePostToFacebook];
@@ -52,6 +53,11 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
+- (IBAction)dateSearch:(id)sender {
+   DateSearchViewController *dateVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DateSearch"];
+    [self presentViewController:dateVC animated:YES completion:nil];
+    
+}
 
 
 @end
