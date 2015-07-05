@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9VY-pY-DY8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xL9-oA-HhE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Entry Image View Controller-->
+        <scene sceneID="afP-12-Yge">
+            <objects>
+                <viewController id="xL9-oA-HhE" customClass="EntryImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hRm-uw-qnu"/>
+                        <viewControllerLayoutGuide type="bottom" id="7eG-Bz-Gan"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Tr-CT-RCI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hlt-YB-AYo">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zY0-xo-Sb1" appends="YES" id="nta-oG-cJI"/>
+                                </connections>
+                            </pageControl>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXP-iR-2mD">
+                                <rect key="frame" x="-5" y="-8" width="331" height="543"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zY0-xo-Sb1" appends="YES" id="bnK-Jn-TCF"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="4vE-75-73I"/>
+                    <connections>
+                        <outlet property="myImg" destination="KXP-iR-2mD" id="D3J-3h-tUG"/>
+                        <outlet property="pageCtl" destination="hlt-YB-AYo" id="sf5-bw-WTp"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" id="hS6-uw-v26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCV-WD-cuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="zY0-xo-Sb1">
+                    <connections>
+                        <action selector="handleSwipe:" destination="xL9-oA-HhE" id="eDC-OX-z2S"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="280" y="142"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -109,24 +155,6 @@
             </objects>
             <point key="canvasLocation" x="757" y="814"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xb7-BS-V07">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9VY-pY-DY8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n1Z-wT-N1d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="FVw-ra-mFC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KLW-5e-Wc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="225" y="128"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -134,6 +162,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GlL-ME-dLf"/>
+        <segue reference="hS6-uw-v26"/>
     </inferredMetricsTieBreakers>
 </document>
