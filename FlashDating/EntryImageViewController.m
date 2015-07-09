@@ -19,8 +19,10 @@
     
     imageArray = [[NSMutableArray alloc]initWithObjects:@"Italy",@"Italy2",@"Italy3", nil];
     self.pageCtl.numberOfPages = [imageArray count];
+  
     [self showImage];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,26 +35,28 @@
     self.myImg.image = [UIImage imageNamed:filename];
 
 }
-
--(IBAction)handleSwipe:(UISwipeGestureRecognizer *)sender {
+- (IBAction)handleSwipe:(UISwipeGestureRecognizer *)sender {
     switch (sender.direction) {
-        case UISwipeGestureRecognizerDirectionLeft:
+        case  UISwipeGestureRecognizerDirectionLeft:
             if (self.pageCtl.currentPage < [imageArray count]) {
                 self.pageCtl.currentPage++;
                 [self showImage];
+                NSLog(@"left");
             }
             break;
             
-       case UISwipeGestureRecognizerDirectionRight:
+        case  UISwipeGestureRecognizerDirectionRight:
             if (self.pageCtl.currentPage > 0) {
                 self.pageCtl.currentPage--;
                 [self showImage];
-            break;
+                NSLog(@"right");
+                break;
             }
         default:;
-            
     }
+
 }
+
 
 /*
 #pragma mark - Navigation

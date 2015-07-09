@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA61B47C7FC006B61A8 /* WebViewController.m */; };
+		846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */; };
+		846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */; };
+		84E6363A1B4BD3620056E467 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E636391B4BD3620056E467 /* CalendarViewController.m */; };
+		84E636AA1B4E67600056E467 /* LoginFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E636A91B4E67600056E467 /* LoginFacebookViewController.m */; };
+		84F3F99E1B427DD100879069 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F99D1B427DD100879069 /* main.m */; };
+		84F3F9A11B427DD100879069 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F9A01B427DD100879069 /* AppDelegate.m */; };
+		84F3F9A41B427DD100879069 /* FlashDating.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F9A21B427DD100879069 /* FlashDating.xcdatamodeld */; };
+		84F3F9A71B427DD100879069 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F9A61B427DD100879069 /* ViewController.m */; };
+		84F3F9AA1B427DD100879069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F3F9A81B427DD100879069 /* Main.storyboard */; };
+		84F3F9AC1B427DD100879069 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F3F9AB1B427DD100879069 /* Images.xcassets */; };
+		84F3F9AF1B427DD100879069 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F3F9AD1B427DD100879069 /* LaunchScreen.xib */; };
+		84F3F9BB1B427DD100879069 /* FlashDatingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F9BA1B427DD100879069 /* FlashDatingTests.m */; };
+		84F3F9C71B427E0700879069 /* LineActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F9C61B427E0700879069 /* LineActivity.m */; };
+		FFFDE134A16104AAD2081817 /* libPods-FlashDating.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E2F7B8600A822357A689AD /* libPods-FlashDating.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84F3F9B51B427DD100879069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F3F9901B427DD000879069 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F3F9971B427DD100879069;
+			remoteInfo = FlashDating;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16E2F7B8600A822357A689AD /* libPods-FlashDating.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlashDating.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C9AAB8C0B81FB45F0A8538 /* Pods-FlashDating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashDating.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashDating/Pods-FlashDating.debug.xcconfig"; sourceTree = "<group>"; };
+		846B9EA51B47C7FC006B61A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
+		846B9EA61B47C7FC006B61A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
+		846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSearchViewController.h; sourceTree = "<group>"; };
+		846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSearchViewController.m; sourceTree = "<group>"; };
+		846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryImageViewController.h; sourceTree = "<group>"; };
+		846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryImageViewController.m; sourceTree = "<group>"; };
+		84E636381B4BD3620056E467 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		84E636391B4BD3620056E467 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		84E636A81B4E67600056E467 /* LoginFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginFacebookViewController.h; sourceTree = "<group>"; };
+		84E636A91B4E67600056E467 /* LoginFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginFacebookViewController.m; sourceTree = "<group>"; };
+		84F3F9981B427DD100879069 /* FDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F3F99C1B427DD100879069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F3F99D1B427DD100879069 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84F3F99F1B427DD100879069 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84F3F9A01B427DD100879069 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84F3F9A31B427DD100879069 /* FlashDating.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlashDating.xcdatamodel; sourceTree = "<group>"; };
+		84F3F9A51B427DD100879069 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84F3F9A61B427DD100879069 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84F3F9A91B427DD100879069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F3F9AB1B427DD100879069 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84F3F9AE1B427DD100879069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		84F3F9B41B427DD100879069 /* FDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F3F9B91B427DD100879069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F3F9BA1B427DD100879069 /* FlashDatingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashDatingTests.m; sourceTree = "<group>"; };
+		84F3F9C51B427E0700879069 /* LineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineActivity.h; sourceTree = "<group>"; };
+		84F3F9C61B427E0700879069 /* LineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineActivity.m; sourceTree = "<group>"; };
+		C61479385DC4EB2C46055F23 /* Pods-FlashDating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashDating.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashDating/Pods-FlashDating.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F3F9951B427DD100879069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFFDE134A16104AAD2081817 /* libPods-FlashDating.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F3F9B11B427DD100879069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C8324FF98F428AE667FC0D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16E2F7B8600A822357A689AD /* libPods-FlashDating.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84F3F98F1B427DD000879069 = {
+			isa = PBXGroup;
+			children = (
+				84E636A81B4E67600056E467 /* LoginFacebookViewController.h */,
+				84E636A91B4E67600056E467 /* LoginFacebookViewController.m */,
+				84E636381B4BD3620056E467 /* CalendarViewController.h */,
+				84E636391B4BD3620056E467 /* CalendarViewController.m */,
+				846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */,
+				846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */,
+				846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */,
+				846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */,
+				84F3F9C51B427E0700879069 /* LineActivity.h */,
+				84F3F9C61B427E0700879069 /* LineActivity.m */,
+				84F3F99A1B427DD100879069 /* FlashDating */,
+				84F3F9B71B427DD100879069 /* FlashDatingTests */,
+				84F3F9991B427DD100879069 /* Products */,
+				B7D306C3A836B7C31B3B108C /* Pods */,
+				0C8324FF98F428AE667FC0D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84F3F9991B427DD100879069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F3F9981B427DD100879069 /* FDate.app */,
+				84F3F9B41B427DD100879069 /* FDateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F3F99A1B427DD100879069 /* FlashDating */ = {
+			isa = PBXGroup;
+			children = (
+				84F3F99F1B427DD100879069 /* AppDelegate.h */,
+				84F3F9A01B427DD100879069 /* AppDelegate.m */,
+				84F3F9A51B427DD100879069 /* ViewController.h */,
+				84F3F9A61B427DD100879069 /* ViewController.m */,
+				84F3F9A81B427DD100879069 /* Main.storyboard */,
+				84F3F9AB1B427DD100879069 /* Images.xcassets */,
+				84F3F9AD1B427DD100879069 /* LaunchScreen.xib */,
+				84F3F9A21B427DD100879069 /* FlashDating.xcdatamodeld */,
+				84F3F99B1B427DD100879069 /* Supporting Files */,
+			);
+			path = FlashDating;
+			sourceTree = "<group>";
+		};
+		84F3F99B1B427DD100879069 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				846B9EA51B47C7FC006B61A8 /* WebViewController.h */,
+				846B9EA61B47C7FC006B61A8 /* WebViewController.m */,
+				84F3F99C1B427DD100879069 /* Info.plist */,
+				84F3F99D1B427DD100879069 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84F3F9B71B427DD100879069 /* FlashDatingTests */ = {
+			isa = PBXGroup;
+			children = (
+				84F3F9BA1B427DD100879069 /* FlashDatingTests.m */,
+				84F3F9B81B427DD100879069 /* Supporting Files */,
+			);
+			path = FlashDatingTests;
+			sourceTree = "<group>";
+		};
+		84F3F9B81B427DD100879069 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84F3F9B91B427DD100879069 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7D306C3A836B7C31B3B108C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53C9AAB8C0B81FB45F0A8538 /* Pods-FlashDating.debug.xcconfig */,
+				C61479385DC4EB2C46055F23 /* Pods-FlashDating.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F3F9971B427DD100879069 /* FDate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F3F9BE1B427DD100879069 /* Build configuration list for PBXNativeTarget "FDate" */;
+			buildPhases = (
+				AC49B4D11DF69F40B85C1876 /* Check Pods Manifest.lock */,
+				84F3F9941B427DD100879069 /* Sources */,
+				84F3F9951B427DD100879069 /* Frameworks */,
+				84F3F9961B427DD100879069 /* Resources */,
+				F7F7BF69205BB64F358F84D9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FDate;
+			productName = FlashDating;
+			productReference = 84F3F9981B427DD100879069 /* FDate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84F3F9B31B427DD100879069 /* FDateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F3F9C11B427DD100879069 /* Build configuration list for PBXNativeTarget "FDateTests" */;
+			buildPhases = (
+				84F3F9B01B427DD100879069 /* Sources */,
+				84F3F9B11B427DD100879069 /* Frameworks */,
+				84F3F9B21B427DD100879069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F3F9B61B427DD100879069 /* PBXTargetDependency */,
+			);
+			name = FDateTests;
+			productName = FlashDatingTests;
+			productReference = 84F3F9B41B427DD100879069 /* FDateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F3F9901B427DD000879069 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = yishain;
+				TargetAttributes = {
+					84F3F9971B427DD100879069 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 8H7X36TF25;
+					};
+					84F3F9B31B427DD100879069 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 84F3F9971B427DD100879069;
+					};
+				};
+			};
+			buildConfigurationList = 84F3F9931B427DD000879069 /* Build configuration list for PBXProject "FDate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F3F98F1B427DD000879069;
+			productRefGroup = 84F3F9991B427DD100879069 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F3F9971B427DD100879069 /* FDate */,
+				84F3F9B31B427DD100879069 /* FDateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F3F9961B427DD100879069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F3F9AA1B427DD100879069 /* Main.storyboard in Resources */,
+				84F3F9AF1B427DD100879069 /* LaunchScreen.xib in Resources */,
+				84F3F9AC1B427DD100879069 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F3F9B21B427DD100879069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC49B4D11DF69F40B85C1876 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7F7BF69205BB64F358F84D9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlashDating/Pods-FlashDating-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F3F9941B427DD100879069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F3F9A11B427DD100879069 /* AppDelegate.m in Sources */,
+				84E6363A1B4BD3620056E467 /* CalendarViewController.m in Sources */,
+				846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */,
+				846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */,
+				84F3F9A41B427DD100879069 /* FlashDating.xcdatamodeld in Sources */,
+				84F3F9A71B427DD100879069 /* ViewController.m in Sources */,
+				84F3F99E1B427DD100879069 /* main.m in Sources */,
+				84F3F9C71B427E0700879069 /* LineActivity.m in Sources */,
+				84E636AA1B4E67600056E467 /* LoginFacebookViewController.m in Sources */,
+				846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F3F9B01B427DD100879069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F3F9BB1B427DD100879069 /* FlashDatingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84F3F9B61B427DD100879069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F3F9971B427DD100879069 /* FDate */;
+			targetProxy = 84F3F9B51B427DD100879069 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84F3F9A81B427DD100879069 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F3F9A91B427DD100879069 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84F3F9AD1B427DD100879069 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F3F9AE1B427DD100879069 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84F3F9BC1B427DD100879069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84F3F9BD1B427DD100879069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F3F9BF1B427DD100879069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53C9AAB8C0B81FB45F0A8538 /* Pods-FlashDating.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = FlashDating/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = FDate;
+			};
+			name = Debug;
+		};
+		84F3F9C01B427DD100879069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61479385DC4EB2C46055F23 /* Pods-FlashDating.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = FlashDating/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = FDate;
+			};
+			name = Release;
+		};
+		84F3F9C21B427DD100879069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlashDatingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = FDateTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/閃電聚會.app/閃電聚會";
+			};
+			name = Debug;
+		};
+		84F3F9C31B427DD100879069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlashDatingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = FDateTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/閃電聚會.app/閃電聚會";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F3F9931B427DD000879069 /* Build configuration list for PBXProject "FDate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F3F9BC1B427DD100879069 /* Debug */,
+				84F3F9BD1B427DD100879069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F3F9BE1B427DD100879069 /* Build configuration list for PBXNativeTarget "FDate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F3F9BF1B427DD100879069 /* Debug */,
+				84F3F9C01B427DD100879069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F3F9C11B427DD100879069 /* Build configuration list for PBXNativeTarget "FDateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F3F9C21B427DD100879069 /* Debug */,
+				84F3F9C31B427DD100879069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84F3F9A21B427DD100879069 /* FlashDating.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84F3F9A31B427DD100879069 /* FlashDating.xcdatamodel */,
+			);
+			currentVersion = 84F3F9A31B427DD100879069 /* FlashDating.xcdatamodel */;
+			path = FlashDating.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84F3F9901B427DD000879069 /* Project object */;
+}

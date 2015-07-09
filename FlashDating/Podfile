@@ -4,6 +4,9 @@
 target 'FlashDating' do
 
 pod 'Parse'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
 
 end
 

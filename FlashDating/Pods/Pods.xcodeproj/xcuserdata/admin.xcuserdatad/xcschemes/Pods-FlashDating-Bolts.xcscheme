@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "791799894262771FC634E943"
+               BlueprintIdentifier = "1EF424949D31E1356D92FA26"
                BuildableName = "libPods-FlashDating-Bolts.a"
                BlueprintName = "Pods-FlashDating-Bolts"
                ReferencedContainer = "container:Pods.xcodeproj">

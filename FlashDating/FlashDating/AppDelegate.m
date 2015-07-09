@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,23 @@
 @implementation AppDelegate
 
 
+
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
     
     [Parse setApplicationId:@"qO0ZQgj6slnMsfMdqg3krsrGeBQqpw9YqkZHyKfe"
                   clientKey:@"D7DPPQ5eKU6ZAbY0RAOZ4Uj6FcJq5vY0GUZKZ2UG"];
@@ -31,6 +47,9 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+
+
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
      NSLog(@"notificationSettings %@", notificationSettings);
 
@@ -74,6 +93,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+     [FBSDKAppEvents activateApp];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
