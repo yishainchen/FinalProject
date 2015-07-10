@@ -5,9 +5,9 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>40F8D222-E186-42A5-9857-A3BDC0A91F1D</string>
+	<string>171A8EF3-AE8D-4054-A218-5E83345FBD6C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>FlashDating</string>
+	<string>FDate</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>02E66C52D74859999E5E1B4219EB70D9CBC1C8C4</key>
@@ -18,15 +18,15 @@
 		<string>github.com:yishainchen/sandbox.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FlashDating/FlashDating.xcworkspace</string>
+	<string>FlashDating/FDate.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>02E66C52D74859999E5E1B4219EB70D9CBC1C8C4</key>
-		<string>../..</string>
+		<string>../../..</string>
 		<key>22A80C84C384114F7487855D66EC8162D9CDD789</key>
-		<string>../../..</string>
+		<string>../../../../..</string>
 		<key>FA38B20756FFC4B1BEBF9DDDCC95DED5BE67051B</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:yishainchen/FinalProject.git</string>
@@ -56,41 +56,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FA38B20756FFC4B1BEBF9DDDCC95DED5BE67051B</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FA38B20756FFC4B1BEBF9DDDCC95DED5BE67051B</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>22A80C84C384114F7487855D66EC8162D9CDD789</string>
 			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FA38B20756FFC4B1BEBF9DDDCC95DED5BE67051B</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FA38B20756FFC4B1BEBF9DDDCC95DED5BE67051B</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
+			<string>..</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

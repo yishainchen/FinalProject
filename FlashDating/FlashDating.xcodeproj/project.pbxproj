@@ -39,15 +39,15 @@
 		53C9AAB8C0B81FB45F0A8538 /* Pods-FlashDating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashDating.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashDating/Pods-FlashDating.debug.xcconfig"; sourceTree = "<group>"; };
 		846B9EA51B47C7FC006B61A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
 		846B9EA61B47C7FC006B61A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
-		846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSearchViewController.h; sourceTree = "<group>"; };
-		846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSearchViewController.m; sourceTree = "<group>"; };
-		846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryImageViewController.h; sourceTree = "<group>"; };
-		846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryImageViewController.m; sourceTree = "<group>"; };
-		84E636381B4BD3620056E467 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		84E636391B4BD3620056E467 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
-		84E636A81B4E67600056E467 /* LoginFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginFacebookViewController.h; sourceTree = "<group>"; };
-		84E636A91B4E67600056E467 /* LoginFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginFacebookViewController.m; sourceTree = "<group>"; };
-		84F3F9981B427DD100879069 /* FDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateSearchViewController.h; path = ../DateSearchViewController.h; sourceTree = "<group>"; };
+		846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateSearchViewController.m; path = ../DateSearchViewController.m; sourceTree = "<group>"; };
+		846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntryImageViewController.h; path = ../EntryImageViewController.h; sourceTree = "<group>"; };
+		846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntryImageViewController.m; path = ../EntryImageViewController.m; sourceTree = "<group>"; };
+		84E636381B4BD3620056E467 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = ../CalendarViewController.h; sourceTree = "<group>"; };
+		84E636391B4BD3620056E467 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarViewController.m; path = ../CalendarViewController.m; sourceTree = "<group>"; };
+		84E636A81B4E67600056E467 /* LoginFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginFacebookViewController.h; path = ../LoginFacebookViewController.h; sourceTree = "<group>"; };
+		84E636A91B4E67600056E467 /* LoginFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginFacebookViewController.m; path = ../LoginFacebookViewController.m; sourceTree = "<group>"; };
+		84F3F9981B427DD100879069 /* FlashDating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashDating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3F99C1B427DD100879069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3F99D1B427DD100879069 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F3F99F1B427DD100879069 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,11 +58,11 @@
 		84F3F9A91B427DD100879069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F3F9AB1B427DD100879069 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84F3F9AE1B427DD100879069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		84F3F9B41B427DD100879069 /* FDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F3F9B41B427DD100879069 /* FlashDatingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashDatingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3F9B91B427DD100879069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3F9BA1B427DD100879069 /* FlashDatingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashDatingTests.m; sourceTree = "<group>"; };
-		84F3F9C51B427E0700879069 /* LineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineActivity.h; sourceTree = "<group>"; };
-		84F3F9C61B427E0700879069 /* LineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineActivity.m; sourceTree = "<group>"; };
+		84F3F9C51B427E0700879069 /* LineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineActivity.h; path = ../LineActivity.h; sourceTree = "<group>"; };
+		84F3F9C61B427E0700879069 /* LineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineActivity.m; path = ../LineActivity.m; sourceTree = "<group>"; };
 		C61479385DC4EB2C46055F23 /* Pods-FlashDating.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashDating.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashDating/Pods-FlashDating.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,16 +96,6 @@
 		84F3F98F1B427DD000879069 = {
 			isa = PBXGroup;
 			children = (
-				84E636A81B4E67600056E467 /* LoginFacebookViewController.h */,
-				84E636A91B4E67600056E467 /* LoginFacebookViewController.m */,
-				84E636381B4BD3620056E467 /* CalendarViewController.h */,
-				84E636391B4BD3620056E467 /* CalendarViewController.m */,
-				846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */,
-				846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */,
-				846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */,
-				846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */,
-				84F3F9C51B427E0700879069 /* LineActivity.h */,
-				84F3F9C61B427E0700879069 /* LineActivity.m */,
 				84F3F99A1B427DD100879069 /* FlashDating */,
 				84F3F9B71B427DD100879069 /* FlashDatingTests */,
 				84F3F9991B427DD100879069 /* Products */,
@@ -117,8 +107,8 @@
 		84F3F9991B427DD100879069 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84F3F9981B427DD100879069 /* FDate.app */,
-				84F3F9B41B427DD100879069 /* FDateTests.xctest */,
+				84F3F9981B427DD100879069 /* FlashDating.app */,
+				84F3F9B41B427DD100879069 /* FlashDatingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +116,14 @@
 		84F3F99A1B427DD100879069 /* FlashDating */ = {
 			isa = PBXGroup;
 			children = (
+				84E636A81B4E67600056E467 /* LoginFacebookViewController.h */,
+				84E636A91B4E67600056E467 /* LoginFacebookViewController.m */,
+				84E636381B4BD3620056E467 /* CalendarViewController.h */,
+				84E636391B4BD3620056E467 /* CalendarViewController.m */,
+				846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */,
+				846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */,
+				84F3F9C51B427E0700879069 /* LineActivity.h */,
+				84F3F9C61B427E0700879069 /* LineActivity.m */,
 				84F3F99F1B427DD100879069 /* AppDelegate.h */,
 				84F3F9A01B427DD100879069 /* AppDelegate.m */,
 				84F3F9A51B427DD100879069 /* ViewController.h */,
@@ -142,6 +140,8 @@
 		84F3F99B1B427DD100879069 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */,
+				846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */,
 				846B9EA51B47C7FC006B61A8 /* WebViewController.h */,
 				846B9EA61B47C7FC006B61A8 /* WebViewController.m */,
 				84F3F99C1B427DD100879069 /* Info.plist */,
@@ -179,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84F3F9971B427DD100879069 /* FDate */ = {
+		84F3F9971B427DD100879069 /* FlashDating */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84F3F9BE1B427DD100879069 /* Build configuration list for PBXNativeTarget "FDate" */;
+			buildConfigurationList = 84F3F9BE1B427DD100879069 /* Build configuration list for PBXNativeTarget "FlashDating" */;
 			buildPhases = (
 				AC49B4D11DF69F40B85C1876 /* Check Pods Manifest.lock */,
 				84F3F9941B427DD100879069 /* Sources */,
@@ -193,14 +193,14 @@
 			);
 			dependencies = (
 			);
-			name = FDate;
+			name = FlashDating;
 			productName = FlashDating;
-			productReference = 84F3F9981B427DD100879069 /* FDate.app */;
+			productReference = 84F3F9981B427DD100879069 /* FlashDating.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84F3F9B31B427DD100879069 /* FDateTests */ = {
+		84F3F9B31B427DD100879069 /* FlashDatingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84F3F9C11B427DD100879069 /* Build configuration list for PBXNativeTarget "FDateTests" */;
+			buildConfigurationList = 84F3F9C11B427DD100879069 /* Build configuration list for PBXNativeTarget "FlashDatingTests" */;
 			buildPhases = (
 				84F3F9B01B427DD100879069 /* Sources */,
 				84F3F9B11B427DD100879069 /* Frameworks */,
@@ -211,9 +211,9 @@
 			dependencies = (
 				84F3F9B61B427DD100879069 /* PBXTargetDependency */,
 			);
-			name = FDateTests;
+			name = FlashDatingTests;
 			productName = FlashDatingTests;
-			productReference = 84F3F9B41B427DD100879069 /* FDateTests.xctest */;
+			productReference = 84F3F9B41B427DD100879069 /* FlashDatingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84F3F9931B427DD000879069 /* Build configuration list for PBXProject "FDate" */;
+			buildConfigurationList = 84F3F9931B427DD000879069 /* Build configuration list for PBXProject "FlashDating" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -248,8 +248,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84F3F9971B427DD100879069 /* FDate */,
-				84F3F9B31B427DD100879069 /* FDateTests */,
+				84F3F9971B427DD100879069 /* FlashDating */,
+				84F3F9B31B427DD100879069 /* FlashDatingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -338,7 +338,7 @@
 /* Begin PBXTargetDependency section */
 		84F3F9B61B427DD100879069 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84F3F9971B427DD100879069 /* FDate */;
+			target = 84F3F9971B427DD100879069 /* FlashDating */;
 			targetProxy = 84F3F9B51B427DD100879069 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,7 +451,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FlashDating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FDate;
+				PRODUCT_NAME = FlashDating;
 			};
 			name = Debug;
 		};
@@ -463,7 +463,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FlashDating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FDate;
+				PRODUCT_NAME = FlashDating;
 			};
 			name = Release;
 		};
@@ -481,7 +481,7 @@
 				);
 				INFOPLIST_FILE = FlashDatingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = FDateTests;
+				PRODUCT_NAME = FlashDatingTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/閃電聚會.app/閃電聚會";
 			};
 			name = Debug;
@@ -496,7 +496,7 @@
 				);
 				INFOPLIST_FILE = FlashDatingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = FDateTests;
+				PRODUCT_NAME = FlashDatingTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/閃電聚會.app/閃電聚會";
 			};
 			name = Release;
@@ -504,7 +504,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84F3F9931B427DD000879069 /* Build configuration list for PBXProject "FDate" */ = {
+		84F3F9931B427DD000879069 /* Build configuration list for PBXProject "FlashDating" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84F3F9BC1B427DD100879069 /* Debug */,
@@ -513,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84F3F9BE1B427DD100879069 /* Build configuration list for PBXNativeTarget "FDate" */ = {
+		84F3F9BE1B427DD100879069 /* Build configuration list for PBXNativeTarget "FlashDating" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84F3F9BF1B427DD100879069 /* Debug */,
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84F3F9C11B427DD100879069 /* Build configuration list for PBXNativeTarget "FDateTests" */ = {
+		84F3F9C11B427DD100879069 /* Build configuration list for PBXNativeTarget "FlashDatingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84F3F9C21B427DD100879069 /* Debug */,

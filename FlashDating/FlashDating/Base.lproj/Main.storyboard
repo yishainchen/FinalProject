@@ -222,7 +222,7 @@
                                 </state>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0yG-yL-nei">
-                                <rect key="frame" x="0.0" y="313" width="320" height="118"/>
+                                <rect key="frame" x="16" y="313" width="288" height="118"/>
                                 <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
                                     <!--2015-07-09 08:27:27 +0000-->
                                 </date>
@@ -239,18 +239,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-a1-Om7">
-                                <rect key="frame" x="0.0" y="121" width="327" height="118"/>
-                                <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
-                                    <!--2015-07-09 08:27:27 +0000-->
-                                </date>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W03-UL-ews">
                                 <rect key="frame" x="145" y="495" width="30" height="30"/>
                                 <state key="normal" title="確認">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-a1-Om7">
+                                <rect key="frame" x="16" y="133" width="288" height="108"/>
+                                <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
+                                    <!--2015-07-09 08:27:27 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

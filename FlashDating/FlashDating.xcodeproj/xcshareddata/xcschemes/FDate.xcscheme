@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84F3F9971B427DD100879069"
-               BuildableName = "&#x9583;&#x96fb;&#x805a;&#x6703;.app"
-               BlueprintName = "&#x9583;&#x96fb;&#x805a;&#x6703;"
-               ReferencedContainer = "container:&#x9583;&#x96fb;&#x805a;&#x6703;.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84F3F9B31B427DD100879069"
-               BuildableName = "&#x9583;&#x96fb;&#x805a;&#x6703;Tests.xctest"
-               BlueprintName = "&#x9583;&#x96fb;&#x805a;&#x6703;Tests"
-               ReferencedContainer = "container:&#x9583;&#x96fb;&#x805a;&#x6703;.xcodeproj">
+               BuildableName = "FDate.app"
+               BlueprintName = "FlashDating"
+               ReferencedContainer = "container:FlashDating.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84F3F9B31B427DD100879069"
-               BuildableName = "&#x9583;&#x96fb;&#x805a;&#x6703;Tests.xctest"
-               BlueprintName = "&#x9583;&#x96fb;&#x805a;&#x6703;Tests"
-               ReferencedContainer = "container:&#x9583;&#x96fb;&#x805a;&#x6703;.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F3F9971B427DD100879069"
             BuildableName = "FDate.app"
-            BlueprintName = "FDate"
-            ReferencedContainer = "container:FDate.xcodeproj">
+            BlueprintName = "FlashDating"
+            ReferencedContainer = "container:FlashDating.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,8 +54,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F3F9971B427DD100879069"
             BuildableName = "FDate.app"
-            BlueprintName = "FDate"
-            ReferencedContainer = "container:FDate.xcodeproj">
+            BlueprintName = "FlashDating"
+            ReferencedContainer = "container:FlashDating.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F3F9971B427DD100879069"
-            BuildableName = "&#x9583;&#x96fb;&#x805a;&#x6703;.app"
-            BlueprintName = "&#x9583;&#x96fb;&#x805a;&#x6703;"
-            ReferencedContainer = "container:&#x9583;&#x96fb;&#x805a;&#x6703;.xcodeproj">
+            BuildableName = "FDate.app"
+            BlueprintName = "FlashDating"
+            ReferencedContainer = "container:FlashDating.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
