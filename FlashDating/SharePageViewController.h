@@ -1,5 +1,5 @@
 //
-//  CalendarViewController.h
+//  SharePageViewController.h
 //  FlashDating
 //
 //  Created by yishain on 7/10/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CalendarViewController : UIViewController
+@interface SharePageViewController : UIViewController
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LoginFacebookViewController.h"
+#import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 @interface LoginFacebookViewController ()
@@ -21,6 +22,19 @@
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
     // Do any additional setup after loading the view.
+    
+    //判斷已登入
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fbTokenChangeNoti:) name:FBSDKAccessTokenDidChangeNotification object:nil];
+}
+
+-(void)fbTokenChangeNoti:(NSNotification*)noti {
+
+    if ([FBSDKAccessToken currentAccessToken]) {
+        
+        ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
+        [self presentViewController:VC animated:YES completion:nil];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

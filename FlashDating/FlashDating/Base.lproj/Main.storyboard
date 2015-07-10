@@ -77,28 +77,18 @@
                     <view key="view" contentMode="scaleToFill" id="9b5-Ij-XoJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlB-vA-m26">
-                                <rect key="frame" x="142" y="472" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Qes-57-ura" kind="modal" id="r7D-D4-5LU"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wOr-oM-SAA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjW-dl-8c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="128"/>
+            <point key="canvasLocation" x="1287" y="128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Kr-1e-QxV">
             <objects>
-                <viewController id="Qes-57-ura" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Cell" id="Qes-57-ura" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Ys-iN-Ouh"/>
                         <viewControllerLayoutGuide type="bottom" id="PWc-VZ-oR9"/>
@@ -107,15 +97,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qR-bV-Rxn">
-                                <rect key="frame" x="133" y="217" width="60" height="33"/>
-                                <state key="normal" title="邀請好友">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ShowInvitePage:" destination="Qes-57-ura" eventType="touchUpInside" id="2qM-BQ-3tp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ls-eo-e40">
                                 <rect key="frame" x="133" y="296" width="60" height="30"/>
                                 <state key="normal" title="聚會查詢">
@@ -123,7 +104,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dateSearch:" destination="Qes-57-ura" eventType="touchUpInside" id="W4q-ZO-FVf"/>
-                                    <segue destination="bj9-XU-Ed6" kind="push" id="TZC-un-12W"/>
+                                    <segue destination="bj9-XU-Ed6" kind="modal" id="TZC-un-12W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lot-q8-T5G">
@@ -136,18 +117,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="tum-Ux-iZS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGx-T2-PjG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="128"/>
+            <point key="canvasLocation" x="1821" y="128"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Type View Controller-->
         <scene sceneID="uQB-gK-dDH">
             <objects>
-                <viewController id="Zrs-Hm-KKX" sceneMemberID="viewController">
+                <viewController id="Zrs-Hm-KKX" customClass="DateTypeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gcB-fg-FTd"/>
                         <viewControllerLayoutGuide type="bottom" id="8od-GO-FX9"/>
@@ -171,7 +152,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhL-wP-Q51">
-                                <rect key="frame" x="0.0" y="521" width="320" height="54"/>
+                                <rect key="frame" x="160" y="521" width="160" height="54"/>
                                 <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="ＮＥＸＴ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,6 +175,34 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49z-MS-gSW">
+                                <rect key="frame" x="0.0" y="460" width="320" height="61"/>
+                                <color key="backgroundColor" red="0.54053758741258739" green="0.66264204550000005" blue="0.69419252620000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="其他活動">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-mO-bnc">
+                                <rect key="frame" x="0.0" y="308" width="160" height="152"/>
+                                <color key="backgroundColor" red="0.76879370629370625" green="0.79941542830000001" blue="0.67671000869999975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="商業會議">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swl-ts-NJg">
+                                <rect key="frame" x="160" y="308" width="160" height="152"/>
+                                <color key="backgroundColor" red="0.69176136363636365" green="0.66264204545454541" blue="0.69419252622377625" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="娛樂">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NP-FB-weg">
+                                <rect key="frame" x="0.0" y="521" width="160" height="47"/>
+                                <color key="backgroundColor" red="0.85803649479999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ＢＡＣＫ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -201,12 +210,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-wN-9Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="128"/>
+            <point key="canvasLocation" x="2226" y="128"/>
         </scene>
-        <!--View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="hBS-AT-FG8">
             <objects>
-                <viewController id="n4u-Q2-0o7" sceneMemberID="viewController">
+                <viewController id="n4u-Q2-0o7" customClass="CalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0sg-jA-TzC"/>
                         <viewControllerLayoutGuide type="bottom" id="I1b-TX-A9l"/>
@@ -218,51 +227,89 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-8g-RhD">
                                 <rect key="frame" x="244" y="28" width="60" height="30"/>
                                 <state key="normal" title="聚會時段">
+                                    <color key="titleColor" red="0.064603365384615391" green="0.093722683566433568" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0yG-yL-nei">
-                                <rect key="frame" x="16" y="313" width="288" height="118"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0yG-yL-nei">
+                                <rect key="frame" x="16" y="319" width="288" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="GBD-2n-tCi"/>
+                                    <constraint firstAttribute="height" constant="118" id="yjp-sD-SCc"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
                                     <!--2015-07-09 08:27:27 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="dateEnd:" destination="n4u-Q2-0o7" eventType="editingDidEnd" id="vqg-Al-npU"/>
+                                </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="終點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-N0-Kla">
-                                <rect key="frame" x="148" y="284" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="起點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-Fr-eyR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="起點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-Fr-eyR">
                                 <rect key="frame" x="143" y="85" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W03-UL-ews">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W03-UL-ews">
                                 <rect key="frame" x="145" y="495" width="30" height="30"/>
                                 <state key="normal" title="確認">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnLocalPush:" destination="n4u-Q2-0o7" eventType="touchUpInside" id="Nrm-V8-hH3"/>
+                                    <segue destination="tc7-aJ-PCb" kind="modal" id="tCF-x0-Jts"/>
+                                </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-a1-Om7">
-                                <rect key="frame" x="16" y="133" width="288" height="108"/>
-                                <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
-                                    <!--2015-07-09 08:27:27 +0000-->
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-N0-Kla">
+                                <rect key="frame" x="143" y="284" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-a1-Om7">
+                                <rect key="frame" x="16" y="131" width="288" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="rYh-ih-bVQ"/>
+                                    <constraint firstAttribute="width" constant="288" id="zwu-TN-Cj8"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="458123220.95120603">
+                                    <!--2015-07-09 08:27:00 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="dateBegin:" destination="n4u-Q2-0o7" eventType="editingDidBegin" id="Yuf-W0-zD0"/>
+                                </connections>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.43883850524475526" green="0.72156862749999995" blue="0.82492897727272729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hhH-a1-Om7" firstAttribute="top" secondItem="Dc3-Fr-eyR" secondAttribute="bottom" constant="25" id="0FZ-T5-070"/>
+                            <constraint firstAttribute="trailing" secondItem="hhH-a1-Om7" secondAttribute="trailing" constant="16" id="298-3p-YFp"/>
+                            <constraint firstItem="Dc3-Fr-eyR" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="143" id="4oh-93-l8A"/>
+                            <constraint firstItem="hhH-a1-Om7" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="16" id="ASh-8Q-vGh"/>
+                            <constraint firstItem="0yG-yL-nei" firstAttribute="top" secondItem="KaN-N0-Kla" secondAttribute="bottom" constant="25" id="B1g-lu-Fgn"/>
+                            <constraint firstAttribute="trailing" secondItem="KaN-N0-Kla" secondAttribute="trailing" constant="143" id="CBK-S7-SW1"/>
+                            <constraint firstItem="Dc3-Fr-eyR" firstAttribute="top" secondItem="0sg-jA-TzC" secondAttribute="bottom" constant="65" id="CZh-x3-rwc"/>
+                            <constraint firstItem="0yG-yL-nei" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="16" id="DBA-3t-hu4"/>
+                            <constraint firstAttribute="trailing" secondItem="Dc3-Fr-eyR" secondAttribute="trailing" constant="143" id="FXJ-R8-lGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="W03-UL-ews" secondAttribute="trailing" constant="145" id="Gap-nR-f0p"/>
+                            <constraint firstItem="I1b-TX-A9l" firstAttribute="top" secondItem="W03-UL-ews" secondAttribute="bottom" constant="43" id="Mqt-Sv-l8n"/>
+                            <constraint firstItem="KaN-N0-Kla" firstAttribute="top" secondItem="hhH-a1-Om7" secondAttribute="bottom" constant="45" id="QMD-ga-ySj"/>
+                            <constraint firstItem="W03-UL-ews" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="145" id="SEa-oG-3xK"/>
+                            <constraint firstAttribute="trailing" secondItem="0yG-yL-nei" secondAttribute="trailing" constant="16" id="ddA-cV-K4E"/>
+                            <constraint firstItem="KaN-N0-Kla" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="143" id="nf6-CU-UKf"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SPz-sz-BlK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j59-FZ-PqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="128"/>
+            <point key="canvasLocation" x="2637" y="128"/>
         </scene>
-        <!--View Controller-->
+        <!--Share Page View Controller-->
         <scene sceneID="e7b-76-2ua">
             <objects>
-                <viewController id="tc7-aJ-PCb" sceneMemberID="viewController">
+                <viewController id="tc7-aJ-PCb" customClass="SharePageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dbF-sw-pDe"/>
                         <viewControllerLayoutGuide type="bottom" id="k0u-Xo-RXJ"/>
@@ -271,19 +318,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spj-NF-vbi">
-                                <rect key="frame" x="100" y="157" width="120" height="30"/>
-                                <state key="normal" title="聚會時段細項選擇">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="短網址顯示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-cR-feW">
+                                <rect key="frame" x="29" y="116" width="275" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWi-YO-Act">
+                                <rect key="frame" x="136" y="414" width="60" height="33"/>
+                                <state key="normal" title="邀請好友">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ShowInvitePage:" destination="tc7-aJ-PCb" eventType="touchUpInside" id="DIW-EF-67T"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQn-FT-UaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="128"/>
+            <point key="canvasLocation" x="3014" y="128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gzh-oj-mXk">
@@ -296,46 +352,12 @@
                     <view key="view" contentMode="scaleToFill" id="fu4-0J-wKw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oht-FD-6hT">
-                                <rect key="frame" x="113" y="152" width="60" height="30"/>
-                                <state key="normal" title="輸入信箱">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgQ-FD-fdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338" y="128"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="08z-18-O0R">
-            <objects>
-                <viewController id="QSR-gR-ZuJ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="myg-8r-s00"/>
-                        <viewControllerLayoutGuide type="bottom" id="bjt-uW-wNi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nsH-63-J9q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHn-zm-zWw">
-                                <rect key="frame" x="106" y="162" width="60" height="30"/>
-                                <state key="normal" title="分享好友">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8g-F1-x3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2748" y="128"/>
+            <point key="canvasLocation" x="3402" y="128"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="aKB-zz-Uor">
@@ -446,6 +468,14 @@
                     <view key="view" contentMode="scaleToFill" id="0eZ-hS-5tT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pa5-Jx-B9Z">
+                                <rect key="frame" x="16" y="88" width="288" height="118"/>
+                                <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
+                                    <!--2015-07-09 08:27:27 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="參與人" id="Myj-3s-ZUf"/>
