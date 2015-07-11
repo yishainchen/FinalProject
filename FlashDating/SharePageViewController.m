@@ -8,6 +8,7 @@
 
 #import "SharePageViewController.h"
 #import "LineActivity.h"
+#import "ViewController.h"
 @interface SharePageViewController ()
 
 @end
@@ -17,11 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+  
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)backHome:(id)sender {
+    ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
+    [self presentViewController:VC animated:YES completion:nil];
+
+    
+    
 }
 
 - (IBAction)ShowInvitePage:(id)sender {

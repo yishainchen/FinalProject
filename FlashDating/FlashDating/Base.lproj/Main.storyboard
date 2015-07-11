@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pw2-fJ-DgF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="n4u-Q2-0o7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -225,52 +225,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-8g-RhD">
-                                <rect key="frame" x="244" y="28" width="60" height="30"/>
+                                <rect key="frame" x="129" y="20" width="60" height="30"/>
                                 <state key="normal" title="聚會時段">
                                     <color key="titleColor" red="0.064603365384615391" green="0.093722683566433568" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.43342985140000001" green="0.2367788462" blue="0.55818400349999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0yG-yL-nei">
-                                <rect key="frame" x="16" y="319" width="288" height="118"/>
+                                <rect key="frame" x="16" y="319" width="288" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="GBD-2n-tCi"/>
-                                    <constraint firstAttribute="height" constant="118" id="yjp-sD-SCc"/>
+                                    <constraint firstAttribute="height" constant="121" id="yjp-sD-SCc"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
                                     <!--2015-07-09 08:27:27 +0000-->
                                 </date>
                                 <connections>
+                                    <action selector="dateEnd:" destination="j59-FZ-PqW" eventType="valueChanged" id="HBL-uk-z0f"/>
                                     <action selector="dateEnd:" destination="n4u-Q2-0o7" eventType="editingDidEnd" id="vqg-Al-npU"/>
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="起點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-Fr-eyR">
-                                <rect key="frame" x="143" y="85" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W03-UL-ews">
-                                <rect key="frame" x="145" y="495" width="30" height="30"/>
-                                <state key="normal" title="確認">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnLocalPush:" destination="n4u-Q2-0o7" eventType="touchUpInside" id="Nrm-V8-hH3"/>
-                                    <segue destination="tc7-aJ-PCb" kind="modal" id="tCF-x0-Jts"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-N0-Kla">
-                                <rect key="frame" x="143" y="284" width="34" height="21"/>
+                                <rect key="frame" x="16" y="71" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-a1-Om7">
-                                <rect key="frame" x="16" y="131" width="288" height="108"/>
+                                <rect key="frame" x="16" y="100" width="288" height="121"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="rYh-ih-bVQ"/>
+                                    <constraint firstAttribute="height" constant="121" id="rYh-ih-bVQ"/>
                                     <constraint firstAttribute="width" constant="288" id="zwu-TN-Cj8"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="458123220.95120603">
@@ -278,29 +262,66 @@
                                 </date>
                                 <connections>
                                     <action selector="dateBegin:" destination="n4u-Q2-0o7" eventType="editingDidBegin" id="Yuf-W0-zD0"/>
+                                    <action selector="dateBegin:" destination="j59-FZ-PqW" eventType="valueChanged" id="c0H-Zv-EVa"/>
                                 </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-N0-Kla">
+                                <rect key="frame" x="16" y="290" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-Lz-YXG">
+                                <rect key="frame" x="16" y="231" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmM-6j-o1h">
+                                <rect key="frame" x="16" y="454" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W03-UL-ews">
+                                <rect key="frame" x="127" y="490" width="65" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="確認">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLocalPush:" destination="n4u-Q2-0o7" eventType="touchUpInside" id="Nrm-V8-hH3"/>
+                                    <segue destination="tc7-aJ-PCb" kind="modal" id="q0B-Td-mkT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43883850524475526" green="0.72156862749999995" blue="0.82492897727272729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hhH-a1-Om7" firstAttribute="top" secondItem="Dc3-Fr-eyR" secondAttribute="bottom" constant="25" id="0FZ-T5-070"/>
+                            <constraint firstItem="hhH-a1-Om7" firstAttribute="top" secondItem="Dc3-Fr-eyR" secondAttribute="bottom" constant="8" id="0FZ-T5-070"/>
                             <constraint firstAttribute="trailing" secondItem="hhH-a1-Om7" secondAttribute="trailing" constant="16" id="298-3p-YFp"/>
-                            <constraint firstItem="Dc3-Fr-eyR" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="143" id="4oh-93-l8A"/>
+                            <constraint firstItem="Dc3-Fr-eyR" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="16" id="4oh-93-l8A"/>
                             <constraint firstItem="hhH-a1-Om7" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="16" id="ASh-8Q-vGh"/>
-                            <constraint firstItem="0yG-yL-nei" firstAttribute="top" secondItem="KaN-N0-Kla" secondAttribute="bottom" constant="25" id="B1g-lu-Fgn"/>
-                            <constraint firstAttribute="trailing" secondItem="KaN-N0-Kla" secondAttribute="trailing" constant="143" id="CBK-S7-SW1"/>
-                            <constraint firstItem="Dc3-Fr-eyR" firstAttribute="top" secondItem="0sg-jA-TzC" secondAttribute="bottom" constant="65" id="CZh-x3-rwc"/>
+                            <constraint firstItem="0yG-yL-nei" firstAttribute="top" secondItem="KaN-N0-Kla" secondAttribute="bottom" constant="8" id="B1g-lu-Fgn"/>
+                            <constraint firstAttribute="trailing" secondItem="KaN-N0-Kla" secondAttribute="trailing" constant="270" id="CBK-S7-SW1"/>
+                            <constraint firstItem="Dc3-Fr-eyR" firstAttribute="top" secondItem="0sg-jA-TzC" secondAttribute="bottom" constant="51" id="CZh-x3-rwc"/>
                             <constraint firstItem="0yG-yL-nei" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="16" id="DBA-3t-hu4"/>
-                            <constraint firstAttribute="trailing" secondItem="Dc3-Fr-eyR" secondAttribute="trailing" constant="143" id="FXJ-R8-lGJ"/>
-                            <constraint firstAttribute="trailing" secondItem="W03-UL-ews" secondAttribute="trailing" constant="145" id="Gap-nR-f0p"/>
+                            <constraint firstAttribute="trailing" secondItem="Dc3-Fr-eyR" secondAttribute="trailing" constant="270" id="FXJ-R8-lGJ"/>
+                            <constraint firstAttribute="trailing" secondItem="W03-UL-ews" secondAttribute="trailing" constant="128" id="Gap-nR-f0p"/>
                             <constraint firstItem="I1b-TX-A9l" firstAttribute="top" secondItem="W03-UL-ews" secondAttribute="bottom" constant="43" id="Mqt-Sv-l8n"/>
-                            <constraint firstItem="KaN-N0-Kla" firstAttribute="top" secondItem="hhH-a1-Om7" secondAttribute="bottom" constant="45" id="QMD-ga-ySj"/>
-                            <constraint firstItem="W03-UL-ews" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="145" id="SEa-oG-3xK"/>
+                            <constraint firstItem="KaN-N0-Kla" firstAttribute="top" secondItem="hhH-a1-Om7" secondAttribute="bottom" constant="69" id="QMD-ga-ySj"/>
+                            <constraint firstItem="W03-UL-ews" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="127" id="SEa-oG-3xK"/>
                             <constraint firstAttribute="trailing" secondItem="0yG-yL-nei" secondAttribute="trailing" constant="16" id="ddA-cV-K4E"/>
-                            <constraint firstItem="KaN-N0-Kla" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="143" id="nf6-CU-UKf"/>
+                            <constraint firstItem="KaN-N0-Kla" firstAttribute="leading" secondItem="fjb-Qq-z39" secondAttribute="leading" constant="16" id="nf6-CU-UKf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SPz-sz-BlK"/>
+                    <connections>
+                        <outlet property="datePickerControl" destination="hhH-a1-Om7" id="zeO-Ys-cP1"/>
+                        <outlet property="datePickerControlEnd" destination="0yG-yL-nei" id="sgO-7z-odf"/>
+                        <outlet property="lblSelectedDate" destination="bgo-Lz-YXG" id="1wc-nu-l2N"/>
+                        <outlet property="lblSelectedDateEnd" destination="XmM-6j-o1h" id="vpm-8Y-gDu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j59-FZ-PqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,12 +339,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="短網址顯示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-cR-feW">
-                                <rect key="frame" x="29" y="116" width="275" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWi-YO-Act">
                                 <rect key="frame" x="136" y="414" width="60" height="33"/>
                                 <state key="normal" title="邀請好友">
@@ -333,13 +348,37 @@
                                     <action selector="ShowInvitePage:" destination="tc7-aJ-PCb" eventType="touchUpInside" id="DIW-EF-67T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="短網址顯示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-cR-feW">
+                                <rect key="frame" x="29" y="116" width="275" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTd-Bk-zv8">
+                                <rect key="frame" x="21" y="35" width="46" height="30"/>
+                                <state key="normal" title="HOME">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backHome:" destination="tc7-aJ-PCb" eventType="touchUpInside" id="vIV-7a-Icw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="活動舉辦區間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsL-Yd-uGQ">
+                                <rect key="frame" x="29" y="199" width="275" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
+                    <connections>
+                        <outlet property="notiTime" destination="KsL-Yd-uGQ" id="Xa1-jx-kdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQn-FT-UaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="128"/>
+            <point key="canvasLocation" x="3017" y="128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gzh-oj-mXk">
@@ -475,6 +514,12 @@
                                     <!--2015-07-09 08:27:27 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufG-yY-h4c">
+                                <rect key="frame" x="16" y="20" width="42" height="30"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
