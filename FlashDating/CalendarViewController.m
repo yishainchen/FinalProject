@@ -20,6 +20,8 @@
 @implementation CalendarViewController
 
 - (void)viewDidLoad {
+//    myDate = [NSDate  ]
+    self.button1.layer.cornerRadius = 10;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -69,29 +71,21 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     SharePageViewController *shareVC = segue.destinationViewController;
-    [shareVC.notiTime setText:[NSString stringWithFormat:@"活動舉辦區間為%@ ~%@",getDate,getDate2]];
-    NSLog(@"%@",getDate);
-   
+    shareVC.str1 =[NSString stringWithFormat:@"活動舉辦區間為%@ ~%@",getDate,getDate2];
+    NSLog(@"gateDate = %@",getDate);
+
+    
 }
 
 -(void)timeInterval{
 
-NSTimeInterval interval = myDate2.timeIntervalSinceReferenceDate;
-NSLog(@"%f", interval);
-NSDate *date = [NSDate dateWithTimeInterval:interval sinceDate:myDate];
-    NSLog(@"interval = %@",date);
-[self getDataString:date];
+   
+NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
+NSLog(@"Time  =  %f", interval);
     
 }
 
--(void)getDataString:(NSDate*)date {
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateStyle = NSDateFormatterLongStyle;
-    dateFormatter.timeStyle = NSDateFormatterLongStyle;
-    NSString *str = [dateFormatter stringFromDate:date];
-    NSLog(@"str %@", str);
-}
+
 /*
 #pragma mark - Navigation
 

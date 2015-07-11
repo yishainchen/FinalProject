@@ -10,6 +10,7 @@
 #import "LineActivity.h"
 #import "ViewController.h"
 @interface SharePageViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *btnShare;
 
 @end
 
@@ -17,9 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.notiTime.text = self.str1;
+    self.btnShare.layer.cornerRadius = 10;
     // Do any additional setup after loading the view.
-    
-  
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SharePageViewController : UIViewController
+
+@property (weak, nonatomic) NSString *str1;
 @property (weak, nonatomic) IBOutlet UILabel *notiTime;
 
 @end

@@ -10,6 +10,10 @@
 
 @interface CalendarViewController : UIViewController
 
+
+@property (weak, nonatomic) IBOutlet UIButton *button1;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *lblSelectedDate;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerControl;
 @property (weak, nonatomic) IBOutlet UILabel *lblSelectedDateEnd;
