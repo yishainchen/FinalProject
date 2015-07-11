@@ -46,7 +46,7 @@
     NSDateFormatter *format = [[NSDateFormatter alloc]init
                                ];
     [format setDateFormat:@"yyyy/M/d"];
-    getDate2 = [format stringFromDate:myDate];
+    getDate2 = [format stringFromDate:myDate2];
     NSLog(@"%@",getDate2);
     [self.lblSelectedDateEnd setText:[NSString stringWithFormat:@"終止時間 :%@",getDate2]];
     [self timeInterval];
@@ -79,10 +79,24 @@
 
 -(void)timeInterval{
 
-   
 NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
 NSLog(@"Time  =  %f", interval);
-    
+    if (interval >=  1209600 ) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"超過選擇區間" message:@"請重新選擇" preferredStyle:UIAlertControllerStyleAlert];
+        [self presentViewController:alert animated:YES completion:nil];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+            [alert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alert addAction:cancel];
+    }
+    else if (interval < 0) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"選擇區間錯誤" message:@"請確認起始點小於終點" preferredStyle:UIAlertControllerStyleAlert];
+        [self presentViewController:alert animated:YES completion:nil];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+            [alert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alert addAction:cancel];
+    }
 }
 
 
