@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="n4u-Q2-0o7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ttp-K9-6ii">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -64,7 +64,37 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="732" y="-899"/>
+            <point key="canvasLocation" x="457" y="-911"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="7ww-2z-AGx">
+            <objects>
+                <viewController id="wkp-pw-fXc" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QvE-7M-hnW"/>
+                        <viewControllerLayoutGuide type="bottom" id="z9o-Ro-qZ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eeQ-wQ-yUB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPe-Jj-wqM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eeQ-wQ-yUB" id="jxW-Gv-ObE"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pbz-nL-NpZ"/>
+                    <connections>
+                        <outlet property="myMapView" destination="uPe-Jj-wqM" id="9WG-qt-VWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvz-mg-yqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840" y="-578"/>
         </scene>
         <!--Login Facebook View Controller-->
         <scene sceneID="Z5v-jt-NXm">
@@ -83,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjW-dl-8c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1287" y="128"/>
+            <point key="canvasLocation" x="1238" y="128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Kr-1e-QxV">
@@ -118,12 +148,25 @@
                                     <segue destination="Zrs-Hm-KKX" kind="modal" id="cHm-Ss-Agj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OW7-Ht-WCN">
+                                <rect key="frame" x="123" y="336" width="75" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="位置查詢">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wkp-pw-fXc" kind="push" id="kGL-vI-KeK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="lot-q8-T5G" firstAttribute="top" secondItem="6Ys-iN-Ouh" secondAttribute="bottom" constant="234" id="4jd-dp-Xoi"/>
+                            <constraint firstItem="lot-q8-T5G" firstAttribute="top" secondItem="6Ys-iN-Ouh" secondAttribute="bottom" constant="190" id="4jd-dp-Xoi"/>
                             <constraint firstItem="lot-q8-T5G" firstAttribute="leading" secondItem="XN8-AJ-XBL" secondAttribute="leading" constant="123" id="CtO-Ep-sHZ"/>
+                            <constraint firstItem="OW7-Ht-WCN" firstAttribute="leading" secondItem="XN8-AJ-XBL" secondAttribute="leading" constant="123" id="FFD-K8-xtx"/>
+                            <constraint firstItem="OW7-Ht-WCN" firstAttribute="top" secondItem="9Ls-eo-e40" secondAttribute="bottom" constant="8" id="Wq5-jm-eIR"/>
                             <constraint firstAttribute="trailing" secondItem="9Ls-eo-e40" secondAttribute="trailing" constant="122" id="ZfU-Qb-fga"/>
+                            <constraint firstAttribute="trailing" secondItem="OW7-Ht-WCN" secondAttribute="trailing" constant="122" id="nLB-UY-cnQ"/>
                             <constraint firstItem="9Ls-eo-e40" firstAttribute="leading" secondItem="XN8-AJ-XBL" secondAttribute="leading" constant="123" id="qhj-jq-NKl"/>
                             <constraint firstAttribute="trailing" secondItem="lot-q8-T5G" secondAttribute="trailing" constant="122" id="ssi-ji-fD4"/>
                             <constraint firstItem="9Ls-eo-e40" firstAttribute="top" secondItem="lot-q8-T5G" secondAttribute="bottom" constant="8" id="zRL-0v-Ha0"/>
@@ -133,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGx-T2-PjG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821" y="128"/>
+            <point key="canvasLocation" x="2353" y="128"/>
         </scene>
         <!--Date Type View Controller-->
         <scene sceneID="uQB-gK-dDH">
@@ -220,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcE-wN-9Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2226" y="128"/>
+            <point key="canvasLocation" x="2758" y="128"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="hBS-AT-FG8">
@@ -344,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j59-FZ-PqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2637" y="128"/>
+            <point key="canvasLocation" x="3169" y="128"/>
         </scene>
         <!--Share Page View Controller-->
         <scene sceneID="e7b-76-2ua">
@@ -437,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQn-FT-UaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3017" y="128"/>
+            <point key="canvasLocation" x="3549" y="128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gzh-oj-mXk">
@@ -455,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgQ-FD-fdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3402" y="128"/>
+            <point key="canvasLocation" x="3934" y="128"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="aKB-zz-Uor">
@@ -483,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdt-97-Aa8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1139" y="-899"/>
+            <point key="canvasLocation" x="833" y="-911"/>
         </scene>
         <!--Item-->
         <scene sceneID="oea-5r-G17">
@@ -590,6 +633,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOv-CH-FkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1139" y="1518"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="otl-NN-LLJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ttp-K9-6ii" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vnc-7F-Hc1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qes-57-ura" kind="relationship" relationship="rootViewController" id="n23-ON-fVg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCM-We-n17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821" y="128"/>
         </scene>
     </scenes>
     <resources>

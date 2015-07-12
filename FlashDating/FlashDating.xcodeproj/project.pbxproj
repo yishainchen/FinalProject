@@ -10,6 +10,9 @@
 		845EAAF41B4FC07800A10B87 /* DateTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */; };
 		845EAAF71B4FC96700A10B87 /* SharePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF61B4FC96700A10B87 /* SharePageViewController.m */; };
 		845EAAFA1B521D6500A10B87 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF91B521D6500A10B87 /* TabController.m */; };
+		845EAAFC1B523E9100A10B87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845EAAFB1B523E9100A10B87 /* MapKit.framework */; };
+		845EAAFF1B523EC700A10B87 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAFE1B523EC700A10B87 /* MapViewController.m */; };
+		845EAB021B52535100A10B87 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAB011B52535100A10B87 /* MyAnnotation.m */; };
 		846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA61B47C7FC006B61A8 /* WebViewController.m */; };
 		846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */; };
 		846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */; };
@@ -46,6 +49,11 @@
 		845EAAF61B4FC96700A10B87 /* SharePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePageViewController.m; sourceTree = "<group>"; };
 		845EAAF81B521D6500A10B87 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
 		845EAAF91B521D6500A10B87 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
+		845EAAFB1B523E9100A10B87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		845EAAFD1B523EC700A10B87 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		845EAAFE1B523EC700A10B87 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		845EAB001B52535100A10B87 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		845EAB011B52535100A10B87 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		846B9EA51B47C7FC006B61A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
 		846B9EA61B47C7FC006B61A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateSearchViewController.h; path = ../DateSearchViewController.h; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845EAAFC1B523E9100A10B87 /* MapKit.framework in Frameworks */,
 				FFFDE134A16104AAD2081817 /* libPods-FlashDating.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +106,7 @@
 		0C8324FF98F428AE667FC0D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				845EAAFB1B523E9100A10B87 /* MapKit.framework */,
 				16E2F7B8600A822357A689AD /* libPods-FlashDating.a */,
 			);
 			name = Frameworks;
@@ -105,6 +115,10 @@
 		84F3F98F1B427DD000879069 = {
 			isa = PBXGroup;
 			children = (
+				845EAB001B52535100A10B87 /* MyAnnotation.h */,
+				845EAB011B52535100A10B87 /* MyAnnotation.m */,
+				845EAAFD1B523EC700A10B87 /* MapViewController.h */,
+				845EAAFE1B523EC700A10B87 /* MapViewController.m */,
 				845EAAF81B521D6500A10B87 /* TabController.h */,
 				845EAAF91B521D6500A10B87 /* TabController.m */,
 				845EAAF51B4FC96700A10B87 /* SharePageViewController.h */,
@@ -338,8 +352,10 @@
 				84F3F9C71B427E0700879069 /* LineActivity.m in Sources */,
 				84E636AA1B4E67600056E467 /* LoginFacebookViewController.m in Sources */,
 				84F09E8F1B4FB3D2007A43D8 /* CalendarViewController.m in Sources */,
+				845EAB021B52535100A10B87 /* MyAnnotation.m in Sources */,
 				846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */,
 				845EAAF71B4FC96700A10B87 /* SharePageViewController.m in Sources */,
+				845EAAFF1B523EC700A10B87 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
