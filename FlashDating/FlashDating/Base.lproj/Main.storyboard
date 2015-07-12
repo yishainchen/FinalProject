@@ -289,7 +289,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnLocalPush:" destination="n4u-Q2-0o7" eventType="touchUpInside" id="Nrm-V8-hH3"/>
-                                    <segue destination="tc7-aJ-PCb" kind="modal" id="q0B-Td-mkT"/>
+                                    <action selector="btnNext:" destination="n4u-Q2-0o7" eventType="touchUpInside" id="b5T-71-NoW"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-a1-Om7">
@@ -348,7 +348,7 @@
         <!--Share Page View Controller-->
         <scene sceneID="e7b-76-2ua">
             <objects>
-                <viewController id="tc7-aJ-PCb" customClass="SharePageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SharePG" id="tc7-aJ-PCb" customClass="SharePageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dbF-sw-pDe"/>
                         <viewControllerLayoutGuide type="bottom" id="k0u-Xo-RXJ"/>

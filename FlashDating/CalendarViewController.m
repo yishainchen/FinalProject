@@ -49,8 +49,6 @@
     getDate2 = [format stringFromDate:myDate2];
     NSLog(@"%@",getDate2);
     [self.lblSelectedDateEnd setText:[NSString stringWithFormat:@"終止時間 :%@",getDate2]];
-    [self timeInterval];
-    
 }
 
 - (IBAction)btnLocalPush:(id)sender {
@@ -68,6 +66,13 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
+
+- (IBAction)btnNext:(id)sender {
+    [self timeInterval];
+}
+
+
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     SharePageViewController *shareVC = segue.destinationViewController;
@@ -79,7 +84,7 @@
 
 -(void)timeInterval{
 
-NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
+ NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
 NSLog(@"Time  =  %f", interval);
     if (interval >=  1209600 ) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"超過選擇區間" message:@"請重新選擇" preferredStyle:UIAlertControllerStyleAlert];
@@ -96,6 +101,10 @@ NSLog(@"Time  =  %f", interval);
             [alert dismissViewControllerAnimated:YES completion:nil];
         }];
         [alert addAction:cancel];
+    }
+    else {
+        SharePageViewController *shareVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SharePG"];
+        [self presentViewController:shareVC animated:YES completion:nil];
     }
 }
 
