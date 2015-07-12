@@ -20,7 +20,17 @@
 @implementation CalendarViewController
 
 - (void)viewDidLoad {
-//    myDate = [NSDate  ]
+    myDate = [NSDate date];
+    NSDateFormatter *format = [[NSDateFormatter alloc]init];
+    [format setDateFormat:@"yyyy/M/d"];
+    getDate = [format stringFromDate:myDate];
+    
+    myDate2 =[NSDate date];
+    NSDateFormatter *format2 = [[NSDateFormatter alloc]init];
+    [format2 setDateFormat:@"yyyy/M/d"];
+    getDate2 = [format stringFromDate:myDate2];
+    
+    
     self.button1.layer.cornerRadius = 10;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -54,13 +64,11 @@
 - (IBAction)btnLocalPush:(id)sender {
     UILocalNotification *localNotification = [[UILocalNotification alloc]init];
 //    NSCalendar *calender = [NSCalendar currentCalendar];
-   
     NSDate *notiDate = [NSDate dateWithTimeIntervalSinceNow:3];
     localNotification.fireDate = notiDate;
 //    localNotification.soundName = @"";
     localNotification.alertAction = @"新增聚會成功";
 //    localNotification.repeatInterval = NSCalendarUnitMonth;
-    
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     localNotification.applicationIconBadgeNumber = 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
@@ -71,40 +79,35 @@
     [self timeInterval];
 }
 
-
-
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     SharePageViewController *shareVC = segue.destinationViewController;
     shareVC.str1 =[NSString stringWithFormat:@"活動舉辦區間為%@ ~%@",getDate,getDate2];
     NSLog(@"gateDate = %@",getDate);
-
-    
 }
 
 -(void)timeInterval{
 
- NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
-NSLog(@"Time  =  %f", interval);
-    if (interval >=  1209600 ) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"超過選擇區間" message:@"請重新選擇" preferredStyle:UIAlertControllerStyleAlert];
+    NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
+    NSLog(@"Time  =  %f", interval);
+        if (interval >=  1209600 ) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"超過選擇區間" message:@"請重新選擇" preferredStyle:UIAlertControllerStyleAlert];
         [self presentViewController:alert animated:YES completion:nil];
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
             [alert dismissViewControllerAnimated:YES completion:nil];
         }];
         [alert addAction:cancel];
     }
-    else if (interval < 0) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"選擇區間錯誤" message:@"請確認起始點小於終點" preferredStyle:UIAlertControllerStyleAlert];
+        else if (interval < 0) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"選擇區間錯誤" message:@"請確認起始點小於終點" preferredStyle:UIAlertControllerStyleAlert];
         [self presentViewController:alert animated:YES completion:nil];
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
             [alert dismissViewControllerAnimated:YES completion:nil];
         }];
         [alert addAction:cancel];
     }
-    else {
-        SharePageViewController *shareVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SharePG"];
-        [self presentViewController:shareVC animated:YES completion:nil];
+        else {
+        [self performSegueWithIdentifier:@"SharePG" sender:self];
     }
 }
 

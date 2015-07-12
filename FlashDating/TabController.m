@@ -1,18 +1,18 @@
 //
-//  DateSearchViewController.m
+//  TabController.m
 //  FlashDating
 //
-//  Created by yishain on 7/4/15.
+//  Created by yishain on 7/12/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
 
-#import "DateSearchViewController.h"
 #import "TabController.h"
-@interface DateSearchViewController ()
+
+@interface TabController ()
 
 @end
 
-@implementation DateSearchViewController
+@implementation TabController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,10 +22,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)btnBack:(id)sender {
-    TabController *tabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
-    [self presentViewController:tabVC animated:YES completion:nil];
 }
 
 /*

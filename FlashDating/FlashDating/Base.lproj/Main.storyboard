@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Controller-->
         <scene sceneID="N13-Dj-NIs">
             <objects>
-                <tabBarController id="bj9-XU-Ed6" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabVC" id="bj9-XU-Ed6" customClass="TabController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="oAf-tg-n1D"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="e5e-SW-fRL">
@@ -339,6 +339,7 @@
                         <outlet property="datePickerControlEnd" destination="0yG-yL-nei" id="sgO-7z-odf"/>
                         <outlet property="lblSelectedDate" destination="bgo-Lz-YXG" id="1wc-nu-l2N"/>
                         <outlet property="lblSelectedDateEnd" destination="XmM-6j-o1h" id="vpm-8Y-gDu"/>
+                        <segue destination="tc7-aJ-PCb" kind="modal" identifier="SharePG" id="3ku-n3-7J9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j59-FZ-PqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -577,6 +578,9 @@
                                 <state key="normal" title="BACK">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnBack:" destination="QX4-au-8lT" eventType="touchUpInside" id="nBd-h3-HBB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		845EAAF41B4FC07800A10B87 /* DateTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */; };
 		845EAAF71B4FC96700A10B87 /* SharePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF61B4FC96700A10B87 /* SharePageViewController.m */; };
+		845EAAFA1B521D6500A10B87 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF91B521D6500A10B87 /* TabController.m */; };
 		846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA61B47C7FC006B61A8 /* WebViewController.m */; };
 		846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */; };
 		846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */; };
@@ -43,6 +44,8 @@
 		845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTypeViewController.m; sourceTree = "<group>"; };
 		845EAAF51B4FC96700A10B87 /* SharePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePageViewController.h; sourceTree = "<group>"; };
 		845EAAF61B4FC96700A10B87 /* SharePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePageViewController.m; sourceTree = "<group>"; };
+		845EAAF81B521D6500A10B87 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
+		845EAAF91B521D6500A10B87 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
 		846B9EA51B47C7FC006B61A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
 		846B9EA61B47C7FC006B61A8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateSearchViewController.h; path = ../DateSearchViewController.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 		84F3F98F1B427DD000879069 = {
 			isa = PBXGroup;
 			children = (
+				845EAAF81B521D6500A10B87 /* TabController.h */,
+				845EAAF91B521D6500A10B87 /* TabController.m */,
 				845EAAF51B4FC96700A10B87 /* SharePageViewController.h */,
 				845EAAF61B4FC96700A10B87 /* SharePageViewController.m */,
 				845EAAF21B4FC07800A10B87 /* DateTypeViewController.h */,
@@ -324,6 +329,7 @@
 			files = (
 				84F3F9A11B427DD100879069 /* AppDelegate.m in Sources */,
 				846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */,
+				845EAAFA1B521D6500A10B87 /* TabController.m in Sources */,
 				846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */,
 				84F3F9A41B427DD100879069 /* FlashDating.xcdatamodeld in Sources */,
 				84F3F9A71B427DD100879069 /* ViewController.m in Sources */,
