@@ -37,6 +37,11 @@
    DateSearchViewController *dateVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DateSearch"];
     [self presentViewController:dateVC animated:YES completion:nil];
     
+    [PFCloud callFunctionInBackground:@"hello" withParameters:[NSDictionary new] block:^(id object,NSError *error) {
+        if (!error) {
+            NSLog(@"great");
+        }
+    }];
 }
 
 

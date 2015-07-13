@@ -12,4 +12,5 @@
 @interface MapViewController : UIViewController @property (nonatomic) BOOL showsUserLocation;
 @property (nonatomic, readonly) MKUserLocation *userLocation;
 - (void)requestAlwaysAuthorization;
+
 @end

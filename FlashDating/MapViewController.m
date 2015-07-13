@@ -17,6 +17,8 @@
     IBOutlet MKMapView *myMapView;
     MKPointAnnotation *annotation;
     CLLocationCoordinate2D coordinateUserGoal;
+    IBOutlet UILabel *labelMap;
+
 }
 @property (nonatomic) CLLocationCoordinate2D centerCoordinate;
 
@@ -28,6 +30,7 @@
     [super viewDidLoad];
     myMapView.delegate = self;
     isFirstGetLocation = NO;
+    [locationManager startUpdatingLocation];
     locationManager = [[CLLocationManager alloc]
                                           init];
     [locationManager requestWhenInUseAuthorization];
@@ -39,7 +42,6 @@
     [myMapView addAnnotation:annotation];
     // Do any additional setup after loading the view.
      [CLLocationManager authorizationStatus];
-
 }
 
 
@@ -65,6 +67,17 @@
                                        1000, 1000 );
 }
 
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    CLLocation *old = [[CLLocation alloc] initWithLatitude:25.033408 longitude:121.564099];
+    NSLog(@"eric is %@",old);
+    CLLocationDistance distance = [newLocation distanceFromLocation:old];
+    
+    labelMap.text = [NSString stringWithFormat:@"距離101尚有%f 公尺",distance];
+    NSLog(@"count ==== %f",distance);
+}
 //-(void)addAnnotation {
 //   coordinateUserGoal = CLLocationCoordinate2DMake(25.033408, 121.564011);
 //   [myMapView addAnnotation:annotation];

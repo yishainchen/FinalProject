@@ -79,16 +79,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPe-Jj-wqM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="531"/>
                                 <connections>
                                     <outlet property="delegate" destination="eeQ-wQ-yUB" id="jxW-Gv-ObE"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKP-5A-6lJ">
+                                <rect key="frame" x="0.0" y="529" width="320" height="39"/>
+                                <color key="backgroundColor" red="0.85803649479999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Pbz-nL-NpZ"/>
                     <connections>
+                        <outlet property="labelMap" destination="YKP-5A-6lJ" id="57J-P6-NcF"/>
                         <outlet property="myMapView" destination="uPe-Jj-wqM" id="9WG-qt-VWr"/>
                     </connections>
                 </viewController>
@@ -145,7 +153,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zrs-Hm-KKX" kind="modal" id="cHm-Ss-Agj"/>
+                                    <segue destination="Zrs-Hm-KKX" kind="push" id="cHm-Ss-Agj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OW7-Ht-WCN">
@@ -191,14 +199,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azA-Zr-yYJ">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="154"/>
+                                <rect key="frame" x="77" y="107" width="83" height="154"/>
                                 <color key="backgroundColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="午餐">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="Zrs-Hm-KKX" eventType="touchUpInside" id="j4l-GA-Npf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRR-TE-djj">
-                                <rect key="frame" x="160" y="0.0" width="160" height="154"/>
+                                <rect key="frame" x="239" y="107" width="81" height="154"/>
                                 <color key="backgroundColor" red="0.83137254900000002" green="1" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="晚餐">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -215,14 +226,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH5-pi-bMs">
-                                <rect key="frame" x="0.0" y="154" width="160" height="154"/>
+                                <rect key="frame" x="160" y="107" width="79" height="154"/>
                                 <color key="backgroundColor" red="0.94719733390000005" green="0.79941542832167833" blue="0.67671000869999975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="下午茶">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7n-wj-Hzd">
-                                <rect key="frame" x="160" y="154" width="160" height="154"/>
+                                <rect key="frame" x="0.0" y="107" width="79" height="154"/>
                                 <color key="backgroundColor" red="0.83137254900000002" green="0.61762456293706292" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="早餐">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,20 +241,20 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49z-MS-gSW">
                                 <rect key="frame" x="0.0" y="460" width="320" height="61"/>
-                                <color key="backgroundColor" red="0.54053758741258739" green="0.66264204550000005" blue="0.69419252620000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.54053758741258739" green="0.66264204550000005" blue="0.49650349650349651" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="其他活動">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-mO-bnc">
-                                <rect key="frame" x="0.0" y="308" width="160" height="152"/>
+                                <rect key="frame" x="0.0" y="304" width="160" height="156"/>
                                 <color key="backgroundColor" red="0.76879370629370625" green="0.79941542830000001" blue="0.67671000869999975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="商業會議">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swl-ts-NJg">
-                                <rect key="frame" x="160" y="308" width="160" height="152"/>
+                                <rect key="frame" x="160" y="303" width="160" height="157"/>
                                 <color key="backgroundColor" red="0.69176136363636365" green="0.66264204545454541" blue="0.69419252622377625" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="娛樂">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,6 +267,20 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="選擇聚會時段" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-W3-qPA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="43"/>
+                                <color key="backgroundColor" red="0.54053758740000002" green="0.66264204550000005" blue="0.69419252620000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="選擇聚會類型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb2-rc-0qh">
+                                <rect key="frame" x="0.0" y="259" width="320" height="45"/>
+                                <color key="backgroundColor" red="0.54053758740000002" green="0.66264204550000005" blue="0.69419252620000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -615,6 +640,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="458123247.95120603">
                                     <!--2015-07-09 08:27:27 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="valueChanged:" destination="QX4-au-8lT" eventType="valueChanged" id="rcN-6X-YfA"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufG-yY-h4c">
                                 <rect key="frame" x="16" y="20" width="42" height="30"/>

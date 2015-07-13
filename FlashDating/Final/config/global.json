@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "FlashDating": {
+      "applicationId": "qO0ZQgj6slnMsfMdqg3krsrGeBQqpw9YqkZHyKfe",
+      "masterKey": "Z4FE9gVLDU7VcSF5OfLVVGmrZZXLM43R5AjlXBxL"
+    },
+    "_default": {
+      "link": "FlashDating"
+    }
+  }
+}
