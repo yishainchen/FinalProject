@@ -7,6 +7,7 @@
 //
 
 #import "CalendarViewController.h"
+#import "CalendarChooseViewController.h"
 #import "SharePageViewController.h"
 @interface CalendarViewController ()
 {
@@ -79,12 +80,12 @@
     [self timeInterval];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    SharePageViewController *shareVC = segue.destinationViewController;
-    shareVC.str1 =[NSString stringWithFormat:@"活動舉辦區間為%@ ~%@",getDate,getDate2];
-    NSLog(@"gateDate = %@",getDate);
-}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    SharePageViewController *shareVC;
+//    shareVC.str1 =[NSString stringWithFormat:@"活動舉辦區間為%@ ~%@",getDate,getDate2];
+//    NSLog(@"gateDate = %@",getDate);
+//}
 
 -(void)timeInterval{
 

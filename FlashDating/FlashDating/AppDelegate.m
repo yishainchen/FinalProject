@@ -33,9 +33,9 @@
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
-    
-    [Parse setApplicationId:@"qO0ZQgj6slnMsfMdqg3krsrGeBQqpw9YqkZHyKfe"
-                  clientKey:@"D7DPPQ5eKU6ZAbY0RAOZ4Uj6FcJq5vY0GUZKZ2UG"];
+//    
+//    [Parse setApplicationId:@"qO0ZQgj6slnMsfMdqg3krsrGeBQqpw9YqkZHyKfe"
+//                  clientKey:@"D7DPPQ5eKU6ZAbY0RAOZ4Uj6FcJq5vY0GUZKZ2UG"];
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
                                                     UIUserNotificationTypeSound);

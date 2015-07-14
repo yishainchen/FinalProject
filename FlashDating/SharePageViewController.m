@@ -12,6 +12,8 @@
 @interface SharePageViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnShare;
 
+
+
 @end
 
 @implementation SharePageViewController

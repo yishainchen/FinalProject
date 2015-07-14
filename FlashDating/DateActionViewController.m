@@ -7,14 +7,11 @@
 //
 
 #import "DateActionViewController.h"
+#import "CMPopTipView.h"
+@interface DateActionViewController ()<CMPopTipViewDelegate>
 
-@interface DateActionViewController ()
-
-@property (weak, nonatomic) IBOutlet UIButton *btnAction1;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnAction2;
-
-@property (weak, nonatomic) IBOutlet UIButton *btnAction3;
+@property id < CMPopTipViewDelegate > delegate;
+@property CMPopTipView *roundRectButtonPopTipView;
 
 @end
 
@@ -22,6 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    self.roundRectButtonPopTipView.has3DStyle = NO;
+    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
+    
     self.btnAction1.layer.cornerRadius = 50;
      self.btnAction2.layer.cornerRadius = 50;
      self.btnAction3.layer.cornerRadius = 50;
@@ -35,12 +39,34 @@
 - (IBAction)btnSelected:(UIButton *)sender {
     
     sender.selected = !sender.selected;
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext1 inView:self.view animated:YES];
+
 }
 - (IBAction)btnSelected2:(UIButton *)sender {
     sender.selected = !sender.selected;
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext1 inView:self.view animated:YES];
 }
 - (IBAction)btnSelected3:(UIButton *)sender {
     sender.selected = !sender.selected;
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext1 inView:self.view animated:YES];
 }
 
 /*

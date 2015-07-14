@@ -18,8 +18,9 @@
 		846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */; };
 		84E0FB2C1B53EAF20021433F /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB2B1B53EAF20021433F /* CMPopTipView.m */; };
 		84E0FB2F1B54089B0021433F /* DateActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB2E1B54089B0021433F /* DateActionViewController.m */; };
-		84E0FB321B540B6E0021433F /* HostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB311B540B6E0021433F /* HostTableViewController.m */; };
-		84E0FB361B540E4C0021433F /* JoinTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB351B540E4C0021433F /* JoinTableViewController.m */; };
+		84E0FB3F1B5542910021433F /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB3E1B5542910021433F /* HostViewController.m */; };
+		84E0FB421B5545660021433F /* CalendarChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB411B5545660021433F /* CalendarChooseViewController.m */; };
+		84E0FB491B554E9F0021433F /* SphereMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB481B554E9F0021433F /* SphereMenuViewController.m */; };
 		84E636AA1B4E67600056E467 /* LoginFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E636A91B4E67600056E467 /* LoginFacebookViewController.m */; };
 		84F09E8F1B4FB3D2007A43D8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */; };
 		84F3F99E1B427DD100879069 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3F99D1B427DD100879069 /* main.m */; };
@@ -54,8 +55,8 @@
 		845EAAF81B521D6500A10B87 /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabController.h; path = ../TabController.h; sourceTree = "<group>"; };
 		845EAAF91B521D6500A10B87 /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabController.m; path = ../TabController.m; sourceTree = "<group>"; };
 		845EAAFB1B523E9100A10B87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		845EAAFD1B523EC700A10B87 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
-		845EAAFE1B523EC700A10B87 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
+		845EAAFD1B523EC700A10B87 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		845EAAFE1B523EC700A10B87 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		845EAB001B52535100A10B87 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		845EAB011B52535100A10B87 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		846B9EA51B47C7FC006B61A8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
@@ -68,10 +69,12 @@
 		84E0FB2B1B53EAF20021433F /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
 		84E0FB2D1B54089B0021433F /* DateActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateActionViewController.h; path = ../DateActionViewController.h; sourceTree = "<group>"; };
 		84E0FB2E1B54089B0021433F /* DateActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateActionViewController.m; path = ../DateActionViewController.m; sourceTree = "<group>"; };
-		84E0FB301B540B6E0021433F /* HostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostTableViewController.h; sourceTree = "<group>"; };
-		84E0FB311B540B6E0021433F /* HostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostTableViewController.m; sourceTree = "<group>"; };
-		84E0FB341B540E4C0021433F /* JoinTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinTableViewController.h; sourceTree = "<group>"; };
-		84E0FB351B540E4C0021433F /* JoinTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinTableViewController.m; sourceTree = "<group>"; };
+		84E0FB3D1B5542910021433F /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
+		84E0FB3E1B5542910021433F /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
+		84E0FB401B5545660021433F /* CalendarChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarChooseViewController.h; sourceTree = "<group>"; };
+		84E0FB411B5545660021433F /* CalendarChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarChooseViewController.m; sourceTree = "<group>"; };
+		84E0FB471B554E9F0021433F /* SphereMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereMenuViewController.h; sourceTree = "<group>"; };
+		84E0FB481B554E9F0021433F /* SphereMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereMenuViewController.m; sourceTree = "<group>"; };
 		84E636A81B4E67600056E467 /* LoginFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginFacebookViewController.h; path = ../LoginFacebookViewController.h; sourceTree = "<group>"; };
 		84E636A91B4E67600056E467 /* LoginFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginFacebookViewController.m; path = ../LoginFacebookViewController.m; sourceTree = "<group>"; };
 		84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = ../CalendarViewController.h; sourceTree = "<group>"; };
@@ -124,27 +127,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		84E0FB331B540B7C0021433F /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				84E0FB301B540B6E0021433F /* HostTableViewController.h */,
-				84E0FB311B540B6E0021433F /* HostTableViewController.m */,
-				84E0FB341B540E4C0021433F /* JoinTableViewController.h */,
-				84E0FB351B540E4C0021433F /* JoinTableViewController.m */,
-			);
-			name = TableView;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		84E0FB3A1B54EBC90021433F /* Import */ = {
 			isa = PBXGroup;
 			children = (
+				84E0FB471B554E9F0021433F /* SphereMenuViewController.h */,
+				84E0FB481B554E9F0021433F /* SphereMenuViewController.m */,
 				84E0FB2A1B53EAF20021433F /* CMPopTipView.h */,
 				84E0FB2B1B53EAF20021433F /* CMPopTipView.m */,
 				845EAB001B52535100A10B87 /* MyAnnotation.h */,
 				845EAB011B52535100A10B87 /* MyAnnotation.m */,
 				84F3F9C51B427E0700879069 /* LineActivity.h */,
 				84F3F9C61B427E0700879069 /* LineActivity.m */,
+				845EAAFD1B523EC700A10B87 /* MapViewController.h */,
+				845EAAFE1B523EC700A10B87 /* MapViewController.m */,
 			);
 			name = Import;
 			sourceTree = "<group>";
@@ -152,6 +147,10 @@
 		84F3F98F1B427DD000879069 = {
 			isa = PBXGroup;
 			children = (
+				84E0FB401B5545660021433F /* CalendarChooseViewController.h */,
+				84E0FB411B5545660021433F /* CalendarChooseViewController.m */,
+				84E0FB3D1B5542910021433F /* HostViewController.h */,
+				84E0FB3E1B5542910021433F /* HostViewController.m */,
 				84E0FB3A1B54EBC90021433F /* Import */,
 				84F3F99A1B427DD100879069 /* FlashDating */,
 				84F3F9B71B427DD100879069 /* FlashDatingTests */,
@@ -173,19 +172,17 @@
 		84F3F99A1B427DD100879069 /* FlashDating */ = {
 			isa = PBXGroup;
 			children = (
-				84E0FB2D1B54089B0021433F /* DateActionViewController.h */,
-				84E0FB2E1B54089B0021433F /* DateActionViewController.m */,
-				845EAAFD1B523EC700A10B87 /* MapViewController.h */,
-				845EAAFE1B523EC700A10B87 /* MapViewController.m */,
 				845EAAF81B521D6500A10B87 /* TabController.h */,
 				845EAAF91B521D6500A10B87 /* TabController.m */,
 				845EAAF51B4FC96700A10B87 /* SharePageViewController.h */,
 				845EAAF61B4FC96700A10B87 /* SharePageViewController.m */,
 				845EAAF21B4FC07800A10B87 /* DateTypeViewController.h */,
 				845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */,
-				84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */,
+				84E0FB2D1B54089B0021433F /* DateActionViewController.h */,
+				84E0FB2E1B54089B0021433F /* DateActionViewController.m */,
 				84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */,
 				84E636A81B4E67600056E467 /* LoginFacebookViewController.h */,
+				84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */,
 				84E636A91B4E67600056E467 /* LoginFacebookViewController.m */,
 				846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */,
 				846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */,
@@ -197,7 +194,6 @@
 				84F3F9AB1B427DD100879069 /* Images.xcassets */,
 				84F3F9AD1B427DD100879069 /* LaunchScreen.xib */,
 				84F3F9A21B427DD100879069 /* FlashDating.xcdatamodeld */,
-				84E0FB331B540B7C0021433F /* TableView */,
 				84F3F99B1B427DD100879069 /* Supporting Files */,
 			);
 			path = FlashDating;
@@ -382,8 +378,10 @@
 				84F3F9A11B427DD100879069 /* AppDelegate.m in Sources */,
 				846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */,
 				845EAAFA1B521D6500A10B87 /* TabController.m in Sources */,
+				84E0FB491B554E9F0021433F /* SphereMenuViewController.m in Sources */,
 				846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */,
 				84F3F9A41B427DD100879069 /* FlashDating.xcdatamodeld in Sources */,
+				84E0FB3F1B5542910021433F /* HostViewController.m in Sources */,
 				84F3F9A71B427DD100879069 /* ViewController.m in Sources */,
 				845EAAF41B4FC07800A10B87 /* DateTypeViewController.m in Sources */,
 				84F3F99E1B427DD100879069 /* main.m in Sources */,
@@ -392,9 +390,8 @@
 				84E0FB2F1B54089B0021433F /* DateActionViewController.m in Sources */,
 				84F09E8F1B4FB3D2007A43D8 /* CalendarViewController.m in Sources */,
 				845EAB021B52535100A10B87 /* MyAnnotation.m in Sources */,
-				84E0FB361B540E4C0021433F /* JoinTableViewController.m in Sources */,
+				84E0FB421B5545660021433F /* CalendarChooseViewController.m in Sources */,
 				846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */,
-				84E0FB321B540B6E0021433F /* HostTableViewController.m in Sources */,
 				845EAAF71B4FC96700A10B87 /* SharePageViewController.m in Sources */,
 				845EAAFF1B523EC700A10B87 /* MapViewController.m in Sources */,
 			);

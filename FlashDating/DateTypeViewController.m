@@ -19,12 +19,22 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnType2;
 @property (weak, nonatomic) IBOutlet UIButton *btnType3;
 
+@property (weak, nonatomic) IBOutlet UILabel *lableDate;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
 @end
 
 @implementation DateTypeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會時段，若下列時段均有聚會舉辦意願，請重複勾選"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    self.roundRectButtonPopTipView.has3DStyle = NO;
+    [self.roundRectButtonPopTipView presentPointingAtView:self.lableDate inView:self.view animated:YES];
+
     self.btnType1.layer.cornerRadius = 50;
     self.btnType2.layer.cornerRadius = 50;
     self.btnType3.layer.cornerRadius = 50;
@@ -40,31 +50,37 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)btnAction:(id)sender {
-    if (nil == self.roundRectButtonPopTipView) {
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"選擇聚會時段"] ;
+
+- (IBAction)btnType1:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-    self.roundRectButtonPopTipView.has3DStyle = NO;
-//    self.roundRectButtonPopTipView presentPointingAtView:<#(UIView *)#> inView:<#(UIView *)#> animated:<#(BOOL)#>
-    UIButton *button = (UIButton *)sender;
-    [self.roundRectButtonPopTipView presentPointingAtView:button inView:self.view animated:YES];
-}
-else {
-    // Dismiss
-    [self.roundRectButtonPopTipView dismissAnimated:YES];
-    self.roundRectButtonPopTipView = nil;
-}
-}
-- (IBAction)btnType1:(UIButton *)sender {
-    sender.selected = !sender.selected;
+    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
 }
 - (IBAction)btnType2:(UIButton *)sender {
     sender.selected = !sender.selected;
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
+    
 }
 - (IBAction)btnType3:(UIButton *)sender {
     sender.selected = !sender.selected;
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
 }
 
 #pragma mark CMPopTipViewDelegate methods
