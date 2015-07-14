@@ -14,12 +14,21 @@
 @property id < CMPopTipViewDelegate > delegate;
 @property CMPopTipView *roundRectButtonPopTipView;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnType1;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnType2;
+@property (weak, nonatomic) IBOutlet UIButton *btnType3;
+
 @end
 
 @implementation DateTypeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.btnType1.layer.cornerRadius = 50;
+    self.btnType2.layer.cornerRadius = 50;
+    self.btnType3.layer.cornerRadius = 50;
+    
     CMPopTipView *navBarLeftButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"A Message"];
     navBarLeftButtonPopTipView.delegate = self;
     [navBarLeftButtonPopTipView presentPointingAtBarButtonItem:self.navigationItem.leftBarButtonItem animated:YES];
@@ -48,13 +57,26 @@ else {
     self.roundRectButtonPopTipView = nil;
 }
 }
+- (IBAction)btnType1:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
+- (IBAction)btnType2:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
+- (IBAction)btnType3:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
 
 #pragma mark CMPopTipViewDelegate methods
 - (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
     // User can tap CMPopTipView to dismiss it
     self.roundRectButtonPopTipView = nil;
-}/*
-#pragma mark - Navigation
+}
+
+
+
+
+/*#pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
