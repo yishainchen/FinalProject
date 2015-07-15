@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QFZ-zK-XIo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="n4u-Q2-0o7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -416,12 +416,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-N0-Kla">
-                                <rect key="frame" x="16" y="290" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-Lz-YXG">
                                 <rect key="frame" x="16" y="231" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -473,6 +467,12 @@
                                     <navigationItem title="聚會區間" id="hqT-hh-4dx"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終點" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaN-N0-Kla">
+                                <rect key="frame" x="16" y="290" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43883850524475526" green="0.72156862749999995" blue="0.82492897727272729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -504,6 +504,7 @@
                         <outlet property="button1" destination="W03-UL-ews" id="0mp-J8-4QA"/>
                         <outlet property="datePickerControl" destination="hhH-a1-Om7" id="zeO-Ys-cP1"/>
                         <outlet property="datePickerControlEnd" destination="0yG-yL-nei" id="sgO-7z-odf"/>
+                        <outlet property="labelStart" destination="Dc3-Fr-eyR" id="2Jv-jp-8T4"/>
                         <outlet property="lblSelectedDate" destination="bgo-Lz-YXG" id="1wc-nu-l2N"/>
                         <outlet property="lblSelectedDateEnd" destination="XmM-6j-o1h" id="vpm-8Y-gDu"/>
                     </connections>
@@ -605,12 +606,18 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Yue-7t-WCF" id="8Dw-eo-cgJ"/>
+                                    <outlet property="delegate" destination="Yue-7t-WCF" id="fNi-MU-ACT"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3P2-S9-iAj"/>
                     <connections>
+                        <outlet property="btnSend" destination="0i0-SR-ubd" id="m9S-SE-yhp"/>
+                        <outlet property="navigator" destination="kjk-nk-5WQ" id="9By-Yz-A8J"/>
                         <outlet property="tabelView" destination="MWl-Dy-Qxv" id="0xg-hv-noT"/>
                     </connections>
                 </viewController>

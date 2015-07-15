@@ -24,7 +24,7 @@
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 5;
 }
 
 
@@ -37,7 +37,6 @@
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
     
     if (cell == nil){
         
@@ -45,6 +44,10 @@
     }
     return cell;
     
+}
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200.0f;
 }
 
 

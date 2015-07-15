@@ -6,33 +6,30 @@
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
 
-#import "CalendarChooseViewController.h"
 
-@interface CalendarChooseViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "CalendarViewController.h"
+#import "CalendarChooseViewController.h"
+@interface CalendarChooseViewController () <UITableViewDataSource,UITableViewDelegate>
+
+
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSend;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigator;
 
 @end
 
 @implementation CalendarChooseViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
+    NSLog(@"num = %d",self.num);
     // Do any additional setup after loading the view.
 
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 7;
-}
 
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 1;
-}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
@@ -45,13 +42,20 @@
     }
     return cell;
     
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return self.num + 1;
 }
+
 - (IBAction)btnChoose:(UIButton *)sender {
     sender.selected = !sender.selected;
 }

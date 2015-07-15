@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController{
+@interface CalendarChooseViewController : UIViewController{
     
 }
+@property NSInteger num;
+
 
 @end

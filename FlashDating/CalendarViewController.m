@@ -7,20 +7,35 @@
 //
 
 #import "CalendarViewController.h"
-#import "CalendarChooseViewController.h"
 #import "SharePageViewController.h"
-@interface CalendarViewController ()
+#import "CalendarChooseViewController.h"
+#import "CMPopTipView.h"
+@interface CalendarViewController ()<CMPopTipViewDelegate>
+
 {
     NSDate *myDate;
     NSDate *myDate2;
     NSString *getDate;
     NSString *getDate2;
+    
 }
+@property id < CMPopTipViewDelegate > delegate;
+@property CMPopTipView *roundRectButtonPopTipView;
+@property (weak, nonatomic) IBOutlet UILabel *labelStart;
+
 @end
 
 @implementation CalendarViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於上方選擇開始時間"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    self.roundRectButtonPopTipView.has3DStyle = NO;
+    [self.roundRectButtonPopTipView presentPointingAtView:self.datePickerControl inView:self.view animated:YES];
     myDate = [NSDate date];
     NSDateFormatter *format = [[NSDateFormatter alloc]init];
     [format setDateFormat:@"yyyy/M/d"];
@@ -30,7 +45,6 @@
     NSDateFormatter *format2 = [[NSDateFormatter alloc]init];
     [format2 setDateFormat:@"yyyy/M/d"];
     getDate2 = [format stringFromDate:myDate2];
-    
     
     self.button1.layer.cornerRadius = 10;
     [super viewDidLoad];
@@ -49,8 +63,14 @@
     getDate = [format stringFromDate:myDate];
     NSLog(@"%@",getDate);
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate]];
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇結束時間"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    self.roundRectButtonPopTipView.has3DStyle = NO;
+    [self.roundRectButtonPopTipView presentPointingAtView:self.datePickerControlEnd inView:self.view animated:YES];
 }
-
 
 - (IBAction)dateEnd:(UIDatePicker *)sender {
     myDate2 = [self.datePickerControlEnd date];
@@ -60,6 +80,15 @@
     getDate2 = [format stringFromDate:myDate2];
     NSLog(@"%@",getDate2);
     [self.lblSelectedDateEnd setText:[NSString stringWithFormat:@"終止時間 :%@",getDate2]];
+     [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選認確進入下一頁"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    self.roundRectButtonPopTipView.has3DStyle = NO;
+    [self.roundRectButtonPopTipView presentPointingAtView:self.button1 inView:self.view animated:YES];
+    NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
+      self.i =  interval / (24*60*60);
 }
 
 - (IBAction)btnLocalPush:(id)sender {
@@ -73,6 +102,7 @@
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     localNotification.applicationIconBadgeNumber = 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
 }
 
 
@@ -110,9 +140,17 @@
         else {
         [self performSegueWithIdentifier:@"SharePG" sender:self];
     }
+    self.i =  interval / (24*60*60);
+    NSLog(@"day =  %d",self.i);
+    
 }
-
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    CalendarChooseViewController *VC = segue.destinationViewController;
+    VC.num = self.i;
+    
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -123,4 +161,6 @@
 }
 */
 
+
 @end
+

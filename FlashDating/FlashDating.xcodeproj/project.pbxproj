@@ -77,8 +77,8 @@
 		84E0FB481B554E9F0021433F /* SphereMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereMenuViewController.m; sourceTree = "<group>"; };
 		84E636A81B4E67600056E467 /* LoginFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginFacebookViewController.h; path = ../LoginFacebookViewController.h; sourceTree = "<group>"; };
 		84E636A91B4E67600056E467 /* LoginFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginFacebookViewController.m; path = ../LoginFacebookViewController.m; sourceTree = "<group>"; };
-		84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarViewController.h; path = ../CalendarViewController.h; sourceTree = "<group>"; };
-		84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarViewController.m; path = ../CalendarViewController.m; sourceTree = "<group>"; };
+		84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		84F3F9981B427DD100879069 /* FlashDating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashDating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3F99C1B427DD100879069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3F99D1B427DD100879069 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,6 +149,8 @@
 			children = (
 				84E0FB401B5545660021433F /* CalendarChooseViewController.h */,
 				84E0FB411B5545660021433F /* CalendarChooseViewController.m */,
+				84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */,
+				84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */,
 				84E0FB3D1B5542910021433F /* HostViewController.h */,
 				84E0FB3E1B5542910021433F /* HostViewController.m */,
 				84E0FB3A1B54EBC90021433F /* Import */,
@@ -180,9 +182,7 @@
 				845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */,
 				84E0FB2D1B54089B0021433F /* DateActionViewController.h */,
 				84E0FB2E1B54089B0021433F /* DateActionViewController.m */,
-				84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */,
 				84E636A81B4E67600056E467 /* LoginFacebookViewController.h */,
-				84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */,
 				84E636A91B4E67600056E467 /* LoginFacebookViewController.m */,
 				846B9EA81B47E6DD006B61A8 /* DateSearchViewController.h */,
 				846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */,
