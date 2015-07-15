@@ -115,6 +115,14 @@
                     <view key="view" contentMode="scaleToFill" id="9b5-Ij-XoJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="各種聚會一鍵搞定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMz-Tn-Cn4">
+                                <rect key="frame" x="38" y="234" width="244" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="wOr-oM-SAA"/>
@@ -266,6 +274,9 @@
                                     <navigationItem title="時段選擇" id="Gfl-Gh-3hh"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Flashdate" translatesAutoresizingMaskIntoConstraints="NO" id="sJU-Qa-FwT">
+                                <rect key="frame" x="0.0" y="44" width="320" height="332"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -361,6 +372,9 @@
                                     <navigationItem title="類型選擇" id="ceZ-Dv-MLU"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Flashdate" translatesAutoresizingMaskIntoConstraints="NO" id="aBc-DE-mav">
+                                <rect key="frame" x="0.0" y="44" width="320" height="332"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.43883850524475526" green="0.72156862749999995" blue="0.82492897727272729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -944,6 +958,7 @@
     </scenes>
     <resources>
         <image name="Flash" width="1000" height="1000"/>
+        <image name="Flashdate" width="720" height="720"/>
         <image name="images" width="225" height="225"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

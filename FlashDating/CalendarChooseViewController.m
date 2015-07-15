@@ -27,8 +27,6 @@
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
     NSLog(@"num = %d",self.num);
-  
-  
     // Do any additional setup after loading the view.
 
 }
@@ -37,31 +35,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    UILabel *label = nil;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    UILabel *labelA = [[UILabel alloc] initWithFrame:CGRectMake(20,20 , 20, 20)];
+    UILabel *labelA = [[UILabel alloc] initWithFrame:CGRectMake(20,11 , 22, 22)];
      labelA.backgroundColor = [UIColor grayColor];
-    
+    labelA.textColor = [UIColor greenColor];
+    labelA.text = @"HI";
+    [[cell contentView] addSubview:labelA];
 
-    if (cell == nil){
-   
+    if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        label = [[UILabel alloc] initWithFrame:CGRectMake(20,20 , 20, 20)];
-     
-        [label setNumberOfLines:0];
-        [label setTag:1];
-        label.textColor = [UIColor darkGrayColor];
-        [label setAlpha:0.8];
-        label.backgroundColor = [UIColor grayColor];
-        
-        [[cell contentView] addSubview:label];
     }
-    if (!label)
-        label = (UILabel*)[cell viewWithTag:1];
-
     return cell;
-    
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
