@@ -25,10 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSArray *images = @[self.btnDate1, self.btnDate2];
-//    SphereMenu *sphereMenu = [[SphereMenu alloc] initWithStartPoint:CGPointMake(160, 320) startImage:self.button submenuImages:images];
-//    sphereMenu.delegate = self;
-//    [self.view addSubview:sphereMenu];
+
     self.btnDate1.layer.cornerRadius = 15;
     self.btnDate2.layer.cornerRadius = 15;
   

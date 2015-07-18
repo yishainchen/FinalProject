@@ -12,6 +12,7 @@
     
 }
 @property NSInteger num;
-
-
+@property (strong, nonatomic) UILabel *labelA;
+@property (weak ,nonatomic) NSString *str1;
+@property NSMutableArray *arr2;
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8403341B1B57EB3A007650EF /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403341A1B57EB3A007650EF /* EditViewController.m */; };
 		845EAAF41B4FC07800A10B87 /* DateTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */; };
 		845EAAF71B4FC96700A10B87 /* SharePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF61B4FC96700A10B87 /* SharePageViewController.m */; };
 		845EAAFA1B521D6500A10B87 /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAAF91B521D6500A10B87 /* TabController.m */; };
@@ -16,6 +17,7 @@
 		846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA61B47C7FC006B61A8 /* WebViewController.m */; };
 		846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */; };
 		846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */; };
+		84D175E51B5A60D700F77D66 /* InformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D175E41B5A60D700F77D66 /* InformViewController.m */; };
 		84E0FB2C1B53EAF20021433F /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB2B1B53EAF20021433F /* CMPopTipView.m */; };
 		84E0FB2F1B54089B0021433F /* DateActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB2E1B54089B0021433F /* DateActionViewController.m */; };
 		84E0FB3F1B5542910021433F /* HostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB3E1B5542910021433F /* HostViewController.m */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		16E2F7B8600A822357A689AD /* libPods-FlashDating.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlashDating.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C9AAB8C0B81FB45F0A8538 /* Pods-FlashDating.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashDating.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashDating/Pods-FlashDating.debug.xcconfig"; sourceTree = "<group>"; };
+		840334191B57EB3A007650EF /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		8403341A1B57EB3A007650EF /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		845EAAF21B4FC07800A10B87 /* DateTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateTypeViewController.h; path = ../DateTypeViewController.h; sourceTree = "<group>"; };
 		845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateTypeViewController.m; path = ../DateTypeViewController.m; sourceTree = "<group>"; };
 		845EAAF51B4FC96700A10B87 /* SharePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharePageViewController.h; path = ../SharePageViewController.h; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 		846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateSearchViewController.m; path = ../DateSearchViewController.m; sourceTree = "<group>"; };
 		846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntryImageViewController.h; path = ../EntryImageViewController.h; sourceTree = "<group>"; };
 		846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntryImageViewController.m; path = ../EntryImageViewController.m; sourceTree = "<group>"; };
+		84D175E31B5A60D700F77D66 /* InformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformViewController.h; sourceTree = "<group>"; };
+		84D175E41B5A60D700F77D66 /* InformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformViewController.m; sourceTree = "<group>"; };
 		84E0FB2A1B53EAF20021433F /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
 		84E0FB2B1B53EAF20021433F /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
 		84E0FB2D1B54089B0021433F /* DateActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateActionViewController.h; path = ../DateActionViewController.h; sourceTree = "<group>"; };
@@ -147,6 +153,10 @@
 		84F3F98F1B427DD000879069 = {
 			isa = PBXGroup;
 			children = (
+				84D175E31B5A60D700F77D66 /* InformViewController.h */,
+				84D175E41B5A60D700F77D66 /* InformViewController.m */,
+				840334191B57EB3A007650EF /* EditViewController.h */,
+				8403341A1B57EB3A007650EF /* EditViewController.m */,
 				84E0FB401B5545660021433F /* CalendarChooseViewController.h */,
 				84E0FB411B5545660021433F /* CalendarChooseViewController.m */,
 				84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */,
@@ -377,6 +387,7 @@
 				84E0FB2C1B53EAF20021433F /* CMPopTipView.m in Sources */,
 				84F3F9A11B427DD100879069 /* AppDelegate.m in Sources */,
 				846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */,
+				84D175E51B5A60D700F77D66 /* InformViewController.m in Sources */,
 				845EAAFA1B521D6500A10B87 /* TabController.m in Sources */,
 				84E0FB491B554E9F0021433F /* SphereMenuViewController.m in Sources */,
 				846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */,
@@ -384,6 +395,7 @@
 				84E0FB3F1B5542910021433F /* HostViewController.m in Sources */,
 				84F3F9A71B427DD100879069 /* ViewController.m in Sources */,
 				845EAAF41B4FC07800A10B87 /* DateTypeViewController.m in Sources */,
+				8403341B1B57EB3A007650EF /* EditViewController.m in Sources */,
 				84F3F99E1B427DD100879069 /* main.m in Sources */,
 				84F3F9C71B427E0700879069 /* LineActivity.m in Sources */,
 				84E636AA1B4E67600056E467 /* LoginFacebookViewController.m in Sources */,

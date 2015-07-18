@@ -10,14 +10,40 @@
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-@interface LoginFacebookViewController ()
-
+#import "SphereMenuViewController.h"
+@interface LoginFacebookViewController ()<SphereMenuDelegate>
+@property (weak,nonatomic) UIImage* image1;
+@property (weak,nonatomic) UIImage* image2;
+@property (weak,nonatomic) UIImage* image3;
+@property (weak,nonatomic) UIImage* image4;
+@property (weak,nonatomic) UIImage* image5;
 @end
 
 @implementation LoginFacebookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UIImage *startImage = [UIImage imageNamed:@"logo120"];
+    _image1 = [UIImage imageNamed:@"Untitled"];
+    _image2 = [UIImage imageNamed:@"Untitled2"];
+    _image3 = [UIImage imageNamed:@"Untitled3"];
+    _image4 = [UIImage imageNamed:@"Untitled4"];
+    _image5 = [UIImage imageNamed:@"Untitled5"];
+
+    
+        NSArray *images = @[self.image1, self.image2, self.image3, self.image4, self.image5];
+    SphereMenu *sphereMenu = [[SphereMenu alloc] initWithStartPoint:CGPointMake(160, 120)
+                                                         startImage:startImage
+                                                      submenuImages:images];
+//    [sphereMenu.frame.size.width ;
+//    startImage.size.width == self.view.frame.size.width;
+    
+        sphereMenu.sphereDamping = 0.3;
+        sphereMenu.sphereLength = 85;
+        sphereMenu.delegate = self;
+        [self.view addSubview:sphereMenu];
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
@@ -28,13 +54,10 @@
 }
 
 -(void)fbTokenChangeNoti:(NSNotification*)noti {
-
     if ([FBSDKAccessToken currentAccessToken]) {
-        
         ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
         [self presentViewController:VC animated:YES completion:nil];
     }
-
 }
 
 - (void)didReceiveMemoryWarning {

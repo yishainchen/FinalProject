@@ -11,7 +11,10 @@
 #import "CalendarChooseViewController.h"
 @interface CalendarChooseViewController () <UITableViewDataSource,UITableViewDelegate>
 {
-   
+    int i;
+    NSDate *newDate;
+    NSDateFormatter *format;
+    int a ;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -23,28 +26,55 @@
 @implementation CalendarChooseViewController
 
 - (void)viewDidLoad {
-
+    a = 0;
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
     NSLog(@"num = %d",self.num);
     // Do any additional setup after loading the view.
 
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     
+//    _arr2 = [[NSMutableArray alloc]init];
+
+  
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    UILabel *labelA = [[UILabel alloc] initWithFrame:CGRectMake(20,11 , 22, 22)];
-     labelA.backgroundColor = [UIColor grayColor];
-    labelA.textColor = [UIColor greenColor];
-    labelA.text = @"HI";
-    [[cell contentView] addSubview:labelA];
+    self.labelA = [[UILabel alloc] initWithFrame:CGRectMake(10, 11, 80, 22)];
+    self.labelA.backgroundColor = [UIColor grayColor];
+    self.labelA.textColor = [UIColor greenColor];
+    [[cell contentView] addSubview:self.labelA];
+   
+        NSLog(@"a = %d",a);
+        self.labelA.text = self.str1 ;
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        NSDate *dateFromString = [dateFormatter dateFromString:self.str1];
+        NSLog(@"%@",self.str1);
+        
+        NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+//        [dateComponents setDay:a];
+        dateComponents.day = 1;
+        newDate = [[NSCalendar currentCalendar]
+                   dateByAddingComponents:dateComponents
+                   toDate:dateFromString options:0];
+        format = [[NSDateFormatter alloc]init];
+        [format setDateFormat:@"yyyy/M/d"];
+        self.str1  = [format stringFromDate:newDate];
+        NSLog(@"123 = %@",self.str1);
+        
+    
+  
 
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+//   self.labelA.text =[arr2 objectAtIndex:indexPath.row];
+//    
     return cell;
 }
 
@@ -68,6 +98,25 @@
 - (IBAction)btnChoose2:(UIButton *)sender {
     sender.selected = !sender.selected;
 }
+
+- (IBAction)btnPost:(id)sender {
+    //AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    //[manager POST:@"https://dojo.alphacamp.co/api/v1/login" parameters:@{@"email": @"billy170916@gmail.com", @"password": @"PEKjadJiE8AJ4T", @"api_key": @"8d7b6db91f21b4ca1a3198dcea481b605e21f4fb"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //    [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
+    //    [[NSUserDefaults standardUserDefaults] synchronize];
+    //    [indicatorView stopAnimating];
+    //    [self performSegueWithIdentifier:@"coursesSegue" sender:self];
+    //} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    //    NSLog(@"failure: %@", error);
+    //}];
+    //}
+}
+
+
+
+
+
+
 
 /*
 #pragma mark - Navigation

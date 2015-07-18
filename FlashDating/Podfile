@@ -2,7 +2,7 @@
 # platform :ios, '6.0'
 
 target 'FlashDating' do
-
+pod "AFNetworking", "~> 2.0"
 pod 'Parse'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'

@@ -25,16 +25,16 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb505410172947953</string>
+				<string>fb1548728052062294</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>505410172947953</string>
+	<string>1548728052062294</string>
 	<key>FacebookDisplayName</key>
-	<string>閃電聚會</string>
+	<string>CatchUp!</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>

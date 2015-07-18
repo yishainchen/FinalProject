@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="te8-6C-tDo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pw2-fJ-DgF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -123,13 +123,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.47058823529411764" green="0.76470588235294112" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="wOr-oM-SAA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjW-dl-8c6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="97"/>
+            <point key="canvasLocation" x="594" y="85"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Kr-1e-QxV">
@@ -164,7 +164,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zrs-Hm-KKX" kind="modal" id="cHm-Ss-Agj"/>
+                                    <segue destination="FZk-Bh-Ads" kind="push" id="hjB-EI-EBJ"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q84-Ch-IM9">
@@ -175,7 +175,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33921547200000002" green="0.83659309439999996" blue="0.52357408220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PWc-VZ-oR9" firstAttribute="top" secondItem="9Ls-eo-e40" secondAttribute="bottom" constant="240" id="8Ds-dE-AVf"/>
                             <constraint firstItem="lot-q8-T5G" firstAttribute="leading" secondItem="XN8-AJ-XBL" secondAttribute="leading" constant="79" id="CtO-Ep-sHZ"/>
@@ -193,7 +193,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGx-T2-PjG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821" y="103"/>
+            <point key="canvasLocation" x="1481" y="128"/>
+        </scene>
+        <!--Inform View Controller-->
+        <scene sceneID="ZqN-JA-HQl">
+            <objects>
+                <viewController id="FZk-Bh-Ads" customClass="InformViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oe4-kB-ib4"/>
+                        <viewControllerLayoutGuide type="bottom" id="DmQ-L9-lUo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dWw-Lu-gLm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-8j-sD8">
+                                <rect key="frame" x="130" y="379" width="68" height="37"/>
+                                <color key="backgroundColor" red="0.13338614509999999" green="0.13338614509999999" blue="0.16753168709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="完成註冊">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="希望系統以下列何種方式通知您" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkC-cL-efg">
+                                <rect key="frame" x="7" y="169" width="306" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33921547200000002" green="0.83659309439999996" blue="0.52357408220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jrH-mJ-6uI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqb-yL-yOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="128"/>
         </scene>
         <!--Date Type View Controller-->
         <scene sceneID="uQB-gK-dDH">
@@ -212,9 +246,11 @@
                                 <color key="backgroundColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="午餐">
+                                        <fragment content="中午">
                                             <attributes>
-                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                <font key="NSFont" size="15" name="STHeitiTC-Light"/>
+                                                <font key="NSOriginalFont" size="15" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -236,7 +272,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH5-pi-bMs">
                                 <rect key="frame" x="110" y="421" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.94719733390000005" green="0.79941542832167833" blue="0.67671000869999975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="下午茶">
+                                <state key="normal" title="下午">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -246,7 +282,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRR-TE-djj">
                                 <rect key="frame" x="215" y="420" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.83137254900000002" green="1" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="晚餐">
+                                <state key="normal" title="晚上">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -258,6 +294,19 @@
                                 <color key="backgroundColor" red="0.54053758740000002" green="0.66264204550000005" blue="0.69419252620000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-9U-bKP">
+                                <rect key="frame" x="235" y="379" width="60" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="_______">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t72-u5-NSp">
@@ -277,8 +326,14 @@
                             <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Flashdate" translatesAutoresizingMaskIntoConstraints="NO" id="sJU-Qa-FwT">
                                 <rect key="frame" x="0.0" y="44" width="320" height="332"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_______" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP5-eO-qc1">
+                                <rect key="frame" x="25" y="379" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33921547200000002" green="0.83659309439999996" blue="0.52357408220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="5EK-Zy-b2s"/>
                     <connections>
@@ -308,7 +363,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swl-ts-NJg">
                                 <rect key="frame" x="4" y="417" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.69176136363636365" green="0.66264204545454541" blue="0.81015078671328666" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="娛樂">
+                                <state key="normal" title="活動">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected">
@@ -321,7 +376,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-mO-bnc">
                                 <rect key="frame" x="110" y="417" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.13338614509999999" green="0.33022836538461536" blue="0.39352054195804198" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="商業會議">
+                                <state key="normal" title="聊天">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -338,7 +393,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws5-d1-x0V">
                                 <rect key="frame" x="215" y="417" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.76879370629999999" green="0.79941542830000001" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="其他">
+                                <state key="normal" title="聚餐">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -375,8 +430,20 @@
                             <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Flashdate" translatesAutoresizingMaskIntoConstraints="NO" id="aBc-DE-mav">
                                 <rect key="frame" x="0.0" y="44" width="320" height="332"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_______" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTj-8w-Ese">
+                                <rect key="frame" x="31" y="377" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_______" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uit-Kj-AFj">
+                                <rect key="frame" x="234" y="377" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.43883850524475526" green="0.72156862749999995" blue="0.82492897727272729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33921547200000002" green="0.83659309439999996" blue="0.52357408220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="1em-2z-3wV"/>
                     <connections>
@@ -488,7 +555,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.43883850524475526" green="0.72156862749999995" blue="0.82492897727272729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33921547202797203" green="0.83659309440559437" blue="0.52357408216783219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hhH-a1-Om7" firstAttribute="top" secondItem="Dc3-Fr-eyR" secondAttribute="bottom" constant="8" id="0FZ-T5-070"/>
                             <constraint firstAttribute="trailing" secondItem="hhH-a1-Om7" secondAttribute="trailing" constant="16" id="298-3p-YFp"/>
@@ -546,7 +613,8 @@
                                     <navigationItem title="聚會時段" id="kjk-nk-5WQ">
                                         <barButtonItem key="rightBarButtonItem" title="送出" id="0i0-SR-ubd">
                                             <connections>
-                                                <segue destination="tc7-aJ-PCb" kind="modal" id="asG-q3-m5Y"/>
+                                                <action selector="btnPost:" destination="te8-6C-tDo" id="Z4p-Dq-HaK"/>
+                                                <segue destination="2Td-Dm-jpS" kind="modal" id="asG-q3-m5Y"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -563,7 +631,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPa-PJ-jLT">
-                                                    <rect key="frame" x="106" y="11" width="24" height="22"/>
+                                                    <rect key="frame" x="139" y="11" width="24" height="22"/>
                                                     <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -573,7 +641,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf1-If-G5B">
-                                                    <rect key="frame" x="184" y="10" width="24" height="22"/>
+                                                    <rect key="frame" x="205" y="11" width="24" height="22"/>
                                                     <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -583,7 +651,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75r-Yj-Iu4">
-                                                    <rect key="frame" x="268" y="11" width="24" height="22"/>
+                                                    <rect key="frame" x="272" y="11" width="24" height="22"/>
                                                     <color key="backgroundColor" red="0.43883850520000001" green="0.72156862749999995" blue="0.82492897730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -593,19 +661,19 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="中午" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XG-WM-LAA">
-                                                    <rect key="frame" x="68" y="11" width="34" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下午" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLN-v4-8bW">
-                                                    <rect key="frame" x="144" y="12" width="34" height="21"/>
+                                                    <rect key="frame" x="101" y="11" width="34" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="晚上" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8S9-jb-wt2">
-                                                    <rect key="frame" x="227" y="12" width="34" height="21"/>
+                                                    <rect key="frame" x="233" y="11" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下午" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLN-v4-8bW">
+                                                    <rect key="frame" x="166" y="11" width="34" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -659,7 +727,7 @@
                                     <action selector="ShowInvitePage:" destination="tc7-aJ-PCb" eventType="touchUpInside" id="DIW-EF-67T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="短網址顯示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-cR-feW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="短網址顯示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-cR-feW">
                                 <rect key="frame" x="23" y="110" width="275" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="8Ux-Xz-yvU"/>
@@ -694,6 +762,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMm-dk-4sQ">
+                                <rect key="frame" x="38" y="170" width="47" height="49"/>
+                                <state key="normal" image="Flash">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWK-Gs-hsi">
+                                <rect key="frame" x="99" y="180" width="123" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="修改聚會內容">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LZp-sP-y7h" kind="push" id="SWw-ai-wle"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -710,13 +794,41 @@
                             <constraint firstItem="CWi-YO-Act" firstAttribute="leading" secondItem="Wst-kM-0OP" secondAttribute="leading" constant="119" id="yCC-WD-MTd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IZN-sh-uv2"/>
                     <connections>
                         <outlet property="btnShare" destination="CWi-YO-Act" id="dm9-et-Iyo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQn-FT-UaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4033" y="128"/>
+            <point key="canvasLocation" x="4565" y="128"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="7ZX-h7-MR1">
+            <objects>
+                <tableViewController id="LZp-sP-y7h" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iRD-0E-2A6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ghy-wv-MSw">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ghy-wv-MSw" id="4qC-s8-jf3">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LZp-sP-y7h" id="kms-dw-56S"/>
+                            <outlet property="delegate" destination="LZp-sP-y7h" id="oUc-Ki-XjJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Tgr-fT-IrA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEb-Ko-crz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5014" y="128"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="aKB-zz-Uor">
@@ -953,7 +1065,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCM-We-n17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1394" y="103"/>
+            <point key="canvasLocation" x="997" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q0a-57-pMb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Td-Dm-jpS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5oC-5s-jDB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tc7-aJ-PCb" kind="relationship" relationship="rootViewController" id="qsh-60-r7G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTo-tt-dBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4033" y="128"/>
         </scene>
     </scenes>
     <resources>

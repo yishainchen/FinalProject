@@ -23,13 +23,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "120 - iPhone.png",
+      "filename" : "logo120.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "180 - iPhone 6 Plus.png",
+      "filename" : "logo120-1.png",
       "scale" : "3x"
     }
   ],

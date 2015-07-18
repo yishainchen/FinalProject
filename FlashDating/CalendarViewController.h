@@ -20,4 +20,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblSelectedDateEnd;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerControlEnd;
 @property int i;
+//@property int addDaysCount;
 @end
