@@ -10,4 +10,8 @@
 
 @interface InformViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btnRegister;
+@property (weak, nonatomic) IBOutlet UIButton *btn1;
+@property (weak, nonatomic) IBOutlet UIButton *btn2;
+
 @end

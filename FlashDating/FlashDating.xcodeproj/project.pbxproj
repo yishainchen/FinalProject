@@ -17,6 +17,7 @@
 		846B9EA71B47C7FC006B61A8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA61B47C7FC006B61A8 /* WebViewController.m */; };
 		846B9EAA1B47E6DD006B61A8 /* DateSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */; };
 		846B9EB01B48D6FF006B61A8 /* EntryImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */; };
+		84B717061B5A8536004C39B9 /* GuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B717051B5A8536004C39B9 /* GuestViewController.m */; };
 		84D175E51B5A60D700F77D66 /* InformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D175E41B5A60D700F77D66 /* InformViewController.m */; };
 		84E0FB2C1B53EAF20021433F /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB2B1B53EAF20021433F /* CMPopTipView.m */; };
 		84E0FB2F1B54089B0021433F /* DateActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0FB2E1B54089B0021433F /* DateActionViewController.m */; };
@@ -69,6 +70,8 @@
 		846B9EA91B47E6DD006B61A8 /* DateSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateSearchViewController.m; path = ../DateSearchViewController.m; sourceTree = "<group>"; };
 		846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntryImageViewController.h; path = ../EntryImageViewController.h; sourceTree = "<group>"; };
 		846B9EAF1B48D6FF006B61A8 /* EntryImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntryImageViewController.m; path = ../EntryImageViewController.m; sourceTree = "<group>"; };
+		84B717041B5A8536004C39B9 /* GuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestViewController.h; sourceTree = "<group>"; };
+		84B717051B5A8536004C39B9 /* GuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestViewController.m; sourceTree = "<group>"; };
 		84D175E31B5A60D700F77D66 /* InformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformViewController.h; sourceTree = "<group>"; };
 		84D175E41B5A60D700F77D66 /* InformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformViewController.m; sourceTree = "<group>"; };
 		84E0FB2A1B53EAF20021433F /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */,
 				84E0FB3D1B5542910021433F /* HostViewController.h */,
 				84E0FB3E1B5542910021433F /* HostViewController.m */,
+				84B717041B5A8536004C39B9 /* GuestViewController.h */,
+				84B717051B5A8536004C39B9 /* GuestViewController.m */,
 				84E0FB3A1B54EBC90021433F /* Import */,
 				84F3F99A1B427DD100879069 /* FlashDating */,
 				84F3F9B71B427DD100879069 /* FlashDatingTests */,
@@ -398,6 +403,7 @@
 				8403341B1B57EB3A007650EF /* EditViewController.m in Sources */,
 				84F3F99E1B427DD100879069 /* main.m in Sources */,
 				84F3F9C71B427E0700879069 /* LineActivity.m in Sources */,
+				84B717061B5A8536004C39B9 /* GuestViewController.m in Sources */,
 				84E636AA1B4E67600056E467 /* LoginFacebookViewController.m in Sources */,
 				84E0FB2F1B54089B0021433F /* DateActionViewController.m in Sources */,
 				84F09E8F1B4FB3D2007A43D8 /* CalendarViewController.m in Sources */,

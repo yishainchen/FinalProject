@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class DateTypeViewController;
+@protocol DateTypedelegate <NSObject>
+@required
+
+-(void)labelText:(DateTypeViewController *)typeVC;
+
+@end
 @interface DateTypeViewController : UIViewController
+@property id<DateTypedelegate>delegate;
 
 @end

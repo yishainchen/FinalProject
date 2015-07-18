@@ -146,7 +146,8 @@
     CalendarChooseViewController *VC = segue.destinationViewController;
     VC.num = self.i;
     VC.str1 = getDate;
-    
+    VC.str2 = self.strTime;
+    NSLog(@"%@",self.strTime);
 }
 
 

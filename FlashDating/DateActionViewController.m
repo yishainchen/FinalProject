@@ -8,6 +8,8 @@
 
 #import "DateActionViewController.h"
 #import "CMPopTipView.h"
+#import "DateTypeViewController.h"
+#import "InformViewController.h"
 @interface DateActionViewController ()<CMPopTipViewDelegate>
 
 @property id < CMPopTipViewDelegate > delegate;
@@ -68,6 +70,11 @@
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext1 inView:self.view animated:YES];
 }
+- (IBAction)btnBackChoose:(id)sender {
+    InformViewController *type = [self.storyboard instantiateViewControllerWithIdentifier:@"informCell"];
+    [self presentViewController:type animated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

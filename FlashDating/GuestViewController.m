@@ -1,24 +1,24 @@
 //
-//  HostViewController.m
+//  GuestViewController.m
 //  FlashDating
 //
-//  Created by yishain on 7/14/15.
+//  Created by yishain on 7/18/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
 
-#import "HostViewController.h"
+#import "GuestViewController.h"
 #import "ViewController.h"
-@interface HostViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface GuestViewController  ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView1;
+@property (weak, nonatomic) IBOutlet UITableView *tableView2;
 @end
 
-@implementation HostViewController
+@implementation GuestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView1.delegate = self;
-    self.tableView1.dataSource = self;
+    self.tableView2.delegate = self;
+    self.tableView2.dataSource = self;
     // Do any additional setup after loading the view.
     
 }
@@ -56,13 +56,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

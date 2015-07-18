@@ -8,10 +8,13 @@
 
 #import "DateTypeViewController.h"
 #import "CMPopTipView.h"
+#import "CalendarChooseViewController.h"
+#import "DateActionViewController.h"
+#import "CalendarViewController.h"
 @interface DateTypeViewController () <CMPopTipViewDelegate>
 {
     }
-@property id < CMPopTipViewDelegate > delegate;
+//@property id < CMPopTipViewDelegate > delegate;
 @property CMPopTipView *roundRectButtonPopTipView;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnType1;
@@ -42,7 +45,6 @@
     CMPopTipView *navBarLeftButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"A Message"];
     navBarLeftButtonPopTipView.delegate = self;
     [navBarLeftButtonPopTipView presentPointingAtBarButtonItem:self.navigationItem.leftBarButtonItem animated:YES];
-
     // Do any additional setup after loading the view.
 }
 
@@ -70,6 +72,7 @@
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
+
     
 }
 - (IBAction)btnType3:(UIButton *)sender {
@@ -81,6 +84,11 @@
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
+
+}
+- (IBAction)btnBackInform:(id)sender {
+    DateActionViewController *actionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ActionView"];
+    [self presentViewController:actionVC animated:YES completion:nil];
 }
 
 #pragma mark CMPopTipViewDelegate methods
@@ -89,7 +97,19 @@
     self.roundRectButtonPopTipView = nil;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    CalendarViewController *calendarVC = segue.destinationViewController;
+    if (self.btnType1.selected) {
+         calendarVC.strTime = @"中午";
+    }
+    if (self.btnType2.selected) {
+        calendarVC.strTime = @"下午";
+    }
+    if (self.btnType3.selected) {
+        calendarVC.strTime = @"晚上";
+    }
 
+}
 
 
 /*#pragma mark - Navigation

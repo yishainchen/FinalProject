@@ -7,7 +7,7 @@
 //
 
 #import "InformViewController.h"
-
+#import "DateActionViewController.h"
 @interface InformViewController ()
 
 @end
@@ -16,12 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.btn1.layer.cornerRadius = 10;
+    self.btn2.layer.cornerRadius = 10;
+    self.btnRegister.layer.cornerRadius = 10;
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)btnRegister:(id)sender {
+     DateActionViewController  *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"ActionView"];
+    [self presentViewController:VC animated:YES completion:nil];
+}
+- (IBAction)btnInform:(id)sender {
+    self.btn1.selected = !self.btn1.selected;
+}
+- (IBAction)btnInform2:(id)sender {
+    self.btn2.selected = !self.btn2.selected;
 }
 
 /*

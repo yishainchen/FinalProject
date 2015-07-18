@@ -9,6 +9,8 @@
 
 #import "CalendarViewController.h"
 #import "CalendarChooseViewController.h"
+#import "SharePageViewController.h"
+
 @interface CalendarChooseViewController () <UITableViewDataSource,UITableViewDelegate>
 {
     int i;
@@ -18,7 +20,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSend;
+//@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSend;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigator;
 
 @end
@@ -31,26 +33,26 @@
     self.tabelView.dataSource = self;
     NSLog(@"num = %d",self.num);
     // Do any additional setup after loading the view.
-
-    
 }
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    
-//    _arr2 = [[NSMutableArray alloc]init];
-
   
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    self.labelA = [[UILabel alloc] initWithFrame:CGRectMake(10, 11, 80, 22)];
-    self.labelA.backgroundColor = [UIColor grayColor];
-    self.labelA.textColor = [UIColor greenColor];
+    self.labelA = [[UILabel alloc] initWithFrame:CGRectMake(5, 11, 80, 22)];
+    self.labelA.backgroundColor = [UIColor clearColor];
+    self.labelA.textColor = [UIColor blueColor];
     [[cell contentView] addSubview:self.labelA];
+    
+    self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake( 160, 11, 40, 22)];
+    self.labelTime.backgroundColor = [UIColor clearColor];
+    self.labelTime.textColor = [UIColor blackColor];
+    [[cell contentView] addSubview:self.labelTime];
+
+//    self.labelTime.text = @"";
    
         NSLog(@"a = %d",a);
-        self.labelA.text = self.str1 ;
+    self.labelA.text = self.str1 ;
+    self.labelTime.text =  self.str2;
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSDate *dateFromString = [dateFormatter dateFromString:self.str1];
@@ -66,15 +68,9 @@
         [format setDateFormat:@"yyyy/M/d"];
         self.str1  = [format stringFromDate:newDate];
         NSLog(@"123 = %@",self.str1);
-        
-    
-  
-
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-//   self.labelA.text =[arr2 objectAtIndex:indexPath.row];
-//    
     return cell;
 }
 
@@ -95,11 +91,13 @@
 - (IBAction)btnChoose1:(UIButton *)sender {
     sender.selected = !sender.selected;
 }
-- (IBAction)btnChoose2:(UIButton *)sender {
-    sender.selected = !sender.selected;
-}
+//- (IBAction)btnChoose2:(UIButton *)sender {
+//    sender.selected = !sender.selected;
+//}
 
 - (IBAction)btnPost:(id)sender {
+    SharePageViewController *shareVC = [self.storyboard instantiateViewControllerWithIdentifier:@"shareCell"];
+    [self presentViewController:shareVC animated:YES completion:nil];
     //AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     //[manager POST:@"https://dojo.alphacamp.co/api/v1/login" parameters:@{@"email": @"billy170916@gmail.com", @"password": @"PEKjadJiE8AJ4T", @"api_key": @"8d7b6db91f21b4ca1a3198dcea481b605e21f4fb"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
     //    [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
@@ -110,6 +108,7 @@
     //    NSLog(@"failure: %@", error);
     //}];
     //}
+    
 }
 
 
