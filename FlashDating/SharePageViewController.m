@@ -23,7 +23,7 @@
     [super viewDidLoad];
     self.notiTime.text = self.str2;
     self.btnShare.layer.cornerRadius = 10;
-    [self loadAddressed];
+//    [self loadAddressed];
     // Do any additional setup after loading the view.
 }
 
@@ -35,20 +35,20 @@
     ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
     [self presentViewController:VC animated:YES completion:nil];
 }
-
-- (void)loadAddressed {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"https://dojo.alphacamp.co/api/v1/courses" parameters:
-     @{@"api_key": @"8d7b6db91f21b4ca1a3198dcea481b605e21f4fb",
-       @"auth_token": [[NSUserDefaults standardUserDefaults] valueForKey:@"auth_token"]}
-         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//             [self.tableView reloadData];
-             NSLog(@"response: %@", responseObject);
-         }
-         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             NSLog(@"failure: %@", error);
-         }];
-}
+//
+//- (void)loadAddressed {
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    [manager GET:@"https://dojo.alphacamp.co/api/v1/courses" parameters:
+//     @{@"api_key": @"8d7b6db91f21b4ca1a3198dcea481b605e21f4fb",
+//       @"auth_token": [[NSUserDefaults standardUserDefaults] valueForKey:@"auth_token"]}
+//         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+////             [self.tableView reloadData];
+//             NSLog(@"response: %@", responseObject);
+//         }
+//         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//             NSLog(@"failure: %@", error);
+//         }];
+//}
 
 
 - (IBAction)ShowInvitePage:(id)sender {

@@ -23,16 +23,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)btnBack:(id)sender {
-    TabController *tabVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
-    [self presentViewController:tabVC animated:YES completion:nil];
-}
-- (IBAction)valueChanged:(UIDatePicker *)sender {
-    // NStimeInterval 型態的定義放在NSDate.h中
-    // typedef double NSTimeInterval;
-    NSTimeInterval n = sender.countDownDuration;
-    NSLog(@"倒數計時秒數為 : %.0f",n);
-}
+
+
+
+
 
 /*
 #pragma mark - Navigation

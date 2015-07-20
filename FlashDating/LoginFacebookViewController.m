@@ -11,12 +11,17 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "SphereMenuViewController.h"
+#import "AutoLogin.h"
+#import <AFNetworking/AFNetworking.h>
 @interface LoginFacebookViewController ()<SphereMenuDelegate>
 @property (weak,nonatomic) UIImage* image1;
 @property (weak,nonatomic) UIImage* image2;
 @property (weak,nonatomic) UIImage* image3;
 @property (weak,nonatomic) UIImage* image4;
 @property (weak,nonatomic) UIImage* image5;
+@property (weak,nonatomic) UIImage* image6;
+@property (weak,nonatomic) UIImage* image7;
+@property (weak,nonatomic) UIImage* image8;
 @end
 
 @implementation LoginFacebookViewController
@@ -31,9 +36,10 @@
     _image3 = [UIImage imageNamed:@"Untitled3"];
     _image4 = [UIImage imageNamed:@"Untitled4"];
     _image5 = [UIImage imageNamed:@"Untitled5"];
-
-    
-        NSArray *images = @[self.image1, self.image2, self.image3, self.image4, self.image5];
+    _image6 = [UIImage imageNamed:@"Untitled6"];
+    _image7 = [UIImage imageNamed:@"Untitled7"];
+    _image8 = [UIImage imageNamed:@"Untitled8"];
+        NSArray *images = @[self.image1, self.image2, self.image3, self.image4, self.image5, self.image6, self.image7, self.image8];
     SphereMenu *sphereMenu = [[SphereMenu alloc] initWithStartPoint:CGPointMake(160, 120)
                                                          startImage:startImage
                                                       submenuImages:images];
@@ -53,12 +59,42 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fbTokenChangeNoti:) name:FBSDKAccessTokenDidChangeNotification object:nil];
 }
 
--(void)fbTokenChangeNoti:(NSNotification*)noti {
-    if ([FBSDKAccessToken currentAccessToken]) {
-        ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
-        [self presentViewController:VC animated:YES completion:nil];
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if ([AutoLogin isEqualToString:@"NO"]) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isAutoLogin"] != nil) {
+            if ([FBSDKAccessToken currentAccessToken] != nil) {
+              
+                AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+                manager = [AFHTTPRequestOperationManager manager];
+                [manager POST:@"https://dojo.alphacamp.co/api/v1/login"
+                   parameters:nil
+                      success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                          AutoLogin = @"YES";
+                          ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
+                          [self presentViewController:VC animated:YES completion:nil];
+
+                          
+                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                          
+                      }];
+            }
+            else {
+                //                loginButton.hidden = 0;
+                [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"isAutoLogin"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+        }
     }
 }
+
+//
+//-(void)fbTokenChangeNoti:(NSNotification*)noti {
+//    if ([FBSDKAccessToken currentAccessToken]) {
+//        ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
+//        [self presentViewController:VC animated:YES completion:nil];
+//    }
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

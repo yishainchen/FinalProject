@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DateTypeViewController.h"
-
+#import "EricTableViewCell.h"
 
 @interface CalendarChooseViewController : UIViewController {
     
@@ -19,7 +19,9 @@
 @property (strong, nonatomic) UILabel *labelTime;
 @property (weak ,nonatomic) NSString *str1;
 @property (weak ,nonatomic) NSString *str2;
+@property (weak ,nonatomic) NSString *strBegin;
 @property NSMutableArray *arr2;
+
 
 
 @end

@@ -10,9 +10,13 @@
 #import "LineActivity.h"
 #import <Parse/Parse.h>
 #import "DateSearchViewController.h"
+#import <AFNetworking/AFNetworking.h>
 //#import "SphereMenuViewController.h"
 
 @interface ViewController ()
+{
+    NSMutableArray *events;
+}
 @property (weak, nonatomic) IBOutlet UIButton *btnDate1;
 @property (weak, nonatomic) IBOutlet UIButton *btnDate2;
 
@@ -24,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    
     
 
     self.btnDate1.layer.cornerRadius = 15;
@@ -35,7 +41,23 @@
 //    [testObject saveInBackground];
 //    
     // Do any additional setup after loading the view, typically from a nib.
+    [self loadCourses];
 }
+
+- (void)loadCourses {
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"https://cryptic-oasis-8248.herokuapp.com/api/v1/events" parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             [events addObject:responseObject[@"data"]];
+             NSLog(@"response: %@", responseObject);
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"failure: %@", error);
+         }];
+
+}
+//@"api_key": @"8d7b6db91f21b4ca1a3198dcea481b605e21f4fb",
+//@"auth_token": [[NSUserDefaults standardUserDefaults] valueForKey:@"auth_token"]
 
 
 - (void)didReceiveMemoryWarning {

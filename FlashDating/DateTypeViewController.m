@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會時段，若下列時段均有聚會舉辦意願，請重複勾選"] ;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇一個聚會時段"] ;
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];

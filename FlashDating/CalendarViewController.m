@@ -87,26 +87,26 @@
     self.roundRectButtonPopTipView.has3DStyle = NO;
     [self.roundRectButtonPopTipView presentPointingAtView:self.button1 inView:self.view animated:YES];
     NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
-      self.i =  interval / (24*60*60);
+      self.i =  interval / (24*60*60) ;
     NSLog(@"%d",self.i);
 }
 
 
 
 
-- (IBAction)btnLocalPush:(id)sender {
-    UILocalNotification *localNotification = [[UILocalNotification alloc]init];
-//    NSCalendar *calender = [NSCalendar currentCalendar];
-    NSDate *notiDate = [NSDate dateWithTimeIntervalSinceNow:3];
-    localNotification.fireDate = notiDate;
-//    localNotification.soundName = @"";
-    localNotification.alertAction = @"新增聚會成功";
-//    localNotification.repeatInterval = NSCalendarUnitMonth;
-    localNotification.soundName = UILocalNotificationDefaultSoundName;
-    localNotification.applicationIconBadgeNumber = 1;
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-    
-}
+//- (IBAction)btnLocalPush:(id)sender {
+//    UILocalNotification *localNotification = [[UILocalNotification alloc]init];
+////    NSCalendar *calender = [NSCalendar currentCalendar];
+//    NSDate *notiDate = [NSDate dateWithTimeIntervalSinceNow:3];
+//    localNotification.fireDate = notiDate;
+////    localNotification.soundName = @"";
+//    localNotification.alertAction = @"新增聚會成功";
+////    localNotification.repeatInterval = NSCalendarUnitMonth;
+//    localNotification.soundName = UILocalNotificationDefaultSoundName;
+//    localNotification.applicationIconBadgeNumber = 1;
+//    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+//    
+//}
 
 
 - (IBAction)btnNext:(id)sender {
@@ -147,7 +147,9 @@
     VC.num = self.i;
     VC.str1 = getDate;
     VC.str2 = self.strTime;
-    NSLog(@"%@",self.strTime);
+    VC.strBegin = getDate;
+//    NSLog(@"time = %@",VC.strBegin);
+    NSLog(@"%@",getDate);
 }
 
 
