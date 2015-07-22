@@ -41,7 +41,7 @@
 //    [testObject saveInBackground];
 //    
     // Do any additional setup after loading the view, typically from a nib.
-    [self loadCourses];
+//    [self loadCourses];
 }
 
 - (void)loadCourses {

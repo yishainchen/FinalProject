@@ -11,46 +11,54 @@
 #import "CalendarChooseViewController.h"
 #import "SharePageViewController.h"
 #import "EricTableViewCell.h"
+#import <AFNetworking/AFNetworking.h>
+#import "DateActionViewController.h"
 
 @interface CalendarChooseViewController () <UITableViewDataSource,UITableViewDelegate>
 {
     int i;
-    NSDate *newDate;
-    NSDateFormatter *format;
     int a ;
-    UIButton *iv1;
+    int type;
+    NSDate *newDate;
+    NSDate *nowDate;
+    NSInteger timeAction;
+    NSDateFormatter *format;
     NSMutableArray *mutableArr;
-//    UITableViewCell *cell;
     NSString *datestring;
+    NSCalendar *current;
+    UIButton *iv1;
+
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
-//@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSend;
-@property (weak, nonatomic) IBOutlet UINavigationItem *navigator;
 
 @end
 
 @implementation CalendarChooseViewController
 
 - (void)viewDidLoad {
+    
     a = 0;
+    type = 0;
+    NSInteger Action;
+    NSLog(@"%ld",(long)Action);
+    timeAction  = Action;
     datestring = self.strBegin;
     mutableArr = [[NSMutableArray alloc] init];
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
-    NSLog(@"num = %d",self.num);
-    // Do any additional setup after loading the view.
-//    [self tableView:self.tabelView didDeselectRowAtIndexPath:];
+    NSLog(@"%d",timeAction);
+    current =  [NSCalendar currentCalendar];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtIndexPath:indexPath];
+    EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtIndexPath:indexPath];
     cell.labelDate.text = self.str1;
      cell.tag = indexPath.row+1;
     static NSString *CellIdentifier = @"Cell";
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    self.labelA = [[UILabel alloc] initWithFrame:CGRectMake(5, 11, 80, 22)];
-    self.labelA.backgroundColor = [UIColor clearColor];
-    self.labelA.textColor = [UIColor blueColor];
+//    self.labelA = [[UILabel alloc] initWithFrame:CGRectMake(5, 11, 80, 22)];
+//    self.labelA.backgroundColor = [UIColor clearColor];
+//    self.labelA.textColor = [UIColor blueColor];
 //    [[cell contentView] addSubview:self.labelA];
     
     self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake( 160, 11, 40, 22)];
@@ -61,8 +69,9 @@ EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtInde
 //    self.labelTime.text = @"";
    
         NSLog(@"a = %d",a);
-    
+        cell.labelDate.text = self.str1 ;
         self.labelTime.text =  self.str2;
+       [self dateAction];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSDate *dateFromString = [dateFormatter dateFromString:self.str1];
@@ -71,25 +80,27 @@ EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtInde
         newDate = [[NSCalendar currentCalendar]
                    dateByAddingComponents:dateComponents
                    toDate:dateFromString  options:0];
+        NSDate *today = [NSDate date];
+    
         format = [[NSDateFormatter alloc]init];
         [format setDateFormat:@"yyyy/M/d"];
-        self.str1  = [format stringFromDate:newDate];
-        NSLog(@"123 = %@",self.str1);
     
+        self.strEnd = [format stringFromDate:today];
+        NSLog(@"456 = %@",self.strBegin);
+        NSLog(@"123 = %@",self.strEnd);
+        self.str1  = [format stringFromDate:newDate];
     
         iv1 = (UIButton *)[cell viewWithTag:1];
         iv1.tag = indexPath.row ;
-    
-    
         [iv1 addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-
-    cell.labelDate.text = self.str1 ;
-
-    if (cell == nil) {
+    
+    
+        if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    NSLog(@"arr1 = %@", mutableArr);
-    return cell;
+        }
+        NSLog(@"arr1 = %@", mutableArr);
+        return cell;
+   
 }
 
 
@@ -101,14 +112,9 @@ EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtInde
     NSIndexPath *indexPath = [NSIndexPath
                               indexPathForRow:sender.tag
                               inSection:0];
-   
     EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtIndexPath:indexPath];
-
-    
-   
-
     [mutableArr addObject:cell.labelDate.text];
-    NSLog(@"%@",mutableArr);
+    NSLog(@"123 = %@",mutableArr);
 }
 
 
@@ -119,7 +125,11 @@ EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtInde
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.num + 1;
+    if (self.strBegin == self.strEnd)  {
+        return self.num + 2;
+    }
+    else
+        return self.num + 1;
 }
 
 //- (IBAction)btnChoose:(UIButton *)sender {
@@ -129,26 +139,50 @@ EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtInde
 - (IBAction)btnChoose1:(UIButton *)sender {
     sender.backgroundColor = sender.selected ? [UIColor blueColor] : [UIColor greenColor];
     sender.selected = !sender.selected;
-    
 }
 
 
+
+
+
+
+-(void) dateAction {
+    if ([self.labelTime.text isEqualToString:@"中午"]) {
+        type = 10;
+    }
+    else if ([self.labelTime.text isEqualToString:@"下午"]) {
+        type = 20;
+    }
+    else if ([self.labelTime.text isEqualToString:@"晚上"]) {
+        type = 30;
+    }
+}
 - (IBAction)btnPost:(id)sender {
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"新增聚會成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+//    [self presentViewController:alert animated:YES completion:nil];
+//    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+//        [alert dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    [alert addAction:cancel];
+
     SharePageViewController *shareVC = [self.storyboard instantiateViewControllerWithIdentifier:@"shareCell"];
     [self presentViewController:shareVC animated:YES completion:nil];
-    //AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    //[manager POST:@"https://dojo.alphacamp.co/api/v1/login" parameters:@{@"email": @"billy170916@gmail.com", @"password": @"PEKjadJiE8AJ4T", @"api_key": @"8d7b6db91f21b4ca1a3198dcea481b605e21f4fb"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    //    [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
-    //    [[NSUserDefaults standardUserDefaults] synchronize];
-    //} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    //    NSLog(@"failure: %@", error);
-    //}];
-    //}
     
-}
-
-
-
+   
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:@"http://catchup.today/events" parameters:@{
+                                                              @"utf8":@"✓",                                                               @"event":@{@"category_id":@"timeAction", @"duration_id":@"type" },
+                                                              @"commit":@"Create Event"}
+     
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+              NSLog(@"success");
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failure: %@", error);
+    }];
+    }
+    
 
 
 /*

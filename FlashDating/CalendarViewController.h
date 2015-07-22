@@ -10,20 +10,12 @@
 
 
 @interface CalendarViewController : UIViewController
-
-
 @property (weak, nonatomic) IBOutlet UIButton *button1;
-
-
 @property (weak, nonatomic) IBOutlet UILabel *lblSelectedDate;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerControl;
 @property (weak, nonatomic) IBOutlet UILabel *lblSelectedDateEnd;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerControlEnd;
-//@property (weak, nonatomic) NSDate *myDate;
-//@property (weak, nonatomic) NSDate *myDate2;
-//@property (weak, nonatomic) NSString *getDate;
-//@property (weak, nonatomic) NSString *getDate2;
 @property int i;
 @property NSString* strTime;
-//@property int addDaysCount;
+
 @end

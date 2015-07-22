@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    CalendarViewController *calendarVC;
+//    CalendarViewController *calendarVC;
     
     
     
@@ -33,7 +33,7 @@
     
     self.startDate = [inputFormatter dateFromString:dateLabel.text];
     
-    NSLog(@"startDate: ", self.startDate.description);
+//    NSLog(@"startDate: ", self.startDate.description);
     
 }
 
@@ -43,19 +43,19 @@
 }
 
 
-
-- (IBAction)slider:(UISlider *)sender {
-    Slider.value = 0;
-    Slider.maximumValue = 14;
-    int sliderValueAsInt = (int)(Slider.value + 14.0f);
-    NSString *newText = [[NSString alloc] initWithFormat:@"%d", sliderValueAsInt];
-    sliderValueLabel.text = newText;
-    NSDate *newDate = [startDate addTimeInterval:86400 * sliderValueAsInt];
-    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-    [outputFormatter setDateFormat:@"yyyy.MM.dd"];
-
-    dateLableEnd.text = [outputFormatter stringFromDate:newDate];
-    
-}
+//
+//- (IBAction)slider:(UISlider *)sender {
+//    Slider.value = 0;
+//    Slider.maximumValue = 14;
+//    int sliderValueAsInt = (int)(Slider.value + 14.0f);
+//    NSString *newText = [[NSString alloc] initWithFormat:@"%d", sliderValueAsInt];
+//    sliderValueLabel.text = newText;
+//    NSDate *newDate = [startDate addTimeInterval:86400 * sliderValueAsInt];
+//    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+//    [outputFormatter setDateFormat:@"yyyy.MM.dd"];
+//
+//    dateLableEnd.text = [outputFormatter stringFromDate:newDate];
+//    
+//}
 
 @end

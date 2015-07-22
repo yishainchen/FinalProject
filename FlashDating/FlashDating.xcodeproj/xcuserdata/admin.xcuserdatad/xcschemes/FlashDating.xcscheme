@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F3F9971B427DD100879069"
-            BuildableName = "FlashDating.app"
+            BuildableName = "&#x9583;&#x96fb;&#x805a;&#x6703;.app"
             BlueprintName = "FlashDating"
             ReferencedContainer = "container:FlashDating.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F3F9971B427DD100879069"
-            BuildableName = "FlashDating.app"
+            BuildableName = "&#x9583;&#x96fb;&#x805a;&#x6703;.app"
             BlueprintName = "FlashDating"
             ReferencedContainer = "container:FlashDating.xcodeproj">
          </BuildableReference>

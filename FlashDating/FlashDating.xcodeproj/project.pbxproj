@@ -97,7 +97,7 @@
 		84F168C21B5CEAC50022790A /* EricTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EricTableViewCell.m; sourceTree = "<group>"; };
 		84F168C41B5D1EDD0022790A /* AutoLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLogin.m; sourceTree = "<group>"; };
 		84F168C61B5D1EFA0022790A /* AutoLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLogin.h; sourceTree = "<group>"; };
-		84F3F9981B427DD100879069 /* FlashDating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashDating.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F3F9981B427DD100879069 /* 閃電聚會.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "閃電聚會.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F3F99C1B427DD100879069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3F99D1B427DD100879069 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F3F99F1B427DD100879069 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		84F3F9991B427DD100879069 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84F3F9981B427DD100879069 /* FlashDating.app */,
+				84F3F9981B427DD100879069 /* 閃電聚會.app */,
 				84F3F9B41B427DD100879069 /* FlashDatingTests.xctest */,
 			);
 			name = Products;
@@ -287,7 +287,7 @@
 			);
 			name = FlashDating;
 			productName = FlashDating;
-			productReference = 84F3F9981B427DD100879069 /* FlashDating.app */;
+			productReference = 84F3F9981B427DD100879069 /* 閃電聚會.app */;
 			productType = "com.apple.product-type.application";
 		};
 		84F3F9B31B427DD100879069 /* FlashDatingTests */ = {
@@ -559,7 +559,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FlashDating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FlashDating;
+				PRODUCT_NAME = "閃電聚會";
 			};
 			name = Debug;
 		};
@@ -571,7 +571,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FlashDating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FlashDating;
+				PRODUCT_NAME = "閃電聚會";
 			};
 			name = Release;
 		};

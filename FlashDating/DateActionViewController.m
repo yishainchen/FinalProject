@@ -39,8 +39,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btnSelected:(UIButton *)sender {
-    
     sender.selected = !sender.selected;
+//     NSInteger Action = 1;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -52,6 +52,7 @@
 }
 - (IBAction)btnSelected2:(UIButton *)sender {
     sender.selected = !sender.selected;
+//    NSInteger Action = 2;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -62,6 +63,7 @@
 }
 - (IBAction)btnSelected3:(UIButton *)sender {
     sender.selected = !sender.selected;
+//     NSInteger Action = 3;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;

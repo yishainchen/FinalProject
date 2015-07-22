@@ -17,9 +17,10 @@
 @property NSInteger num;
 @property (strong, nonatomic) UILabel *labelA;
 @property (strong, nonatomic) UILabel *labelTime;
-@property (weak ,nonatomic) NSString *str1;
-@property (weak ,nonatomic) NSString *str2;
-@property (weak ,nonatomic) NSString *strBegin;
+@property (retain ,nonatomic) NSString *str1;
+@property (retain ,nonatomic) NSString *str2;
+@property (retain ,nonatomic) NSString *strBegin;
+@property (retain ,nonatomic) NSString *strEnd;
 @property NSMutableArray *arr2;
 
 

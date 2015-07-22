@@ -39,10 +39,10 @@
     _image6 = [UIImage imageNamed:@"Untitled6"];
     _image7 = [UIImage imageNamed:@"Untitled7"];
     _image8 = [UIImage imageNamed:@"Untitled8"];
-        NSArray *images = @[self.image1, self.image2, self.image3, self.image4, self.image5, self.image6, self.image7, self.image8];
+    NSArray *images = @[self.image1, self.image2, self.image3, self.image4, self.image5, self.image6, self.image7, self.image8];
     SphereMenu *sphereMenu = [[SphereMenu alloc] initWithStartPoint:CGPointMake(160, 120)
-                                                         startImage:startImage
-                                                      submenuImages:images];
+        startImage:startImage
+        submenuImages:images];
 //    [sphereMenu.frame.size.width ;
 //    startImage.size.width == self.view.frame.size.width;
     
@@ -50,6 +50,7 @@
         sphereMenu.sphereLength = 85;
         sphereMenu.delegate = self;
         [self.view addSubview:sphereMenu];
+    
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
@@ -57,20 +58,39 @@
     
     //判斷已登入
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fbTokenChangeNoti:) name:FBSDKAccessTokenDidChangeNotification object:nil];
+    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me"
+                                       parameters:@{@"fields": @"name,id,picture,gender,birthday,email"}]
+     startWithCompletionHandler:^(FBSDKGraphRequestConnection
+                                  *connection, id result, NSError *error) {
+         if (!error) {
+             NSLog(@"fetched user:%@", result);
+         } }];
+    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
+    [FBSDKProfile currentProfile];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
-    if ([AutoLogin isEqualToString:@"NO"]) {
+    if ([FBSDKAccessToken currentAccessToken]) {
+        
+        ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
+        [self presentViewController:VC animated:YES completion:nil];
+
+        
+    }
+    
+    
+    else if ([AutoLogin isEqualToString:@"NO"]) {
         if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isAutoLogin"] != nil) {
             if ([FBSDKAccessToken currentAccessToken] != nil) {
               
                 AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
                 manager = [AFHTTPRequestOperationManager manager];
-                [manager POST:@"https://dojo.alphacamp.co/api/v1/login"
+                [manager POST:@"https://cryptic-oasis-8248.herokuapp.com/api/v1/events"
                    parameters:nil
                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
                           AutoLogin = @"YES";
+                          NSLog(@"%@",AutoLogin);
                           ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
                           [self presentViewController:VC animated:YES completion:nil];
 
@@ -88,13 +108,14 @@
     }
 }
 
-//
-//-(void)fbTokenChangeNoti:(NSNotification*)noti {
-//    if ([FBSDKAccessToken currentAccessToken]) {
-//        ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
-//        [self presentViewController:VC animated:YES completion:nil];
-//    }
-//}
+
+-(void)fbTokenChangeNoti:(NSNotification*)noti {
+    if ([FBSDKAccessToken currentAccessToken]) {
+        
+        ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
+        [self presentViewController:VC animated:YES completion:nil];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
