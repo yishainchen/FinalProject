@@ -14,6 +14,9 @@
 #import "AutoLogin.h"
 #import <AFNetworking/AFNetworking.h>
 @interface LoginFacebookViewController ()<SphereMenuDelegate>
+{
+    NSString *userID;
+}
 @property (weak,nonatomic) UIImage* image1;
 @property (weak,nonatomic) UIImage* image2;
 @property (weak,nonatomic) UIImage* image3;
@@ -74,6 +77,8 @@
                                       *connection, id result, NSError *error) {
              if (!error) {
                  NSLog(@"fetched user:%@", result);
+                 NSLog(@"eric = %@",result[@"id"]);
+                 userID = result[@"id"];
              } }];
 
         ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
@@ -132,7 +137,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
                                                                      @"utf8":@"✓",                                                               @"event":@{
-                                                                             @"fb_uid":@"user[id]",
+                                                                             @"fb_uid":@"userID",
                                                                                                                                                         @"fb_token":@""
                                            }}
           success:^(AFHTTPRequestOperation *operation, id responseObject) {

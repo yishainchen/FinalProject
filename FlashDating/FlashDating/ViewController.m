@@ -51,8 +51,12 @@
     [manager GET:@"https://cryptic-oasis-8248.herokuapp.com/api/v1/events" parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              [events addObject:responseObject[@"data"]];
-//             NSLog(@"response: %@", responseObject);
-             NSLog(@"eric %@",responseObject[@"data"]);
+             
+             for (NSDictionary *dict in responseObject[@"data"]) {
+                 NSLog(@"eric %@",dict[@"availabilities"]);
+             }
+             
+//             NSLog(@"eric %@",responseObject[@"data"]);
          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              NSLog(@"failure: %@", error);
          }];
