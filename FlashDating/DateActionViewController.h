@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnAction2;
 @property (weak, nonatomic) IBOutlet UIButton *btnAction3;
 @property (weak, nonatomic) IBOutlet UIButton *btnNext1;
-extern NSInteger Action;
+
 @end

@@ -23,6 +23,7 @@
 @property (retain ,nonatomic) NSString *strEnd;
 @property NSMutableArray *arr2;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelChoose;
 
 
 @end

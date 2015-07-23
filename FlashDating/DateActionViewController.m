@@ -10,6 +10,7 @@
 #import "CMPopTipView.h"
 #import "DateTypeViewController.h"
 #import "InformViewController.h"
+#import "AppDelegate.h"
 @interface DateActionViewController ()<CMPopTipViewDelegate>
 
 @property id < CMPopTipViewDelegate > delegate;
@@ -31,6 +32,8 @@
     self.btnAction1.layer.cornerRadius = 50;
      self.btnAction2.layer.cornerRadius = 50;
      self.btnAction3.layer.cornerRadius = 50;
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -40,7 +43,10 @@
 }
 - (IBAction)btnSelected:(UIButton *)sender {
     sender.selected = !sender.selected;
-//     NSInteger Action = 1;
+    AppDelegate *delegate = [[UIApplication sharedApplication]
+                             delegate];
+    delegate.Action = 1;
+
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -52,7 +58,10 @@
 }
 - (IBAction)btnSelected2:(UIButton *)sender {
     sender.selected = !sender.selected;
-//    NSInteger Action = 2;
+    AppDelegate *delegate = [[UIApplication sharedApplication]
+                             delegate];
+    delegate.Action = 2;
+
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -63,7 +72,10 @@
 }
 - (IBAction)btnSelected3:(UIButton *)sender {
     sender.selected = !sender.selected;
-//     NSInteger Action = 3;
+    AppDelegate *delegate = [[UIApplication sharedApplication]
+                             delegate];
+    delegate.Action = 3;
+
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;

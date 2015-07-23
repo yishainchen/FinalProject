@@ -9,10 +9,16 @@
 #import "SharePageViewController.h"
 #import "LineActivity.h"
 #import "ViewController.h"
-#import <AFNetworking.h>
+#import <FBSDKShareKit/FBSDKShareLinkContent.h>
+#import <FBSDKShareKit/FBSDKShareDialog.h>
+#import <FBSDKCoreKit/FBSDKGraphRequest.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <AFNetworking/AFNetworking.h>
+
+//#import <
 @interface SharePageViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *btnShare;
-
 @property (strong, nonatomic) NSString *webAddressed;
 
 @end
@@ -23,8 +29,33 @@
     [super viewDidLoad];
     self.notiTime.text = self.str2;
     self.btnShare.layer.cornerRadius = 10;
-//    [self loadAddressed];
+    
+    
+    
+//    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+//    content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
+//                          [FBSDKShareDialog showFromViewController:self
+//                                                       withContent:content
+//                                                          delegate:nil];
+
     // Do any additional setup after loading the view.
+    
+    if ([[FBSDKAccessToken currentAccessToken] hasGranted:@"publish_actions"]) {
+        [self post];
+    }
+    else {
+        FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+        [login logInWithPublishPermissions:@[@"publish_actions"]
+                                   handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+                                       if (error) {
+                                           // Process error
+                                       } else if (result.isCancelled) {
+                                           // Handle cancellations
+                                       } else {
+                                           [self post];
+                                       } }];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,23 +63,36 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)backHome:(id)sender {
+    
     ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
     [self presentViewController:VC animated:YES completion:nil];
 }
-//
-//- (void)loadAddressed {
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    [manager GET:@"https://dojo.alphacamp.co/api/v1/courses" parameters:
-//     @{@"api_key": @"8d7b6db91f21b4ca1a3198dcea481b605e21f4fb",
-//       @"auth_token": [[NSUserDefaults standardUserDefaults] valueForKey:@"auth_token"]}
-//         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-////             [self.tableView reloadData];
-//             NSLog(@"response: %@", responseObject);
-//         }
-//         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//             NSLog(@"failure: %@", error);
-//         }];
-//}
+
+-(void)post {
+//    [[[FBSDKGraphRequest alloc]
+//      initWithGraphPath:@"me/feed"
+//      parameters: @{ @"message" : @"hello world"}
+//      HTTPMethod:@"POST"]
+//     startWithCompletionHandler:^(FBSDKGraphRequestConnection
+//                                  *connection, id result, NSError *error) {
+//         if (!error) {
+//             NSLog(@"Post id:%@", result[@"id"]);
+//         } }];
+//    
+
+}
+
+- (void)loadAdressed {
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"https://cryptic-oasis-8248.herokuapp.com/api/v1/events" parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             NSLog(@"response: %@", responseObject);
+//             self.webAddressed.text = responseObject;
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"failure: %@", error);
+         }];
+}
 
 
 - (IBAction)ShowInvitePage:(id)sender {

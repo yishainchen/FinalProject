@@ -13,6 +13,8 @@
 #import "EricTableViewCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import "DateActionViewController.h"
+#import "CMPopTipView.h"
+#import "AppDelegate.h"
 
 @interface CalendarChooseViewController () <UITableViewDataSource,UITableViewDelegate>
 {
@@ -38,11 +40,14 @@
 
 - (void)viewDidLoad {
     
+    AppDelegate *delegate = [[UIApplication sharedApplication]
+                             delegate];
     a = 0;
     type = 0;
     NSInteger Action;
-    NSLog(@"%ld",(long)Action);
-    timeAction  = Action;
+    
+    timeAction  = delegate.Action;
+    NSLog(@"action = %d",timeAction);
     datestring = self.strBegin;
     mutableArr = [[NSMutableArray alloc] init];
     self.tabelView.delegate = self;
@@ -115,6 +120,8 @@
     EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtIndexPath:indexPath];
     [mutableArr addObject:cell.labelDate.text];
     NSLog(@"123 = %@",mutableArr);
+    
+
 }
 
 
@@ -168,11 +175,18 @@
     SharePageViewController *shareVC = [self.storyboard instantiateViewControllerWithIdentifier:@"shareCell"];
     [self presentViewController:shareVC animated:YES completion:nil];
     
-   
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mutableArr
+                                                       options:NSJSONWritingPrettyPrinted
+                                            error:&error];
+    NSString *body = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"body = %@",body);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"http://catchup.today/events" parameters:@{
-                                                              @"utf8":@"✓",                                                               @"event":@{@"category_id":@"timeAction", @"duration_id":@"type" },
-                                                              @"commit":@"Create Event"}
+    [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
+                                                              @"utf8":@"✓",                                                               @"event":@{@"category_id":@"timeAction", @"duration_id":@"type",
+                                                                                                                                                     @"rangetimes_attributes":@{@"range":body}},
+                                                              @"commit":@"Update"}
      
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];

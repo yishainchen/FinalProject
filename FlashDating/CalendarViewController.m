@@ -138,7 +138,7 @@
 - (IBAction)btnNext:(id)sender {
     [self timeInterval];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"http://catchup.today/events" parameters:@{
+    [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
                                                               @"utf8":@"✓",                                                               @"event":@{@"start_date(1i)":@"SeperateDate", @"start_date(2i)":@"SeperateDate2",                                                                    @"start_date(3i)":@"SeperateDate3",                                                                              @"end_date(1i)":@"SeperateEnd",                                                                                  @"end_date(2i)":@"SeperateEnd2",
                                                             @"end_date(3i)":@"SeperateEnd3"},                                                              @"commit":@"Create Event"}
      
