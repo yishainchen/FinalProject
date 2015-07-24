@@ -26,6 +26,9 @@
     NSInteger timeAction;
     NSDateFormatter *format;
     NSMutableArray *mutableArr;
+    NSMutableArray *resetArr;
+    NSDictionary *dict;
+    NSMutableDictionary *resetdic;
     NSString *datestring;
     NSCalendar *current;
     UIButton *iv1;
@@ -39,13 +42,14 @@
 @implementation CalendarChooseViewController
 
 - (void)viewDidLoad {
-    
+//    resetdic = [[NSMutableDictionary alloc]init];
     AppDelegate *delegate = [[UIApplication sharedApplication]
                              delegate];
+    resetArr = [[NSMutableArray alloc]init];
+    dict = [[NSMutableDictionary alloc]init];
     a = 0;
     type = 0;
     NSInteger Action;
-    
     timeAction  = delegate.Action;
     NSLog(@"action = %d",timeAction);
     datestring = self.strBegin;
@@ -103,24 +107,23 @@
         if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         }
-        NSLog(@"arr1 = %@", mutableArr);
         return cell;
    
 }
 
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   }
-
 
 -(void)buttonTapped:(UIButton *)sender {
     NSIndexPath *indexPath = [NSIndexPath
                               indexPathForRow:sender.tag
                               inSection:0];
     EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtIndexPath:indexPath];
-    [mutableArr addObject:cell.labelDate.text];
-    NSLog(@"123 = %@",mutableArr);
-    
+    dict = [NSDictionary dictionaryWithObjectsAndKeys:cell.labelDate.text,@"range",nil];
+ 
+    [resetArr addObject:dict];
+
+    NSLog(@"arr = %@",resetArr);
 
 }
 
@@ -147,11 +150,6 @@
     sender.backgroundColor = sender.selected ? [UIColor blueColor] : [UIColor greenColor];
     sender.selected = !sender.selected;
 }
-
-
-
-
-
 
 -(void) dateAction {
     if ([self.labelTime.text isEqualToString:@"中午"]) {
@@ -184,8 +182,9 @@
     NSLog(@"body = %@",body);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
-                                                              @"utf8":@"✓",                                                               @"event":@{@"category_id":@"timeAction", @"duration_id":@"type",
-                                                                                                                                                     @"rangetimes_attributes":@{@"range":body}},
+                                                              @"utf8":@"✓",                                                               @"event":@{@"category_id":@(timeAction),
+                                                                                                                                                     @"duration_id":@(type),
+                                                                                                                                                     @"rangetimes_attributes":@{@"range":resetArr}},
                                                               @"commit":@"Update"}
      
           success:^(AFHTTPRequestOperation *operation, id responseObject) {

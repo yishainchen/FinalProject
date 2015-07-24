@@ -16,6 +16,7 @@
 @interface LoginFacebookViewController ()<SphereMenuDelegate>
 {
     NSString *userID;
+    FBSDKAccessToken *myToken;
 }
 @property (weak,nonatomic) UIImage* image1;
 @property (weak,nonatomic) UIImage* image2;
@@ -63,13 +64,15 @@
     [FBSDKProfile currentProfile];
     //判斷已登入
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fbTokenChangeNoti:) name:FBSDKAccessTokenDidChangeNotification object:nil];
-    
-    [self postFBInfo];
+   
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     if ([FBSDKAccessToken currentAccessToken]) {
+        
+        myToken = [FBSDKAccessToken currentAccessToken];
+        NSLog(@"Token string: %@", myToken.tokenString);
         
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me"
                                            parameters:@{@"fields": @"name,id,picture,gender,birthday,email"}]
@@ -79,11 +82,12 @@
                  NSLog(@"fetched user:%@", result);
                  NSLog(@"eric = %@",result[@"id"]);
                  userID = result[@"id"];
+                 [self postFBInfo];
              } }];
+    
 
         ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
         [self presentViewController:VC animated:YES completion:nil];
-
         
     }
     
@@ -130,16 +134,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 -(void)postFBInfo {
-
+    
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
+    [manager POST:@"http://catchup.today/api/v1/login" parameters:@{
                                                                      @"utf8":@"✓",                                                               @"event":@{
-                                                                             @"fb_uid":@"userID",
-                                                                                                                                                        @"fb_token":@""
-                                           }}
+                                                                             @"fb_uid":userID,
+                                                                             @"fb_token":myToken.tokenString
+                                                                             }}
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
               [[NSUserDefaults standardUserDefaults] synchronize];
@@ -148,9 +151,6 @@
               NSLog(@"failure: %@", error);
           }];
 }
-
-
-
 /*
 #pragma mark - Navigation
 

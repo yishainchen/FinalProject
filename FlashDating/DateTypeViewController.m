@@ -16,14 +16,10 @@
     }
 //@property id < CMPopTipViewDelegate > delegate;
 @property CMPopTipView *roundRectButtonPopTipView;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnType1;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnType2;
 @property (weak, nonatomic) IBOutlet UIButton *btnType3;
-
 @property (weak, nonatomic) IBOutlet UILabel *lableDate;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnNext;
 @end
 
@@ -55,6 +51,9 @@
 
 - (IBAction)btnType1:(UIButton *)sender {
     sender.selected = !sender.selected;
+    CalendarViewController *calendarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
+    [self presentViewController:calendarVC animated:YES completion:nil];
+    
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -65,6 +64,8 @@
 }
 - (IBAction)btnType2:(UIButton *)sender {
     sender.selected = !sender.selected;
+    CalendarViewController *calendarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
+    [self presentViewController:calendarVC animated:YES completion:nil];
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -77,6 +78,8 @@
 }
 - (IBAction)btnType3:(UIButton *)sender {
     sender.selected = !sender.selected;
+    CalendarViewController *calendarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
+    [self presentViewController:calendarVC animated:YES completion:nil];
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;

@@ -43,6 +43,8 @@
 }
 - (IBAction)btnSelected:(UIButton *)sender {
     sender.selected = !sender.selected;
+    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+    [self presentViewController:typeVC animated:YES completion:nil];
     AppDelegate *delegate = [[UIApplication sharedApplication]
                              delegate];
     delegate.Action = 1;
@@ -58,6 +60,9 @@
 }
 - (IBAction)btnSelected2:(UIButton *)sender {
     sender.selected = !sender.selected;
+    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+    [self presentViewController:typeVC animated:YES completion:nil];
+    
     AppDelegate *delegate = [[UIApplication sharedApplication]
                              delegate];
     delegate.Action = 2;
@@ -72,6 +77,8 @@
 }
 - (IBAction)btnSelected3:(UIButton *)sender {
     sender.selected = !sender.selected;
+    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+    [self presentViewController:typeVC animated:YES completion:nil];
     AppDelegate *delegate = [[UIApplication sharedApplication]
                              delegate];
     delegate.Action = 3;

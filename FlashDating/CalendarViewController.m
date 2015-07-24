@@ -62,6 +62,8 @@
     [format3 setDateFormat:@"yyyy/M/d"];
     getDate3 = [format3 stringFromDate:today];
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate3]];
+    [self seperateDate];
+    [self postdata];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -137,10 +139,13 @@
 
 - (IBAction)btnNext:(id)sender {
     [self timeInterval];
+    }
+
+-(void)postdata {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
-                                                              @"utf8":@"✓",                                                               @"event":@{@"start_date(1i)":@"SeperateDate", @"start_date(2i)":@"SeperateDate2",                                                                    @"start_date(3i)":@"SeperateDate3",                                                                              @"end_date(1i)":@"SeperateEnd",                                                                                  @"end_date(2i)":@"SeperateEnd2",
-                                                            @"end_date(3i)":@"SeperateEnd3"},                                                              @"commit":@"Create Event"}
+                                                                     @"utf8":@"✓",                                                               @"event":@{@"start_date(1i)":SeperateDate, @"start_date(2i)":SeperateDate2,                                                                    @"start_date(3i)":SeperateDate3,                                                                              @"end_date(1i)":SeperateEnd,                                                                                  @"end_date(2i)":SeperateEnd2,
+                                                                                                                                                            @"end_date(3i)":SeperateEnd3},                                                              @"commit":@"Create Event"}
      
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
@@ -149,9 +154,9 @@
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"failure: %@", error);
           }];
+
+
 }
-
-
 
 
 -(void)timeInterval{
