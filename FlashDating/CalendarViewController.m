@@ -47,23 +47,28 @@
     [self.roundRectButtonPopTipView presentPointingAtView:self.datePickerControl inView:self.view animated:YES];
     myDate = [NSDate date];
     NSDateFormatter *format = [[NSDateFormatter alloc]init];
-    [format setDateFormat:@"yyyy/M/d"];
+    [format setDateFormat:@"yyyy-MM-dd"];
     getDate = [format stringFromDate:myDate];
     myDate2 =[NSDate date];
     NSDateFormatter *format2 = [[NSDateFormatter alloc]init];
-    [format2 setDateFormat:@"yyyy/M/d"];
+    [format2 setDateFormat:@"yyyy-MM-dd"];
     getDate2 = [format2 stringFromDate:myDate2];
        NSLog(@"%@",getDate2);
     self.button1.layer.cornerRadius = 10;
+    self.Backbtn.layer.cornerRadius = 10;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSDate *today = [NSDate date];
     NSDateFormatter *format3 = [[NSDateFormatter alloc]init];
-    [format3 setDateFormat:@"yyyy/M/d"];
+    [format3 setDateFormat:@"yyyy-MM-dd"];
     getDate3 = [format3 stringFromDate:today];
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate3]];
     [self seperateDate];
     [self postdata];
+    NSLog(@"date = %@",SeperateDate);
+     NSLog(@"date2 = %@",SeperateDate2);
+    NSLog(@"date3 = %@",SeperateDate3);
+    NSLog(@"date4 = %@",SeperateEnd);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +78,7 @@
 - (IBAction)dateBegin:(UIDatePicker *)sender {
     myDate = [self.datePickerControl date];
     NSDateFormatter *format = [[NSDateFormatter alloc]init];
-    [format setDateFormat:@"yyyy/M/d"];
+    [format setDateFormat:@"yyyy-MM-dd"];
     getDate = [format stringFromDate:myDate];
 //    NSLog(@"%@",getDate);
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate]];
@@ -90,7 +95,7 @@
     myDate2 = [self.datePickerControlEnd date];
     NSDateFormatter *format = [[NSDateFormatter alloc]init
                                ];
-    [format setDateFormat:@"yyyy/M/d"];
+    [format setDateFormat:@"yyyy-MM-dd"];
     getDate2 = [format stringFromDate:myDate2];
     [self.lblSelectedDateEnd setText:[NSString stringWithFormat:@"終止時間 :%@",getDate2]];
      [self.roundRectButtonPopTipView dismissAnimated:YES];
@@ -111,14 +116,16 @@
     [format setDateFormat:@"yyyy"];
         SeperateDate = [format stringFromDate:myDate];
         SeperateEnd = [format stringFromDate:myDate2];
+    
     NSDateFormatter *format2 = [[NSDateFormatter alloc]init];
-    [format2 setDateFormat:@"M"];
-        SeperateDate2 = [format stringFromDate:myDate];
-        SeperateEnd2 = [format stringFromDate:myDate2];
+    [format2 setDateFormat:@"MM"];
+        SeperateDate2 = [format2 stringFromDate:myDate];
+        SeperateEnd2 = [format2 stringFromDate:myDate2];
+    
     NSDateFormatter *format3 = [[NSDateFormatter alloc]init];
-    [format3 setDateFormat:@"d"];
-        SeperateDate3 = [format stringFromDate:myDate];
-        SeperateEnd3 = [format stringFromDate:myDate2];
+    [format3 setDateFormat:@"dd"];
+        SeperateDate3 = [format3 stringFromDate:myDate];
+        SeperateEnd3 = [format3 stringFromDate:myDate2];
 }
 
 
@@ -194,6 +201,9 @@
     VC.strEnd = getDate2;
    }
 
+- (IBAction)backBtn:(id)sender { DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+    [self presentViewController:typeVC animated:YES completion:nil];
+}
 
 /*
 #pragma mark - Navigation

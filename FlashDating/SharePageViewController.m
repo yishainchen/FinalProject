@@ -29,8 +29,8 @@
     [super viewDidLoad];
     self.notiTime.text = self.str2;
     self.btnShare.layer.cornerRadius = 10;
-    
-    
+    [self loadAdressed];
+//    self.webAddressed = 
     
 //    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
 //    content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];

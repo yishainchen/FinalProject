@@ -84,6 +84,19 @@
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSDate *dateFromString = [dateFormatter dateFromString:self.str1];
+    
+//        NSDateFormatter *dateFormatterM = [[NSDateFormatter alloc] init];
+//        [dateFormatterM setDateFormat:@"MM"];
+//        NSDate *dateFromStringM = [dateFormatterM dateFromString:self.str1];
+//    
+//        NSDateFormatter *dateFormatterD = [[NSDateFormatter alloc] init];
+//        [dateFormatterD setDateFormat:@"dd"];
+//        NSDate *dateFromStringD = [dateFormatterD dateFromString:self.str1];
+    
+    
+  
+    
+    
         NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
         dateComponents.day = 1;
         newDate = [[NSCalendar currentCalendar]
@@ -92,7 +105,7 @@
         NSDate *today = [NSDate date];
     
         format = [[NSDateFormatter alloc]init];
-        [format setDateFormat:@"yyyy/M/d"];
+        [format setDateFormat:@"yyyy-M-d"];
     
         self.strEnd = [format stringFromDate:today];
         NSLog(@"456 = %@",self.strBegin);
@@ -113,6 +126,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   }
+
+
+- (IBAction)backBtn:(id)sender {
+    CalendarViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
+    [self presentViewController:VC animated:YES completion:nil];
+}
+
 
 -(void)buttonTapped:(UIButton *)sender {
     NSIndexPath *indexPath = [NSIndexPath

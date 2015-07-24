@@ -141,7 +141,7 @@
     [manager POST:@"http://catchup.today/api/v1/login" parameters:@{
                                                                      @"utf8":@"✓",                                                               @"event":@{
                                                                              @"fb_uid":userID,
-                                                                             @"fb_token":myToken.tokenString
+                                                                             @"authenticity_token":myToken.tokenString
                                                                              }}
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
