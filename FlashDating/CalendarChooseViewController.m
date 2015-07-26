@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
 
-
+#import "LoginFacebookViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "CalendarViewController.h"
 #import "CalendarChooseViewController.h"
 #import "SharePageViewController.h"
@@ -24,6 +26,7 @@
     NSDate *newDate;
     NSDate *nowDate;
     NSInteger timeAction;
+    NSNumber* flashNum;
     NSDateFormatter *format;
     NSMutableArray *mutableArr;
     NSMutableArray *resetArr;
@@ -32,7 +35,10 @@
     NSString *datestring;
     NSCalendar *current;
     UIButton *iv1;
-
+    NSString *strToday;
+    NSString *strNum;
+    NSString *url;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tabelView;
@@ -43,6 +49,9 @@
 
 - (void)viewDidLoad {
 //    resetdic = [[NSMutableDictionary alloc]init];
+    flashNum = self.identifynum;
+    strNum = [NSString stringWithFormat:@"%@",flashNum];
+    NSLog(@"strnum = %@" ,strNum);
     AppDelegate *delegate = [[UIApplication sharedApplication]
                              delegate];
     resetArr = [[NSMutableArray alloc]init];
@@ -51,13 +60,13 @@
     type = 0;
     NSInteger Action;
     timeAction  = delegate.Action;
-    NSLog(@"action = %d",timeAction);
     datestring = self.strBegin;
     mutableArr = [[NSMutableArray alloc] init];
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
-    NSLog(@"%d",timeAction);
     current =  [NSCalendar currentCalendar];
+    url =[@"http://catchup.today/api/v1/events/" stringByAppendingFormat:@"%@",strNum];
+
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EricTableViewCell *cell = (EricTableViewCell *) [self.tabelView cellForRowAtIndexPath:indexPath];
@@ -85,18 +94,6 @@
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSDate *dateFromString = [dateFormatter dateFromString:self.str1];
     
-//        NSDateFormatter *dateFormatterM = [[NSDateFormatter alloc] init];
-//        [dateFormatterM setDateFormat:@"MM"];
-//        NSDate *dateFromStringM = [dateFormatterM dateFromString:self.str1];
-//    
-//        NSDateFormatter *dateFormatterD = [[NSDateFormatter alloc] init];
-//        [dateFormatterD setDateFormat:@"dd"];
-//        NSDate *dateFromStringD = [dateFormatterD dateFromString:self.str1];
-    
-    
-  
-    
-    
         NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
         dateComponents.day = 1;
         newDate = [[NSCalendar currentCalendar]
@@ -105,11 +102,12 @@
         NSDate *today = [NSDate date];
     
         format = [[NSDateFormatter alloc]init];
-        [format setDateFormat:@"yyyy-M-d"];
+        [format setDateFormat:@"yyyy-MM-dd"];
     
-        self.strEnd = [format stringFromDate:today];
-        NSLog(@"456 = %@",self.strBegin);
-        NSLog(@"123 = %@",self.strEnd);
+        strToday = [format stringFromDate:today];
+        NSLog(@"begin = %@",self.strBegin);
+        NSLog(@"today = %@",   strToday);
+        NSLog(@"end = %@",self.strEnd);
         self.str1  = [format stringFromDate:newDate];
     
         iv1 = (UIButton *)[cell viewWithTag:1];
@@ -134,6 +132,7 @@
 }
 
 
+
 -(void)buttonTapped:(UIButton *)sender {
     NSIndexPath *indexPath = [NSIndexPath
                               indexPathForRow:sender.tag
@@ -142,9 +141,6 @@
     dict = [NSDictionary dictionaryWithObjectsAndKeys:cell.labelDate.text,@"range",nil];
  
     [resetArr addObject:dict];
-
-    NSLog(@"arr = %@",resetArr);
-
 }
 
 
@@ -155,7 +151,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    if (self.strBegin == self.strEnd)  {
+    if ([self.strBegin isEqualToString:strToday])  {
+        if ([self.strEnd isEqualToString:strToday]) {
+            return self.num + 1;
+        }
         return self.num + 2;
     }
     else
@@ -183,38 +182,37 @@
     }
 }
 - (IBAction)btnPost:(id)sender {
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"新增聚會成功" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-//    [self presentViewController:alert animated:YES completion:nil];
-//    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
-//        [alert dismissViewControllerAnimated:YES completion:nil];
-//    }];
-//    [alert addAction:cancel];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"新增成功" message:@"下一步邀請好友參加聚會" preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alert animated:YES completion:nil];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"確定" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+        [self performSegueWithIdentifier:@"urlPG" sender:self];
+//        SharePageViewController *shareVC = [self.storyboard instantiateViewControllerWithIdentifier:@"shareCell"];
+//        [self presentViewController:shareVC animated:YES completion:nil];
+    }];
+    [alert addAction:cancel];
 
-    SharePageViewController *shareVC = [self.storyboard instantiateViewControllerWithIdentifier:@"shareCell"];
-    [self presentViewController:shareVC animated:YES completion:nil];
-    
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mutableArr
-                                                       options:NSJSONWritingPrettyPrinted
-                                            error:&error];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mutableArr options:NSJSONWritingPrettyPrinted error:&error];
     NSString *body = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
-    NSLog(@"body = %@",body);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
-                                                              @"utf8":@"✓",                                                               @"event":@{@"category_id":@(timeAction),
-                                                                                                                                                     @"duration_id":@(type),
-                                                                                                                                                     @"rangetimes_attributes":@{@"range":resetArr}},
-                                                              @"commit":@"Update"}
-     
-          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-              NSLog(@"success");
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"failure: %@", error);
-    }];
-    }
+    [manager PUT:url parameters:@{
+                                                                                                @"utf8":@"✓",
+                                  
+                                                                                      @"event":@{@"category_id":@(timeAction),
+                                                                                                                                                                                       @"duration_id":@(type),
+                                                                                                                                                                                       @"rangetimes_attributes":@{@"range":resetArr}},
+                                                                                                @"commit":@"Update Event",@"id":strNum}         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+           [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+                 NSLog(@"success");
+                  NSLog(@"success %@",responseObject);
+                                                                                                    self.urlstring =responseObject[@"url"];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"failure: %@", error);
+        }];
+        }
     
 
 
@@ -227,5 +225,10 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    SharePageViewController *shareVC = segue.destinationViewController;
+    shareVC.strurl = self.urlstring;
+    NSLog(@"strurl = %@",shareVC.strurl);
+}
 @end

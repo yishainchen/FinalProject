@@ -27,10 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.str2 = self.strurl;
     self.notiTime.text = self.str2;
+    NSLog(@"eric = %@",self.str2);
     self.btnShare.layer.cornerRadius = 10;
-    [self loadAdressed];
-//    self.webAddressed = 
+//    [self loadAdressed];
+//    self.webAddressed =
     
 //    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
 //    content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
@@ -81,23 +83,23 @@
 //    
 
 }
-
-- (void)loadAdressed {
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"https://cryptic-oasis-8248.herokuapp.com/api/v1/events" parameters:nil
-         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             NSLog(@"response: %@", responseObject);
-//             self.webAddressed.text = responseObject;
-         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             NSLog(@"failure: %@", error);
-         }];
-}
+//
+//- (void)loadAdressed {
+//    
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    [manager GET:@"https://cryptic-oasis-8248.herokuapp.com/api/v1/events" parameters:nil
+//         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//             NSLog(@"response: %@", responseObject);
+////             self.webAddressed.text = responseObject;
+//         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//             NSLog(@"failure: %@", error);
+//         }];
+//}
 
 
 - (IBAction)ShowInvitePage:(id)sender {
-    UIImage *image = [UIImage imageNamed:@"Flashdate"];
-    NSArray *array = @[@"Hello",image];
+    UIImage *image = [UIImage imageNamed:@"invite"];
+    NSArray *array = @[@"嗨!最近找個時間來聚聚吧",image,self.notiTime.text];
     LineActivity *line = [[LineActivity alloc ]init];
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:array   applicationActivities:@[line]];
     controller.excludedActivityTypes = @[UIActivityTypePostToFacebook];

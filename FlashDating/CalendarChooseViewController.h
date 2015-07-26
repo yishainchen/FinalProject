@@ -14,7 +14,7 @@
 @interface CalendarChooseViewController : UIViewController {
     
 }
-@property NSInteger num;
+@property NSNumber* identifynum;
 @property (strong, nonatomic) UILabel *labelA;
 @property (strong, nonatomic) UILabel *labelTime;
 @property (retain ,nonatomic) NSString *str1;
@@ -22,8 +22,9 @@
 @property (retain ,nonatomic) NSString *strBegin;
 @property (retain ,nonatomic) NSString *strEnd;
 @property NSMutableArray *arr2;
+@property NSString *urlstring;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelChoose;
-
+@property  int num;
 
 @end

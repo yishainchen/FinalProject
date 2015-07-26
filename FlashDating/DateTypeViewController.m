@@ -5,7 +5,9 @@
 //  Created by yishain on 7/10/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
-
+#import "LoginFacebookViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "DateTypeViewController.h"
 #import "CMPopTipView.h"
 #import "CalendarChooseViewController.h"
@@ -123,5 +125,10 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(IBAction)cancalToken:(UIButton *)button{
+    FBSDKAccessToken.currentAccessToken = nil;
+    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+    //
+}
 @end

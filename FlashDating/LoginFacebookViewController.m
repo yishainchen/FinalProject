@@ -13,6 +13,7 @@
 #import "SphereMenuViewController.h"
 #import "AutoLogin.h"
 #import <AFNetworking/AFNetworking.h>
+#import "AppDelegate.h"
 @interface LoginFacebookViewController ()<SphereMenuDelegate>
 {
     NSString *userID;
@@ -147,10 +148,13 @@
               [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
               [[NSUserDefaults standardUserDefaults] synchronize];
               NSLog(@"success");
+              
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"failure: %@", error);
           }];
 }
+
+
 /*
 #pragma mark - Navigation
 

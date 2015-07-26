@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerControlEnd;
 @property int i;
 @property NSString* strTime;
+@property NSNumber* idNum;
 
 @end

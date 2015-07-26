@@ -7,7 +7,7 @@ Parse.Cloud.define("hello", function(request, response) {
 Parse.Push.send({
   channels: [ "Giants", "Mets" ],
   data: {
-    alert: "The Giants won against the Mets 2-3."
+    alert: "Please give me a msg!"
   }
 }, {
   success: function() {

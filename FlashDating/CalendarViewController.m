@@ -5,7 +5,9 @@
 //  Created by yishain on 7/10/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
-
+#import "LoginFacebookViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "CalendarViewController.h"
 #import "SharePageViewController.h"
 #import "CalendarChooseViewController.h"
@@ -158,6 +160,9 @@
               [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
               [[NSUserDefaults standardUserDefaults] synchronize];
               NSLog(@"success");
+              NSLog(@"idnum = %@",responseObject);
+              self.idNum = responseObject[@"id"];
+              NSLog(@"numid = %@",self.idNum);
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"failure: %@", error);
           }];
@@ -199,6 +204,8 @@
     VC.str2 = self.strTime;
     VC.strBegin = getDate;
     VC.strEnd = getDate2;
+    VC.identifynum = self.idNum;
+    NSLog(@"%@",VC.identifynum);
    }
 
 - (IBAction)backBtn:(id)sender { DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
@@ -214,6 +221,11 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(IBAction)cancalToken:(UIButton *)button{
+    FBSDKAccessToken.currentAccessToken = nil;
+    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+    //
+}
 @end
 

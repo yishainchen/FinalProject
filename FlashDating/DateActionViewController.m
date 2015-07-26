@@ -5,7 +5,9 @@
 //  Created by yishain on 7/13/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "LoginFacebookViewController.h"
 #import "DateActionViewController.h"
 #import "CMPopTipView.h"
 #import "DateTypeViewController.h"
@@ -96,7 +98,12 @@
     [self presentViewController:type animated:YES completion:nil];
 }
 
-
+-(IBAction)cancalToken:(UIButton *)button{
+    FBSDKAccessToken.currentAccessToken = nil;
+    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+//
+}
 /*
 #pragma mark - Navigation
 

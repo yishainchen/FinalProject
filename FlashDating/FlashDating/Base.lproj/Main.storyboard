@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="te8-6C-tDo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="n4u-Q2-0o7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -90,7 +90,7 @@
         <!--Login Facebook View Controller-->
         <scene sceneID="Z5v-jt-NXm">
             <objects>
-                <viewController id="pw2-fJ-DgF" customClass="LoginFacebookViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="pw2-fJ-DgF" customClass="LoginFacebookViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5XN-I7-b8B"/>
                         <viewControllerLayoutGuide type="bottom" id="MwG-zO-btX"/>
@@ -99,8 +99,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="各種聚會一鍵搞定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMz-Tn-Cn4">
-                                <rect key="frame" x="38" y="234" width="244" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="各種聚會一鍵搞定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMz-Tn-Cn4">
+                                <rect key="frame" x="38" y="300" width="244" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="lcV-dm-Xnv"/>
+                                    <constraint firstAttribute="height" constant="37" id="ncF-e0-YxN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -108,6 +112,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.5452360281387586" green="0.80121266654175016" blue="0.83344303266178266" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MwG-zO-btX" firstAttribute="top" secondItem="MMz-Tn-Cn4" secondAttribute="bottom" constant="231" id="HEV-gY-QFX"/>
+                            <constraint firstAttribute="trailing" secondItem="MMz-Tn-Cn4" secondAttribute="trailing" constant="38" id="nCh-5O-DdC"/>
+                            <constraint firstItem="MMz-Tn-Cn4" firstAttribute="leading" secondItem="9b5-Ij-XoJ" secondAttribute="leading" constant="38" id="oAT-cG-DpK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wOr-oM-SAA"/>
                 </viewController>
@@ -354,6 +363,9 @@
                                 <state key="normal" backgroundImage="logo-1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancalToken:" destination="Zrs-Hm-KKX" eventType="touchUpInside" id="Gs5-IQ-Zep"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_______" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP5-eO-qc1">
                                 <rect key="frame" x="25" y="379" width="60" height="21"/>
@@ -510,6 +522,9 @@
                                 <state key="normal" backgroundImage="logo-1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancalToken:" destination="6Lc-Fd-Loj" eventType="touchUpInside" id="Yhd-Ft-38V"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swl-ts-NJg">
                                 <rect key="frame" x="4" y="417" width="100" height="100"/>
@@ -784,6 +799,9 @@
                                 <state key="normal" backgroundImage="logo-1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancalToken:" destination="n4u-Q2-0o7" eventType="touchUpInside" id="gdM-06-XEk"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0yG-yL-nei">
                                 <rect key="frame" x="16" y="319" width="288" height="162"/>
@@ -981,11 +999,13 @@
                                     <constraint firstAttribute="height" constant="30" id="Pxl-3r-HAp"/>
                                     <constraint firstAttribute="width" constant="71" id="W4f-g8-BjU"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="送出">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnPost:" destination="te8-6C-tDo" eventType="touchUpInside" id="9XP-KI-cwZ"/>
+                                    <segue destination="tc7-aJ-PCb" kind="modal" identifier="urlPG" id="89l-Mb-HKW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聚會時段" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfP-WM-ThN">
@@ -1088,7 +1108,6 @@
                     <connections>
                         <outlet property="labelChoose" destination="yfP-WM-ThN" id="F91-r3-zIk"/>
                         <outlet property="tabelView" destination="MWl-Dy-Qxv" id="0xg-hv-noT"/>
-                        <segue destination="tc7-aJ-PCb" kind="push" identifier="" id="M1m-Ei-Gbx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFl-gL-JdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1121,7 +1140,7 @@
                                     <action selector="ShowInvitePage:" destination="tc7-aJ-PCb" eventType="touchUpInside" id="DIW-EF-67T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="短網址顯示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-cR-feW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="短網址顯示" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-cR-feW">
                                 <rect key="frame" x="23" y="66" width="275" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="8Ux-Xz-yvU"/>
@@ -1158,6 +1177,7 @@
                                     <constraint firstAttribute="height" constant="49" id="CaQ-Yj-Au5"/>
                                     <constraint firstAttribute="width" constant="72" id="ayn-am-AUv"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="17"/>
                                 <state key="normal" title="返回首頁">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1190,6 +1210,7 @@
                     <navigationItem key="navigationItem" id="IZN-sh-uv2"/>
                     <connections>
                         <outlet property="btnShare" destination="CWi-YO-Act" id="dm9-et-Iyo"/>
+                        <outlet property="notiTime" destination="ePZ-cR-feW" id="wEt-PR-6hh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQn-FT-UaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1362,7 +1383,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xhq-FP-iIp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="backgroundColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.60945694930000005" green="0.79559112759999995" blue="0.95473666960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="聚會列表" id="cMv-VN-fAA">
                                         <barButtonItem key="leftBarButtonItem" title="返回" id="JfN-RA-PYl">
