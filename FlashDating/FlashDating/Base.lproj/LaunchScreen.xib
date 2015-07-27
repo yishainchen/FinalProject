@@ -9,18 +9,10 @@
         <view alpha="0.69999999999999973" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="622"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="finalpro1" translatesAutoresizingMaskIntoConstraints="NO" id="o4u-qd-CRe">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="622"/>
-                </imageView>
-            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="526"/>
         </view>
     </objects>
-    <resources>
-        <image name="finalpro1" width="3632" height="5075"/>
-    </resources>
 </document>

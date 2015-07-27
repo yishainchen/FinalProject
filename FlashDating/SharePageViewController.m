@@ -18,6 +18,8 @@
 
 //#import <
 @interface SharePageViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *btnBack;
 @property (weak, nonatomic) IBOutlet UIButton *btnShare;
 @property (strong, nonatomic) NSString *webAddressed;
 
@@ -28,9 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.str2 = self.strurl;
-    self.notiTime.text = self.str2;
     NSLog(@"eric = %@",self.str2);
     self.btnShare.layer.cornerRadius = 10;
+    self.btnBack.layer.cornerRadius = 10;
 //    [self loadAdressed];
 //    self.webAddressed =
     
@@ -99,9 +101,21 @@
 
 - (IBAction)ShowInvitePage:(id)sender {
     UIImage *image = [UIImage imageNamed:@"invite"];
-    NSArray *array = @[@"嗨!最近找個時間來聚聚吧",image,self.notiTime.text];
+    
+    NSMutableArray *mArray = [[NSMutableArray alloc] initWithArray:@[@"嗨!最近找個時間來聚聚吧",image]];
+    
+    if (self.strurl) {
+        //array = @[@"嗨!最近找個時間來聚聚吧",image,_strurl];
+        NSLog(@"server return nil");
+        [mArray addObject:self.strurl];
+    }else{
+        
+    }
+
+
+    
     LineActivity *line = [[LineActivity alloc ]init];
-    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:array   applicationActivities:@[line]];
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:mArray   applicationActivities:@[line]];
     controller.excludedActivityTypes = @[UIActivityTypePostToFacebook];
     
     [self presentViewController:controller animated:YES completion:nil];

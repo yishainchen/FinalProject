@@ -13,28 +13,41 @@
 #import "DateTypeViewController.h"
 #import "InformViewController.h"
 #import "AppDelegate.h"
+#import "CalendarViewController.h"
 @interface DateActionViewController ()<CMPopTipViewDelegate>
 
 @property id < CMPopTipViewDelegate > delegate;
 @property CMPopTipView *roundRectButtonPopTipView;
-
+@property (weak, nonatomic) IBOutlet UIButton *btnType1;
+@property (weak, nonatomic) IBOutlet UIButton *btnType2;
+@property (weak, nonatomic) IBOutlet UIButton *btnType3;
+@property (weak, nonatomic) IBOutlet UILabel *lableDate;
 @end
 
 @implementation DateActionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於上方選擇一個聚會時段"] ;
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     self.roundRectButtonPopTipView.has3DStyle = NO;
-    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.lableDate inView:self.view animated:YES];
     
+//    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
+//    self.roundRectButtonPopTipView.delegate = self;
+//    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+//    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+//    self.roundRectButtonPopTipView.has3DStyle = NO;
+//    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
+//    
     self.btnAction1.layer.cornerRadius = 50;
-     self.btnAction2.layer.cornerRadius = 50;
-     self.btnAction3.layer.cornerRadius = 50;
-    
+    self.btnAction2.layer.cornerRadius = 50;
+    self.btnAction3.layer.cornerRadius = 50;
+    self.btnType1.layer.cornerRadius = 50;
+    self.btnType2.layer.cornerRadius = 50;
+    self.btnType3.layer.cornerRadius = 50;
     
     // Do any additional setup after loading the view.
 }
@@ -43,9 +56,49 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)btnType1:(UIButton *)sender {
+    sender.selected = !sender.selected;
+   
+    
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+//    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
+}
+- (IBAction)btnType2:(UIButton *)sender {
+    sender.selected = !sender.selected;
+   
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+//    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
+    
+    
+}
+- (IBAction)btnType3:(UIButton *)sender {
+    sender.selected = !sender.selected;
+
+    [self.roundRectButtonPopTipView dismissAnimated:YES];
+    self.roundRectButtonPopTipView = nil;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
+    self.roundRectButtonPopTipView.delegate = self;
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
+//
+}
+
+
 - (IBAction)btnSelected:(UIButton *)sender {
     sender.selected = !sender.selected;
-    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
     [self presentViewController:typeVC animated:YES completion:nil];
     AppDelegate *delegate = [[UIApplication sharedApplication]
                              delegate];
@@ -57,12 +110,12 @@
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext1 inView:self.view animated:YES];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
 
 }
 - (IBAction)btnSelected2:(UIButton *)sender {
     sender.selected = !sender.selected;
-    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
     [self presentViewController:typeVC animated:YES completion:nil];
     
     AppDelegate *delegate = [[UIApplication sharedApplication]
@@ -75,11 +128,11 @@
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext1 inView:self.view animated:YES];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
 }
 - (IBAction)btnSelected3:(UIButton *)sender {
     sender.selected = !sender.selected;
-    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+    DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
     [self presentViewController:typeVC animated:YES completion:nil];
     AppDelegate *delegate = [[UIApplication sharedApplication]
                              delegate];
@@ -113,5 +166,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    CalendarViewController *calendarVC = segue.destinationViewController;
+    if (self.btnType1.selected) {
+        calendarVC.strTime = @"中午";
+    }
+    if (self.btnType2.selected) {
+        calendarVC.strTime = @"下午";
+    }
+    if (self.btnType3.selected) {
+        calendarVC.strTime = @"晚上";
+    }
+    
+}
 
 @end

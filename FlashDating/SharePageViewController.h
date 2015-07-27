@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) NSString *str2;
 @property NSString *strurl;
-@property (weak, nonatomic) IBOutlet UILabel *notiTime;
+//@property (weak, nonatomic) IBOutlet UILabel *notiTime;
 
 @end

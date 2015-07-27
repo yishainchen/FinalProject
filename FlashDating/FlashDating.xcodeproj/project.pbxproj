@@ -214,8 +214,6 @@
 				845EAAF91B521D6500A10B87 /* TabController.m */,
 				845EAAF51B4FC96700A10B87 /* SharePageViewController.h */,
 				845EAAF61B4FC96700A10B87 /* SharePageViewController.m */,
-				845EAAF21B4FC07800A10B87 /* DateTypeViewController.h */,
-				845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */,
 				84E0FB2D1B54089B0021433F /* DateActionViewController.h */,
 				84E0FB2E1B54089B0021433F /* DateActionViewController.m */,
 				84E636A81B4E67600056E467 /* LoginFacebookViewController.h */,
@@ -238,6 +236,8 @@
 		84F3F99B1B427DD100879069 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				845EAAF21B4FC07800A10B87 /* DateTypeViewController.h */,
+				845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */,
 				84B717041B5A8536004C39B9 /* GuestViewController.h */,
 				84B717051B5A8536004C39B9 /* GuestViewController.m */,
 				846B9EAE1B48D6FF006B61A8 /* EntryImageViewController.h */,

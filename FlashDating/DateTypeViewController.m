@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnType1;
 @property (weak, nonatomic) IBOutlet UIButton *btnType2;
 @property (weak, nonatomic) IBOutlet UIButton *btnType3;
-@property (weak, nonatomic) IBOutlet UILabel *lableDate;
 @property (weak, nonatomic) IBOutlet UIButton *btnNext;
 @end
 
@@ -29,16 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇一個聚會時段"] ;
-    self.roundRectButtonPopTipView.delegate = self;
-    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
-    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-    self.roundRectButtonPopTipView.has3DStyle = NO;
-    [self.roundRectButtonPopTipView presentPointingAtView:self.lableDate inView:self.view animated:YES];
+   
 
-    self.btnType1.layer.cornerRadius = 50;
-    self.btnType2.layer.cornerRadius = 50;
-    self.btnType3.layer.cornerRadius = 50;
+    
     
     CMPopTipView *navBarLeftButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"A Message"];
     navBarLeftButtonPopTipView.delegate = self;
@@ -51,50 +43,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnType1:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    CalendarViewController *calendarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
-    [self presentViewController:calendarVC animated:YES completion:nil];
-    
-    [self.roundRectButtonPopTipView dismissAnimated:YES];
-    self.roundRectButtonPopTipView = nil;
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
-    self.roundRectButtonPopTipView.delegate = self;
-    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
-    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
-}
-- (IBAction)btnType2:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    CalendarViewController *calendarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
-    [self presentViewController:calendarVC animated:YES completion:nil];
-    [self.roundRectButtonPopTipView dismissAnimated:YES];
-    self.roundRectButtonPopTipView = nil;
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
-    self.roundRectButtonPopTipView.delegate = self;
-    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
-    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
 
-    
-}
-- (IBAction)btnType3:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    CalendarViewController *calendarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
-    [self presentViewController:calendarVC animated:YES completion:nil];
-    [self.roundRectButtonPopTipView dismissAnimated:YES];
-    self.roundRectButtonPopTipView = nil;
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
-    self.roundRectButtonPopTipView.delegate = self;
-    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
-    self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
-
-}
-- (IBAction)btnBackInform:(id)sender {
-    DateActionViewController *actionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ActionView"];
-    [self presentViewController:actionVC animated:YES completion:nil];
-}
 
 #pragma mark CMPopTipViewDelegate methods
 - (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
@@ -125,10 +74,5 @@
     // Pass the selected object to the new view controller.
 }
 */
--(IBAction)cancalToken:(UIButton *)button{
-    FBSDKAccessToken.currentAccessToken = nil;
-    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
-    [self presentViewController:loginVC animated:YES completion:nil];
-    //
-}
+
 @end

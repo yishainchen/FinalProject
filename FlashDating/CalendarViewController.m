@@ -65,8 +65,6 @@
     [format3 setDateFormat:@"yyyy-MM-dd"];
     getDate3 = [format3 stringFromDate:today];
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate3]];
-    [self seperateDate];
-    [self postdata];
     NSLog(@"date = %@",SeperateDate);
      NSLog(@"date2 = %@",SeperateDate2);
     NSLog(@"date3 = %@",SeperateDate3);
@@ -148,7 +146,9 @@
 
 - (IBAction)btnNext:(id)sender {
     [self timeInterval];
-    }
+    [self seperateDate];
+    [self postdata];
+}
 
 -(void)postdata {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -194,12 +194,12 @@
         else {
         [self performSegueWithIdentifier:@"SharePG" sender:self];
     }
-    self.i =  interval / (24*60*60);
+    self.i =  interval  / (24*60*60);
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     CalendarChooseViewController *VC = segue.destinationViewController;
-    VC.num = self.i;
+    VC.num = self.i ;
     VC.str1 = getDate;
     VC.str2 = self.strTime;
     VC.strBegin = getDate;
@@ -208,7 +208,7 @@
     NSLog(@"%@",VC.identifynum);
    }
 
-- (IBAction)backBtn:(id)sender { DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CellView"];
+- (IBAction)backBtn:(id)sender { DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ActionView"];
     [self presentViewController:typeVC animated:YES completion:nil];
 }
 

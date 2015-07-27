@@ -105,9 +105,7 @@
         [format setDateFormat:@"yyyy-MM-dd"];
     
         strToday = [format stringFromDate:today];
-        NSLog(@"begin = %@",self.strBegin);
-        NSLog(@"today = %@",   strToday);
-        NSLog(@"end = %@",self.strEnd);
+    
         self.str1  = [format stringFromDate:newDate];
     
         iv1 = (UIButton *)[cell viewWithTag:1];
@@ -151,14 +149,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+    NSLog(@"begin = %@",self.strBegin);
+    NSLog(@"today = %@",   strToday);
+    NSLog(@"end = %@",self.strEnd);
+    
     if ([self.strBegin isEqualToString:strToday])  {
+        
+        
         if ([self.strEnd isEqualToString:strToday]) {
             return self.num + 1;
         }
         return self.num + 2;
     }
-    else
-        return self.num + 1;
+    else {
+       return self.num + 1;
+    }
 }
 
 //- (IBAction)btnChoose:(UIButton *)sender {
