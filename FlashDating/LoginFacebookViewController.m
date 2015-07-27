@@ -17,6 +17,7 @@
 @interface LoginFacebookViewController ()<SphereMenuDelegate>
 {
     NSString *userID;
+    NSString *userEmail;
     FBSDKAccessToken *myToken;
 }
 @property (weak,nonatomic) UIImage* image1;
@@ -83,12 +84,14 @@
                  NSLog(@"fetched user:%@", result);
                  NSLog(@"eric = %@",result[@"id"]);
                  userID = result[@"id"];
+                userEmail =  result[@"email"];
                  [self postFBInfo];
              } }];
     
 
         ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
         [self presentViewController:VC animated:YES completion:nil];
+       
         
     }
     
@@ -136,19 +139,15 @@
 }
 
 -(void)postFBInfo {
-    
-    
+
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"http://catchup.today/api/v1/login" parameters:@{
-                                                                     @"utf8":@"✓",                                                               @"event":@{
-                                                                             @"fb_uid":userID,
-                                                                             @"authenticity_token":myToken.tokenString
-                                                                             }}
+    [manager POST:@"http://catchup.today/api/v1/login" parameters:@{   @"utf8":@"✓",
+                        @"access_token":myToken.tokenString        }
+
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
               [[NSUserDefaults standardUserDefaults] synchronize];
               NSLog(@"success");
-              
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"failure: %@", error);
           }];

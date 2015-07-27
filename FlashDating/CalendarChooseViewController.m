@@ -78,11 +78,6 @@
      cell.tag = indexPath.row+1;
     static NSString *CellIdentifier = @"Cell";
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    self.labelA = [[UILabel alloc] initWithFrame:CGRectMake(5, 11, 80, 22)];
-//    self.labelA.backgroundColor = [UIColor clearColor];
-//    self.labelA.textColor = [UIColor blueColor];
-//    [[cell contentView] addSubview:self.labelA];
-    
     self.labelTime = [[UILabel alloc] initWithFrame:CGRectMake( 160, 11, 40, 22)];
     self.labelTime.backgroundColor = [UIColor clearColor];
     self.labelTime.textColor = [UIColor blackColor];
@@ -103,20 +98,13 @@
         newDate = [[NSCalendar currentCalendar]
                    dateByAddingComponents:dateComponents
                    toDate:dateFromString  options:0];
-//        NSDate *today = [NSDate date];
-    
         format = [[NSDateFormatter alloc]init];
         [format setDateFormat:@"yyyy-MM-dd"];
-//    NSLog(@"erictoday = %@",today);
-//        strToday = [format stringFromDate:today];
-    NSLog(@"erictoday1 = %@",strToday
-          );
+
         self.str1  = [format stringFromDate:newDate];
-    
         iv1 = (UIButton *)[cell viewWithTag:1];
         iv1.tag = indexPath.row ;
         [iv1 addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    
     
         if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -154,12 +142,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    NSLog(@"begin = %@",self.strBegin);
-    NSLog(@"today = %@",   strToday);
-    NSLog(@"end = %@",self.strEnd);
     
     if ([self.strBegin isEqualToString:strToday])  {
-        
         
         if ([self.strEnd isEqualToString:strToday]) {
             return self.num + 1;
