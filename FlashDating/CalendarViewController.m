@@ -65,10 +65,7 @@
     [format3 setDateFormat:@"yyyy-MM-dd"];
     getDate3 = [format3 stringFromDate:today];
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate3]];
-    NSLog(@"date = %@",SeperateDate);
-     NSLog(@"date2 = %@",SeperateDate2);
-    NSLog(@"date3 = %@",SeperateDate3);
-    NSLog(@"date4 = %@",SeperateEnd);
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -147,6 +144,10 @@
 - (IBAction)btnNext:(id)sender {
     [self timeInterval];
     [self seperateDate];
+    NSLog(@"date = %@",SeperateDate);
+    NSLog(@"date2 = %@",SeperateDate2);
+    NSLog(@"date3 = %@",SeperateDate3);
+    NSLog(@"date4 = %@",SeperateEnd);
     [self postdata];
 }
 

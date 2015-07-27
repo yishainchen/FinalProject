@@ -6,13 +6,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view alpha="0.69999999999999973" contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="622"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="622"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="WFn-AE-mNj">
+                    <rect key="frame" x="0.0" y="-51" width="436" height="679"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WFn-AE-mNj" secondAttribute="trailing" constant="-6" id="2Vv-ui-1g9"/>
+                <constraint firstItem="WFn-AE-mNj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Khr-By-0Az"/>
+                <constraint firstItem="WFn-AE-mNj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-51" id="bNe-QY-uBA"/>
+                <constraint firstAttribute="bottom" secondItem="WFn-AE-mNj" secondAttribute="bottom" constant="-6" id="yaH-IA-ld0"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="526"/>
+            <point key="canvasLocation" x="537" y="526"/>
         </view>
     </objects>
+    <resources>
+        <image name="splash" width="640" height="1136"/>
+    </resources>
 </document>

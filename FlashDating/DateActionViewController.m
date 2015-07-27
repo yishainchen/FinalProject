@@ -67,7 +67,11 @@
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-//    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
+    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
+    if (sender.selected) {
+        self.btnType2.selected = NO;
+        self.btnType3.selected = NO;
+    }
 }
 - (IBAction)btnType2:(UIButton *)sender {
     sender.selected = !sender.selected;
@@ -78,8 +82,11 @@
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-//    [self.roundRectButtonPopTipView presentPointingAtView:self.btnNext inView:self.view animated:YES];
-    
+    [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
+    if (sender.selected) {
+        self.btnType1.selected = NO;
+        self.btnType3.selected = NO;
+    }
     
 }
 - (IBAction)btnType3:(UIButton *)sender {
@@ -92,7 +99,10 @@
     self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     [self.roundRectButtonPopTipView presentPointingAtView:self.labelAction inView:self.view animated:YES];
-//
+    if (sender.selected) {
+        self.btnType1.selected = NO;
+        self.btnType2.selected = NO;
+    }
 }
 
 
@@ -151,12 +161,7 @@
     [self presentViewController:type animated:YES completion:nil];
 }
 
--(IBAction)cancalToken:(UIButton *)button{
-    FBSDKAccessToken.currentAccessToken = nil;
-    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
-    [self presentViewController:loginVC animated:YES completion:nil];
-//
-}
+
 /*
 #pragma mark - Navigation
 

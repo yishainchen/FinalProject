@@ -83,8 +83,8 @@
 		84E0FB2B1B53EAF20021433F /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
 		84E0FB2D1B54089B0021433F /* DateActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateActionViewController.h; path = ../DateActionViewController.h; sourceTree = "<group>"; };
 		84E0FB2E1B54089B0021433F /* DateActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateActionViewController.m; path = ../DateActionViewController.m; sourceTree = "<group>"; };
-		84E0FB3D1B5542910021433F /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostViewController.h; sourceTree = "<group>"; };
-		84E0FB3E1B5542910021433F /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostViewController.m; sourceTree = "<group>"; };
+		84E0FB3D1B5542910021433F /* HostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HostViewController.h; path = ../HostViewController.h; sourceTree = "<group>"; };
+		84E0FB3E1B5542910021433F /* HostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HostViewController.m; path = ../HostViewController.m; sourceTree = "<group>"; };
 		84E0FB401B5545660021433F /* CalendarChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarChooseViewController.h; sourceTree = "<group>"; };
 		84E0FB411B5545660021433F /* CalendarChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarChooseViewController.m; sourceTree = "<group>"; };
 		84E0FB471B554E9F0021433F /* SphereMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereMenuViewController.h; sourceTree = "<group>"; };
@@ -187,8 +187,6 @@
 				84E0FB411B5545660021433F /* CalendarChooseViewController.m */,
 				84F09E8D1B4FB3D2007A43D8 /* CalendarViewController.h */,
 				84F09E8E1B4FB3D2007A43D8 /* CalendarViewController.m */,
-				84E0FB3D1B5542910021433F /* HostViewController.h */,
-				84E0FB3E1B5542910021433F /* HostViewController.m */,
 				84E0FB3A1B54EBC90021433F /* Import */,
 				84F3F99A1B427DD100879069 /* FlashDating */,
 				84F3F9B71B427DD100879069 /* FlashDatingTests */,
@@ -236,6 +234,8 @@
 		84F3F99B1B427DD100879069 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84E0FB3D1B5542910021433F /* HostViewController.h */,
+				84E0FB3E1B5542910021433F /* HostViewController.m */,
 				845EAAF21B4FC07800A10B87 /* DateTypeViewController.h */,
 				845EAAF31B4FC07800A10B87 /* DateTypeViewController.m */,
 				84B717041B5A8536004C39B9 /* GuestViewController.h */,

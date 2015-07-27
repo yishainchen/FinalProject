@@ -49,6 +49,10 @@
 
 - (void)viewDidLoad {
 //    resetdic = [[NSMutableDictionary alloc]init];
+    NSDate *today = [NSDate date];
+    format = [[NSDateFormatter alloc]init];
+    [format setDateFormat:@"yyyy-MM-dd"];
+    strToday = [format stringFromDate:today];
     flashNum = self.identifynum;
     strNum = [NSString stringWithFormat:@"%@",flashNum];
     NSLog(@"strnum = %@" ,strNum);
@@ -99,13 +103,14 @@
         newDate = [[NSCalendar currentCalendar]
                    dateByAddingComponents:dateComponents
                    toDate:dateFromString  options:0];
-        NSDate *today = [NSDate date];
+//        NSDate *today = [NSDate date];
     
         format = [[NSDateFormatter alloc]init];
         [format setDateFormat:@"yyyy-MM-dd"];
-    
-        strToday = [format stringFromDate:today];
-    
+//    NSLog(@"erictoday = %@",today);
+//        strToday = [format stringFromDate:today];
+    NSLog(@"erictoday1 = %@",strToday
+          );
         self.str1  = [format stringFromDate:newDate];
     
         iv1 = (UIButton *)[cell viewWithTag:1];
