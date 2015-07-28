@@ -5,7 +5,9 @@
 //  Created by yishain on 7/18/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "LoginFacebookViewController.h"
 #import "InformViewController.h"
 #import "DateActionViewController.h"
 @interface InformViewController ()
@@ -35,6 +37,15 @@
 }
 - (IBAction)btnInform2:(id)sender {
     self.btn2.selected = !self.btn2.selected;
+}
+
+
+
+-(IBAction)cancalToken:(UIButton *)button{
+    FBSDKAccessToken.currentAccessToken = nil;
+    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+    //
 }
 
 /*

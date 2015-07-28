@@ -12,11 +12,13 @@
 #import "SharePageViewController.h"
 #import "CalendarChooseViewController.h"
 #import "CMPopTipView.h"
+#import "AppDelegate.h"
 #import <AFNetworking/AFNetworking.h>
 
 @interface CalendarViewController ()<CMPopTipViewDelegate>
 
 {
+    int type;
     NSInteger timeAction;
     NSDate *myDate;
     NSDate *myDate2;
@@ -30,6 +32,7 @@
     NSString *SeperateEnd2;
     NSString *SeperateEnd3;
     
+    
 }
 @property id < CMPopTipViewDelegate > delegate;
 @property CMPopTipView *roundRectButtonPopTipView;
@@ -40,10 +43,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    type = 0;
+   myToken = [FBSDKAccessToken currentAccessToken];
+    NSLog(@"token = %@",myToken.tokenString);
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於上方選擇開始時間"] ;
     self.roundRectButtonPopTipView.delegate = self;
-    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor greenColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     self.roundRectButtonPopTipView.has3DStyle = NO;
     [self.roundRectButtonPopTipView presentPointingAtView:self.datePickerControl inView:self.view animated:YES];
@@ -65,7 +70,7 @@
     [format3 setDateFormat:@"yyyy-MM-dd"];
     getDate3 = [format3 stringFromDate:today];
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate3]];
-
+    [self postdata];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,7 +87,7 @@
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇結束時間，活動舉辦區間勿大於十四天"] ;
     self.roundRectButtonPopTipView.delegate = self;
-    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor greenColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     self.roundRectButtonPopTipView.has3DStyle = NO;
     [self.roundRectButtonPopTipView presentPointingAtView:self.datePickerControlEnd inView:self.view animated:YES];
@@ -98,7 +103,7 @@
      [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選認確進入下一頁"] ;
     self.roundRectButtonPopTipView.delegate = self;
-    self.roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+    self.roundRectButtonPopTipView.backgroundColor = [UIColor greenColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
     self.roundRectButtonPopTipView.has3DStyle = NO;
     [self.roundRectButtonPopTipView presentPointingAtView:self.button1 inView:self.view animated:YES];
@@ -148,14 +153,22 @@
     NSLog(@"date2 = %@",SeperateDate2);
     NSLog(@"date3 = %@",SeperateDate3);
     NSLog(@"date4 = %@",SeperateEnd);
-    [self postdata];
+    
+   
 }
 
 -(void)postdata {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
-                                                                     @"utf8":@"✓",                                                               @"event":@{@"start_date(1i)":SeperateDate, @"start_date(2i)":SeperateDate2,                                                                    @"start_date(3i)":SeperateDate3,                                                                              @"end_date(1i)":SeperateEnd,                                                                                  @"end_date(2i)":SeperateEnd2,
-                                                                                                                                                            @"end_date(3i)":SeperateEnd3},                                                              @"commit":@"Create Event"}
+                                                                     @"utf8":@"✓",
+                                           @"authenticity_token":myToken.tokenString,
+                                                                     @"event":@{
+                                                                             @"start_date":getDate ,
+                                                                                                                                                    @"end_date":getDate2
+                                                                             ,@"duration_id":@(type)
+                                                                             ,
+                                                           @"category_id":@(timeAction),},
+                                                                     @"commit":@"下一步"}
      
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
@@ -206,11 +219,25 @@
     VC.strBegin = getDate;
     VC.strEnd = getDate2;
     VC.identifynum = self.idNum;
-    NSLog(@"%@",VC.identifynum);
+    NSLog(@"vc = %@",VC.identifynum);
    }
 
 - (IBAction)backBtn:(id)sender { DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ActionView"];
     [self presentViewController:typeVC animated:YES completion:nil];
+}
+
+
+
+-(void) dateAction {
+    if ([self.strTime isEqualToString:@"中午"]) {
+        type = 10;
+    }
+    else if ([self.strTime isEqualToString:@"下午"]) {
+        type = 20;
+    }
+    else if ([self.strTime isEqualToString:@"晚上"]) {
+        type = 30;
+    }
 }
 
 /*

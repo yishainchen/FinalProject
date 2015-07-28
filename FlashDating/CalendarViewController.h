@@ -10,7 +10,10 @@
 
 
 @interface CalendarViewController : UIViewController
+{
+  FBSDKAccessToken *myToken;
 
+}
 @property (weak, nonatomic) IBOutlet UIButton *Backbtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *button1;

@@ -5,7 +5,7 @@
 //  Created by yishain on 7/14/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
-
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "LoginFacebookViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
@@ -54,6 +54,7 @@
     [format setDateFormat:@"yyyy-MM-dd"];
     strToday = [format stringFromDate:today];
     flashNum = self.identifynum;
+    NSLog(@"strnum = %@" ,self.identifynum);
     strNum = [NSString stringWithFormat:@"%@",flashNum];
     NSLog(@"strnum = %@" ,strNum);
     AppDelegate *delegate = [[UIApplication sharedApplication]
@@ -176,6 +177,15 @@
     }
 }
 - (IBAction)btnPost:(id)sender {
+    [SVProgressHUD show];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // time-consuming task
+        NSLog(@"HI");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    });
+    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"新增成功" message:@"下一步邀請好友參加聚會" preferredStyle:UIAlertControllerStyleAlert];
     [self presentViewController:alert animated:YES completion:nil];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"確定" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
@@ -225,4 +235,12 @@
     shareVC.strurl = self.urlstring;
     NSLog(@"strurl = %@",shareVC.strurl);
 }
+
+-(IBAction)cancalToken:(UIButton *)button{
+    FBSDKAccessToken.currentAccessToken = nil;
+    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+    //
+}
+
 @end

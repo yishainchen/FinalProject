@@ -5,7 +5,9 @@
 //  Created by yishain on 7/14/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "LoginFacebookViewController.h"
 #import "HostViewController.h"
 #import "ViewController.h"
 @interface HostViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -30,7 +32,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -64,5 +66,10 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(IBAction)cancalToken:(UIButton *)button{
+    FBSDKAccessToken.currentAccessToken = nil;
+    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+    //
+}
 @end

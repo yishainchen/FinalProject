@@ -4,6 +4,7 @@
 target 'FlashDating' do
 pod "AFNetworking", "~> 2.0"
 pod 'Parse'
+pod 'SVProgressHUD'
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'

@@ -5,7 +5,7 @@
 //  Created by yishain on 7/9/15.
 //  Copyright (c) 2015 yishain. All rights reserved.
 //
-
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "LoginFacebookViewController.h"
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -65,8 +65,15 @@
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     [FBSDKProfile currentProfile];
     //判斷已登入
+    [SVProgressHUD show];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // time-consuming task
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    });
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fbTokenChangeNoti:) name:FBSDKAccessTokenDidChangeNotification object:nil];
-   
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -91,43 +98,12 @@
 
         ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
         [self presentViewController:VC animated:YES completion:nil];
-       
-        
     }
-    
-    
-//    else if ([AutoLogin isEqualToString:@"NO"]) {
-//        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"isAutoLogin"] != nil) {
-//            if ([FBSDKAccessToken currentAccessToken] != nil) {
-//              
-//                AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//                manager = [AFHTTPRequestOperationManager manager];
-//                [manager POST:@"https://cryptic-oasis-8248.herokuapp.com/api/v1/events"
-//                   parameters:nil
-//                      success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//                          AutoLogin = @"YES";
-//                          NSLog(@"%@",AutoLogin);
-//                          ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
-//                          [self presentViewController:VC animated:YES completion:nil];
-//
-//                          
-//                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//                          
-//                      }];
-//            }
-//            else {
-//                //                loginButton.hidden = 0;
-//                [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"isAutoLogin"];
-//                [[NSUserDefaults standardUserDefaults] synchronize];
-//            }
-//        }
-//    }
 }
 
 
 -(void)fbTokenChangeNoti:(NSNotification*)noti {
     if ([FBSDKAccessToken currentAccessToken]) {
-        
         ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
         [self presentViewController:VC animated:YES completion:nil];
     }
@@ -145,9 +121,11 @@
                         @"access_token":myToken.tokenString        }
 
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
+//              [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
               [[NSUserDefaults standardUserDefaults] synchronize];
               NSLog(@"success");
+              NSLog(@"success = %@",responseObject);
+            
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"failure: %@", error);
           }];

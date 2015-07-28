@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FlashDating-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FlashDating.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3AD6CDF6A6C5CC0F936D9C08</key>
+		<key>2C413A5448F15EC97E73F390</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44D4300F37DC0EF834CE35CB</key>
+		<key>458B82ABA891D8ABE2CE7342</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B03A21D8C419C0A2E9A6399</key>
+		<key>6DF2205BAB7BA4E2B4AEAF29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66CE9B23026EF05A813EFCD1</key>
+		<key>800B7DC39F14EBF560327832</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0E6ADE7EFE5CD13066E6AF2</key>
+		<key>9751762C84D125B7B3A2D57F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F64C991C1D95B875E939C9AC</key>
+		<key>B37BC1D272D1FDF7EC557109</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC874706B51773B2568D1F34</key>
+		<key>BAFBB396F4F6C5F541D51ECA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1A3E9867600A44D49BFDA13</key>
 		<dict>
 			<key>primary</key>
 			<true/>

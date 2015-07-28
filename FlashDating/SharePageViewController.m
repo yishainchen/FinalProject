@@ -15,6 +15,8 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <AFNetworking/AFNetworking.h>
+#import "LoginFacebookViewController.h"
+
 
 //#import <
 @interface SharePageViewController ()
@@ -122,6 +124,13 @@
     
 }
 
+
+-(IBAction)cancalToken:(UIButton *)button{
+    FBSDKAccessToken.currentAccessToken = nil;
+    LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+    //
+}
 
 /*
 #pragma mark - Navigation
