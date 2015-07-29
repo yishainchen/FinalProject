@@ -12,6 +12,7 @@
 #import "EricTableViewCell.h"
 
 @interface CalendarChooseViewController : UIViewController {
+    FBSDKAccessToken *myToken;
     
 }
 @property NSNumber* identifynum;

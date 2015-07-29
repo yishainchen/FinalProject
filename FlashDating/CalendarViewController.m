@@ -31,8 +31,6 @@
     NSString *SeperateEnd;
     NSString *SeperateEnd2;
     NSString *SeperateEnd3;
-    
-    
 }
 @property id < CMPopTipViewDelegate > delegate;
 @property CMPopTipView *roundRectButtonPopTipView;
@@ -85,7 +83,7 @@
 //    NSLog(@"%@",getDate);
     [self.lblSelectedDate setText:[NSString stringWithFormat:@"開始時間 :%@",getDate]];
     [self.roundRectButtonPopTipView dismissAnimated:YES];
-    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇結束時間，活動舉辦區間勿大於十四天"] ;
+    self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇結束時間，活動舉辦區間勿大於七天"] ;
     self.roundRectButtonPopTipView.delegate = self;
     self.roundRectButtonPopTipView.backgroundColor = [UIColor greenColor];
     self.roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
@@ -188,8 +186,8 @@
 -(void)timeInterval{
 
     NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
-//    NSLog(@"Time  =  %f", interval);
-        if (interval >=  1209600 ) {
+//    有ＢＵＧ  往上拉日期也會加
+        if (interval >=  604800 ) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"超過選擇區間" message:@"請重新選擇" preferredStyle:UIAlertControllerStyleAlert];
         [self presentViewController:alert animated:YES completion:nil];
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {

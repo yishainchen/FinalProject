@@ -17,15 +17,17 @@
 #import "DateActionViewController.h"
 #import "CMPopTipView.h"
 #import "AppDelegate.h"
+#import "GV.h"
 
 @interface CalendarChooseViewController () <UITableViewDataSource,UITableViewDelegate>
 {
     int i;
-    int a ;
+//    int a ;
     int type;
     NSDate *newDate;
     NSDate *nowDate;
     NSInteger timeAction;
+    NSString *ident;
     NSNumber* flashNum;
     NSDateFormatter *format;
     NSMutableArray *mutableArr;
@@ -48,7 +50,8 @@
 @implementation CalendarChooseViewController
 
 - (void)viewDidLoad {
-//    resetdic = [[NSMutableDictionary alloc]init];
+  
+    myToken = [FBSDKAccessToken currentAccessToken];
     NSDate *today = [NSDate date];
     format = [[NSDateFormatter alloc]init];
     [format setDateFormat:@"yyyy-MM-dd"];
@@ -61,9 +64,11 @@
                              delegate];
     resetArr = [[NSMutableArray alloc]init];
     dict = [[NSMutableDictionary alloc]init];
-    a = 0;
+//    a = 0;
     type = 0;
     NSInteger Action;
+//    NSString *userIdent;
+   
     timeAction  = delegate.Action;
     datestring = self.strBegin;
     mutableArr = [[NSMutableArray alloc] init];
@@ -86,7 +91,7 @@
 
 //    self.labelTime.text = @"";
    
-        NSLog(@"a = %d",a);
+//        NSLog(@"a = %d",a);
         cell.labelDate.text = self.str1 ;
         self.labelTime.text =  self.str2;
        [self dateAction];
@@ -203,11 +208,16 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager PUT:url parameters:@{
                                                                                                 @"utf8":@"✓",
+                                                                                                @":user_id":userIdent,
+                                                                                                @"authenticity_token":myToken.tokenString,
                                   
-                                                                                      @"event":@{@"category_id":@(timeAction),
-                                                                                                                                                                                       @"duration_id":@(type),
-                                                                                                                                                                                       @"rangetimes_attributes":@{@"range":resetArr}},
-                                                                                                @"commit":@"Update Event",@"id":strNum}         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//                                                                                                @"category_id":@(timeAction),
+//                                                                                                @"duration_id":@(type),
+//                                                                                                
+                                                                                                
+                                                                                      @"event":@{
+                                                                                                                                                                                       @"rangetimes_attributes":resetArr},
+                                                                                                @"commit":@"確認勾選",@"id":strNum}         success:^(AFHTTPRequestOperation *operation, id responseObject) {
            [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
             [[NSUserDefaults standardUserDefaults] synchronize];
                  NSLog(@"success");

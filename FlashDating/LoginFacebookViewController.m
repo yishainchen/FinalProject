@@ -14,10 +14,12 @@
 #import "AutoLogin.h"
 #import <AFNetworking/AFNetworking.h>
 #import "AppDelegate.h"
+#import "GV.h"
 @interface LoginFacebookViewController ()<SphereMenuDelegate>
 {
     NSString *userID;
     NSString *userEmail;
+
     FBSDKAccessToken *myToken;
 }
 @property (weak,nonatomic) UIImage* image1;
@@ -35,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+
     UIImage *startImage = [UIImage imageNamed:@"logo120"];
     _image1 = [UIImage imageNamed:@"Untitled"];
     _image2 = [UIImage imageNamed:@"Untitled2"];
@@ -91,7 +93,10 @@
                  NSLog(@"fetched user:%@", result);
                  NSLog(@"eric = %@",result[@"id"]);
                  userID = result[@"id"];
+                 
+                 NSLog(@"userIden = %@",userIdent);
                 userEmail =  result[@"email"];
+                 
                  [self postFBInfo];
              } }];
     
@@ -117,7 +122,8 @@
 -(void)postFBInfo {
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"http://catchup.today/api/v1/login" parameters:@{   @"utf8":@"✓",
+    [manager POST:@"http://catchup.today/api/v1/login" parameters:@{   @"utf8":@"✓"
+                         ,
                         @"access_token":myToken.tokenString        }
 
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -125,7 +131,7 @@
               [[NSUserDefaults standardUserDefaults] synchronize];
               NSLog(@"success");
               NSLog(@"success = %@",responseObject);
-            
+            userIdent = responseObject[@"user_id"];
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"failure: %@", error);
           }];

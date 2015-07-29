@@ -30,10 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    
-    
-
     self.btnDate1.layer.cornerRadius = 15;
     self.btnDate2.layer.cornerRadius = 15;
   
@@ -98,6 +94,17 @@
 }
 
 
+- (IBAction)alertBtn:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"聚會邀請已回覆" message:@"請前往查詢頁面確認聚會日期" preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alert animated:YES completion:nil];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"確定" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+      
+    [alert addAction:cancel];
+
+    }];
+}
 
 
 @end
