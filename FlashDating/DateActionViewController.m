@@ -13,6 +13,7 @@
 #import "DateTypeViewController.h"
 #import "InformViewController.h"
 #import "AppDelegate.h"
+#import "GV.h"
 #import "CalendarViewController.h"
 @interface DateActionViewController ()<CMPopTipViewDelegate>
 
@@ -59,6 +60,7 @@
 
 - (IBAction)btnType1:(UIButton *)sender {
     sender.selected = !sender.selected;
+    type = 10;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
@@ -73,6 +75,7 @@
 }
 - (IBAction)btnType2:(UIButton *)sender {
     sender.selected = !sender.selected;
+    type = 20;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
@@ -88,7 +91,7 @@
 }
 - (IBAction)btnType3:(UIButton *)sender {
     sender.selected = !sender.selected;
-
+    type = 30;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於下方選擇聚會類型"] ;
@@ -107,9 +110,7 @@
     sender.selected = !sender.selected;
     DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
     [self presentViewController:typeVC animated:YES completion:nil];
-    AppDelegate *delegate = [[UIApplication sharedApplication]
-                             delegate];
-    delegate.Action = 1;
+    Action = 1;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -123,9 +124,7 @@
     sender.selected = !sender.selected;
     DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
     [self presentViewController:typeVC animated:YES completion:nil];
-    AppDelegate *delegate = [[UIApplication sharedApplication]
-                             delegate];
-    delegate.Action = 2;
+    Action = 2;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -138,9 +137,7 @@
     sender.selected = !sender.selected;
     DateTypeViewController *typeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"calendarVC"];
     [self presentViewController:typeVC animated:YES completion:nil];
-    AppDelegate *delegate = [[UIApplication sharedApplication]
-                             delegate];
-    delegate.Action = 3;
+    Action = 3;
     [self.roundRectButtonPopTipView dismissAnimated:YES];
     self.roundRectButtonPopTipView = nil;
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請點選NEXT進入下一頁"] ;
@@ -184,5 +181,8 @@
     LoginFacebookViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
     [self presentViewController:loginVC animated:YES completion:nil];
     //
+}
+
+- (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
 }
 @end

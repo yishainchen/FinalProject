@@ -21,9 +21,6 @@
 }
 @property (weak, nonatomic) IBOutlet UIButton *btnDate1;
 @property (weak, nonatomic) IBOutlet UIButton *btnDate2;
-
-
-
 @end
 
 @implementation ViewController
@@ -69,11 +66,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-
-
-
 - (IBAction)dateSearch:(id)sender {
    DateSearchViewController *dateVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DateSearch"];
     [self presentViewController:dateVC animated:YES completion:nil];
@@ -84,7 +76,6 @@
         }
     }];
 }
-
 
 -(IBAction)cancalToken:(UIButton *)button{
     FBSDKAccessToken.currentAccessToken = nil;
@@ -98,12 +89,11 @@
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"聚會邀請已回覆" message:@"請前往查詢頁面確認聚會日期" preferredStyle:UIAlertControllerStyleAlert];
     [self presentViewController:alert animated:YES completion:nil];
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"確定" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
-        [alert dismissViewControllerAnimated:YES completion:nil];
-      
-    [alert addAction:cancel];
 
-    }];
+     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"確定" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+    [alert addAction:cancel];
 }
 
 

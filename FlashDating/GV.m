@@ -8,3 +8,6 @@
 
 #import <Foundation/Foundation.h>
 NSString *userIdent = 0;
+NSString *autoken;
+NSInteger Action;
+NSInteger type;

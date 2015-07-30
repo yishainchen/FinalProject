@@ -13,12 +13,12 @@
 #import "CalendarChooseViewController.h"
 #import "CMPopTipView.h"
 #import "AppDelegate.h"
+#import "GV.h"
 #import <AFNetworking/AFNetworking.h>
 
 @interface CalendarViewController ()<CMPopTipViewDelegate>
 
 {
-    int type;
     NSInteger timeAction;
     NSDate *myDate;
     NSDate *myDate2;
@@ -41,7 +41,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    type = 0;
    myToken = [FBSDKAccessToken currentAccessToken];
     NSLog(@"token = %@",myToken.tokenString);
     self.roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"請於上方選擇開始時間"] ;
@@ -59,8 +58,8 @@
     [format2 setDateFormat:@"yyyy-MM-dd"];
     getDate2 = [format2 stringFromDate:myDate2];
        NSLog(@"%@",getDate2);
-    self.button1.layer.cornerRadius = 10;
-    self.Backbtn.layer.cornerRadius = 10;
+//    self.button1.layer.cornerRadius = 10;
+//    self.Backbtn.layer.cornerRadius = 10;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSDate *today = [NSDate date];
@@ -128,44 +127,29 @@
         SeperateEnd3 = [format3 stringFromDate:myDate2];
 }
 
-
-//- (IBAction)btnLocalPush:(id)sender {
-//    UILocalNotification *localNotification = [[UILocalNotification alloc]init];
-////    NSCalendar *calender = [NSCalendar currentCalendar];
-//    NSDate *notiDate = [NSDate dateWithTimeIntervalSinceNow:3];
-//    localNotification.fireDate = notiDate;
-////    localNotification.soundName = @"";
-//    localNotification.alertAction = @"新增聚會成功";
-////    localNotification.repeatInterval = NSCalendarUnitMonth;
-//    localNotification.soundName = UILocalNotificationDefaultSoundName;
-//    localNotification.applicationIconBadgeNumber = 1;
-//    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-//    
-//}
-
-
 - (IBAction)btnNext:(id)sender {
     [self timeInterval];
     [self seperateDate];
-    NSLog(@"date = %@",SeperateDate);
-    NSLog(@"date2 = %@",SeperateDate2);
-    NSLog(@"date3 = %@",SeperateDate3);
-    NSLog(@"date4 = %@",SeperateEnd);
-    
-   
 }
 
 -(void)postdata {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:@"http://catchup.today/api/v1/events" parameters:@{
                                                                      @"utf8":@"✓",
-                                           @"authenticity_token":myToken.tokenString,
+                                           @"auth_token":autoken,
                                                                      @"event":@{
                                                                              @"start_date":getDate ,
                                                                                                                                                     @"end_date":getDate2
-                                                                             ,@"duration_id":@(type)
+                                                                             ,@"duration_id":@(30
+                                                                                 )
+                                                                                 
+//                                                                                 @(type)
                                                                              ,
-                                                           @"category_id":@(timeAction),},
+                                                           @"category_id":@(3)
+                                                                                 
+//                                                                                 @(timeAction)
+                                                                             
+                                                                             ,},
                                                                      @"commit":@"下一步"}
      
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -237,7 +221,8 @@
         type = 30;
     }
 }
-
+- (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
+}
 /*
 #pragma mark - Navigation
 

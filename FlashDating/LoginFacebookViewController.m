@@ -91,16 +91,12 @@
                                       *connection, id result, NSError *error) {
              if (!error) {
                  NSLog(@"fetched user:%@", result);
-                 NSLog(@"eric = %@",result[@"id"]);
                  userID = result[@"id"];
-                 
                  NSLog(@"userIden = %@",userIdent);
                 userEmail =  result[@"email"];
                  
                  [self postFBInfo];
              } }];
-    
-
         ViewController *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"Cell"];
         [self presentViewController:VC animated:YES completion:nil];
     }
@@ -132,6 +128,8 @@
               NSLog(@"success");
               NSLog(@"success = %@",responseObject);
             userIdent = responseObject[@"user_id"];
+             autoken =  responseObject[@"auth_token"];
+              NSLog(@"userID = %@",userIdent);
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"failure: %@", error);
           }];

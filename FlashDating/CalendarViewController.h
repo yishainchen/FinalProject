@@ -16,6 +16,7 @@
 }
 @property (weak, nonatomic) IBOutlet UIButton *Backbtn;
 
+@property (weak, nonatomic) IBOutlet UILabel *desLable;
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UILabel *lblSelectedDate;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerControl;

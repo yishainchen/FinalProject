@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.btnDate.layer.cornerRadius = 11;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

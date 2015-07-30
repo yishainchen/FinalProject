@@ -102,7 +102,7 @@
 
 
 - (IBAction)ShowInvitePage:(id)sender {
-    UIImage *image = [UIImage imageNamed:@"invite"];
+    UIImage *image = [UIImage imageNamed:@"inviteMe"];
     
     NSMutableArray *mArray = [[NSMutableArray alloc] initWithArray:@[@"嗨!最近找個時間來聚聚吧",image]];
     

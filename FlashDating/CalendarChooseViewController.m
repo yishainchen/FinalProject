@@ -51,6 +51,8 @@
 
 - (void)viewDidLoad {
   
+    NSLog(@"action  = %d",Action);
+     NSLog(@"type  = %d",type);
     myToken = [FBSDKAccessToken currentAccessToken];
     NSDate *today = [NSDate date];
     format = [[NSDateFormatter alloc]init];
@@ -60,16 +62,8 @@
     NSLog(@"strnum = %@" ,self.identifynum);
     strNum = [NSString stringWithFormat:@"%@",flashNum];
     NSLog(@"strnum = %@" ,strNum);
-    AppDelegate *delegate = [[UIApplication sharedApplication]
-                             delegate];
     resetArr = [[NSMutableArray alloc]init];
     dict = [[NSMutableDictionary alloc]init];
-//    a = 0;
-    type = 0;
-    NSInteger Action;
-//    NSString *userIdent;
-   
-    timeAction  = delegate.Action;
     datestring = self.strBegin;
     mutableArr = [[NSMutableArray alloc] init];
     self.tabelView.delegate = self;
@@ -92,6 +86,7 @@
 //    self.labelTime.text = @"";
    
 //        NSLog(@"a = %d",a);
+
         cell.labelDate.text = self.str1 ;
         self.labelTime.text =  self.str2;
        [self dateAction];
@@ -207,17 +202,10 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager PUT:url parameters:@{
-                                                                                                @"utf8":@"✓",
-                                                                                                @":user_id":userIdent,
-                                                                                                @"authenticity_token":myToken.tokenString,
-                                  
-//                                                                                                @"category_id":@(timeAction),
-//                                                                                                @"duration_id":@(type),
-//                                                                                                
+                                                                                                                 @"auth_token":autoken,             @"event":@{
+                                                                                                                                                                                       @"rangetimes_attributes":resetArr}
                                                                                                 
-                                                                                      @"event":@{
-                                                                                                                                                                                       @"rangetimes_attributes":resetArr},
-                                                                                                @"commit":@"確認勾選",@"id":strNum}         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                  }         success:^(AFHTTPRequestOperation *operation, id responseObject) {
            [[NSUserDefaults standardUserDefaults] setValue:responseObject[@"auth_token"] forKey:@"auth_token"];
             [[NSUserDefaults standardUserDefaults] synchronize];
                  NSLog(@"success");

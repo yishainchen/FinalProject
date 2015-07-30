@@ -8,6 +8,8 @@
 
 #ifndef FlashDating_GV_h
 #define FlashDating_GV_h
-
+extern NSInteger Action;
+extern NSInteger type;
 extern NSString *userIdent;
+extern NSString *autoken;
 #endif
