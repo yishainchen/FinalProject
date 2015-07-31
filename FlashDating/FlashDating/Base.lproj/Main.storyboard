@@ -1222,25 +1222,25 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled" translatesAutoresizingMaskIntoConstraints="NO" id="m8U-0z-4Up">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled5" translatesAutoresizingMaskIntoConstraints="NO" id="m8U-0z-4Up">
                                                     <rect key="frame" x="72" y="49" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled2" translatesAutoresizingMaskIntoConstraints="NO" id="4oa-XK-Rsp">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ken" translatesAutoresizingMaskIntoConstraints="NO" id="4oa-XK-Rsp">
                                                     <rect key="frame" x="117" y="49" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled3" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-eu-G4t">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sean" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-eu-G4t">
                                                     <rect key="frame" x="156" y="48" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled4" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-jN-tYi">
-                                                    <rect key="frame" x="198" y="49" width="37" height="41"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="klein1" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-jN-tYi">
+                                                    <rect key="frame" x="199" y="49" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled7" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-tE-Jp2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled8" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-tE-Jp2">
                                                     <rect key="frame" x="243" y="49" width="37" height="41"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6e-GU-2xq">
-                                                    <rect key="frame" x="274" y="99" width="38" height="30"/>
+                                                    <rect key="frame" x="243" y="99" width="69" height="30"/>
                                                     <color key="backgroundColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="確認">
+                                                    <state key="normal" title="就選這天">
                                                         <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
@@ -1287,22 +1287,22 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-Iz-coI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled5" translatesAutoresizingMaskIntoConstraints="NO" id="sbj-Iz-coI">
                                                     <rect key="frame" x="72" y="49" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled2" translatesAutoresizingMaskIntoConstraints="NO" id="hv4-WL-5YI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ken" translatesAutoresizingMaskIntoConstraints="NO" id="hv4-WL-5YI">
                                                     <rect key="frame" x="117" y="49" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled3" translatesAutoresizingMaskIntoConstraints="NO" id="QjE-Lz-aNB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sean" translatesAutoresizingMaskIntoConstraints="NO" id="QjE-Lz-aNB">
                                                     <rect key="frame" x="156" y="48" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled4" translatesAutoresizingMaskIntoConstraints="NO" id="ICV-Ba-sQW">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="klein1" translatesAutoresizingMaskIntoConstraints="NO" id="ICV-Ba-sQW">
                                                     <rect key="frame" x="198" y="49" width="37" height="41"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdo-Q6-e0M">
-                                                    <rect key="frame" x="274" y="99" width="38" height="30"/>
+                                                    <rect key="frame" x="243" y="101" width="69" height="30"/>
                                                     <color key="backgroundColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="確認">
+                                                    <state key="normal" title="就選這天">
                                                         <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
@@ -1342,10 +1342,10 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled" translatesAutoresizingMaskIntoConstraints="NO" id="WNf-lo-Hj5">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled5" translatesAutoresizingMaskIntoConstraints="NO" id="WNf-lo-Hj5">
                                                     <rect key="frame" x="72" y="49" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled2" translatesAutoresizingMaskIntoConstraints="NO" id="5HV-hB-xT7">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ken" translatesAutoresizingMaskIntoConstraints="NO" id="5HV-hB-xT7">
                                                     <rect key="frame" x="117" y="49" width="37" height="41"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015/08/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss0-bq-Aeu">
@@ -1355,9 +1355,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpc-ps-Wtc">
-                                                    <rect key="frame" x="274" y="91" width="38" height="30"/>
+                                                    <rect key="frame" x="242" y="91" width="70" height="30"/>
                                                     <color key="backgroundColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="確認">
+                                                    <state key="normal" title="就選這天">
                                                         <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
@@ -1394,7 +1394,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled" translatesAutoresizingMaskIntoConstraints="NO" id="Kfu-js-JOy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled5" translatesAutoresizingMaskIntoConstraints="NO" id="Kfu-js-JOy">
                                                     <rect key="frame" x="72" y="49" width="37" height="41"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015/08/08" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lie-2l-3bd">
@@ -1404,12 +1404,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4l-gD-VqL">
-                                                    <rect key="frame" x="274" y="91" width="38" height="30"/>
+                                                    <rect key="frame" x="243" y="91" width="69" height="30"/>
                                                     <color key="backgroundColor" red="0.94719733390000005" green="1" blue="0.67671000869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="確認">
+                                                    <state key="normal" title="就選這天">
                                                         <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ken" translatesAutoresizingMaskIntoConstraints="NO" id="pxV-7F-GGl">
+                                                    <rect key="frame" x="117" y="49" width="37" height="41"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1552,17 +1555,20 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled2" translatesAutoresizingMaskIntoConstraints="NO" id="F1T-Mb-38s">
-                                                    <rect key="frame" x="99" y="85" width="37" height="41"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sean" translatesAutoresizingMaskIntoConstraints="NO" id="F1T-Mb-38s">
+                                                    <rect key="frame" x="94" y="85" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled3" translatesAutoresizingMaskIntoConstraints="NO" id="2h9-AS-lfv">
-                                                    <rect key="frame" x="150" y="85" width="37" height="41"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled8" translatesAutoresizingMaskIntoConstraints="NO" id="2h9-AS-lfv">
+                                                    <rect key="frame" x="139" y="85" width="37" height="41"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled4" translatesAutoresizingMaskIntoConstraints="NO" id="gGc-Bs-AvW">
-                                                    <rect key="frame" x="201" y="85" width="37" height="41"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="klein1" translatesAutoresizingMaskIntoConstraints="NO" id="gGc-Bs-AvW">
+                                                    <rect key="frame" x="184" y="85" width="37" height="41"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled5" translatesAutoresizingMaskIntoConstraints="NO" id="Y4j-sT-to8">
-                                                    <rect key="frame" x="254" y="85" width="37" height="41"/>
+                                                    <rect key="frame" x="229" y="85" width="37" height="41"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ken" translatesAutoresizingMaskIntoConstraints="NO" id="ZNM-gd-kLE">
+                                                    <rect key="frame" x="275" y="85" width="37" height="41"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1616,7 +1622,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled8" translatesAutoresizingMaskIntoConstraints="NO" id="C2C-Gt-MP3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled2" translatesAutoresizingMaskIntoConstraints="NO" id="C2C-Gt-MP3">
                                                     <rect key="frame" x="99" y="85" width="37" height="41"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled6" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-AW-jC7">
@@ -1789,14 +1795,16 @@
     <resources>
         <image name="Untitled" width="116" height="111"/>
         <image name="Untitled2" width="117" height="112"/>
-        <image name="Untitled3" width="116" height="117"/>
         <image name="Untitled4" width="113" height="118"/>
         <image name="Untitled5" width="114" height="118"/>
         <image name="Untitled6" width="110" height="116"/>
         <image name="Untitled7" width="117" height="119"/>
         <image name="Untitled8" width="119" height="115"/>
         <image name="background" width="640" height="1048"/>
+        <image name="ken" width="117" height="115"/>
+        <image name="klein1" width="118" height="118"/>
         <image name="logo120" width="120" height="120"/>
+        <image name="sean" width="114" height="119"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

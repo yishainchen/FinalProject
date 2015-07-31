@@ -40,6 +40,12 @@
     
 }
 
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"首頁";
+}
+
 - (void)loadCourses {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "GAI.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +20,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [FBSDKAppEvents activateApp];
+    
 
 }
 
@@ -33,9 +35,16 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = 20;
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-65832814-1"];
     self.tokenString = 0;
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
+    
+    
 //    
 //    [Parse setApplicationId:@"qO0ZQgj6slnMsfMdqg3krsrGeBQqpw9YqkZHyKfe"
 //                  clientKey:@"D7DPPQ5eKU6ZAbY0RAOZ4Uj6FcJq5vY0GUZKZ2UG"];

@@ -171,7 +171,7 @@
 
     NSTimeInterval interval = [myDate2 timeIntervalSinceDate:myDate];
 //    有ＢＵＧ  往上拉日期也會加
-        if (interval >=  604800 ) {
+        if (interval >=  1209600 ) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"超過選擇區間" message:@"請重新選擇" preferredStyle:UIAlertControllerStyleAlert];
         [self presentViewController:alert animated:YES completion:nil];
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertViewStyleDefault handler:^(UIAlertAction *action) {
